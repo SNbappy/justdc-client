@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../../assets/logo-pro.jpg";
 import { IoSearch } from "react-icons/io5";
+import { FaAngleDown } from "react-icons/fa";
 
 const navOptionsTiny = [
     { name: "Notice", path: "/notice" },
@@ -61,20 +62,25 @@ const Navbar = () => {
 
     const renderLargeNavOptions = () => (
         navOptionsLarge.map((option, index) => (
-            <li key={index} className="">
+            <li key={index} className="relative">
                 {option.subOptions ? (
-                    <details>
-                        <summary className="hover:underline">{option.name}</summary>
-                        <ul className="p-2 rounded shadow-lg bg-base-100">
-                            {option.subOptions.map((subOption, subIndex) => (
-                                <li key={subIndex}>
-                                    <NavLink to={subOption.path} className="p-1 text-lg rounded hover:bg-gray-200">
-                                        {subOption.name}
-                                    </NavLink>
-                                </li>
-                            ))}
-                        </ul>
-                    </details>
+                    <div className="group">
+                        <NavLink to="#" className="flex items-center hover:underline">
+                            {option.name}
+                            <span className="ml-2 transition-all duration-300 transform group-hover:rotate-180"><FaAngleDown className="font-light" /></span> {/* Caret symbol */}
+                        </NavLink>
+                        <div className="absolute left-0 hidden w-full bg-white shadow-lg group-hover:block top-10">
+                            <ul className="p-2 rounded shadow-lg bg-base-100">
+                                {option.subOptions.map((subOption, subIndex) => (
+                                    <li key={subIndex}>
+                                        <NavLink to={subOption.path} className="p-1 text-lg rounded hover:bg-gray-200">
+                                            {subOption.name}
+                                        </NavLink>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
                 ) : (
                     <NavLink to={option.path} className="hover:underline">
                         {option.name}
