@@ -94,7 +94,7 @@ const Navbar = () => {
                 </div>
             </NavLink>
             <div className="grid justify-around">
-                <div className="flex justify-between bg-[#98002e] rounded-bl-[10px] mb-10">
+                <div className="flex justify-between bg-[#98002e] rounded-bl-[10px] mb-6">
                     <div>
                         <ul className="flex gap-10 text-lg font-medium text-white rounded-bl-[10px]">
                             {renderTinyNavOptions()}
@@ -104,7 +104,7 @@ const Navbar = () => {
                         <IoSearch className="mt-[7px] font-black text-white " />
                     </div>
                 </div>
-                <div className="flex items-center justify-between pb-3 pr-12">
+                <div className="flex items-center justify-between pb-2 pr-12">
                     <ul className="gap-4 pl-10 text-xl menu menu-horizontal">
                         {renderLargeNavOptions()}
                     </ul>
