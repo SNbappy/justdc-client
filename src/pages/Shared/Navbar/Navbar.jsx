@@ -51,7 +51,7 @@ const navOptionsLarge = [
 const Navbar = () => {
     const renderTinyNavOptions = () => (
         navOptionsTiny.map((option, index) => (
-            <li key={index} className={index === 0 ? "bg-[#740427] rounded-bl-[10px] px-2" : ""}>
+            <li key={index} className={index === 0 ? "bg-[#740427] rounded-bl-[10px] px-3" : ""}>
                 <NavLink to={option.path} className="hover:underline">
                     {option.name}
                 </NavLink>
@@ -61,10 +61,10 @@ const Navbar = () => {
 
     const renderLargeNavOptions = () => (
         navOptionsLarge.map((option, index) => (
-            <li key={index} className="relative text-2xl">
+            <li key={index} className="">
                 {option.subOptions ? (
                     <details>
-                        <summary className="cursor-pointer hover:underline">{option.name}</summary>
+                        <summary className="hover:underline">{option.name}</summary>
                         <ul className="p-2 rounded shadow-lg bg-base-100">
                             {option.subOptions.map((subOption, subIndex) => (
                                 <li key={subIndex}>
@@ -86,29 +86,29 @@ const Navbar = () => {
 
     return (
         <div className="flex justify-between pl-12 mx-auto shadow-lg">
-            <NavLink to="/" className="flex items-center gap-1 pt-4 font-sans">
+            <NavLink to="/" className="flex items-center gap-1 font-sans">
                 <img className="w-[100px]" src={logo} alt="logo" />
-                <div className="mt-[-18px] text-red-900 uppercase">
-                    <h2 className="text-[17px] leading-[20px] font-semibold">Jashore University of<br />Science & Technology</h2>
-                    <h1 className="text-[31px] font-bold leading-[30px]">Debate Club</h1>
+                <div className="text-red-900 uppercase whitespace-nowrap">
+                    <h2 className="xl:text-[20px] leading-[20px] font-semibold">Jashore University of<br />Science & Technology</h2>
+                    <h1 className="xl:text-[36px] font-bold leading-[30px]">Debate Club</h1>
                 </div>
             </NavLink>
             <div className="grid justify-around">
-                <div className="flex justify-between bg-[#98002e] rounded-bl-[10px] mb-4">
+                <div className="flex justify-between bg-[#98002e] rounded-bl-[10px] mb-10">
                     <div>
-                        <ul className="flex gap-6 text-lg font-medium text-white rounded-bl-[10px]">
+                        <ul className="flex gap-10 text-lg font-medium text-white rounded-bl-[10px]">
                             {renderTinyNavOptions()}
                         </ul>
                     </div>
                     <div className="pr-20">
-                        <IoSearch className="mt-[10px] font-black text-white " />
+                        <IoSearch className="mt-[7px] font-black text-white " />
                     </div>
                 </div>
-                <div className="flex items-center pr-12">
-                    <ul className="pl-10 menu menu-horizontal">
+                <div className="flex items-center justify-between pb-3 pr-12">
+                    <ul className="gap-4 pl-10 text-xl menu menu-horizontal">
                         {renderLargeNavOptions()}
                     </ul>
-                    <div className="flex gap-2 font-semibold text-[#7D1E27] text-lg">
+                    <div className="flex gap-4 font-semibold text-[#7D1E27] text-lg">
                         <button className="px-6 py-2 rounded-full bg-[#FDB714] hover:bg-[#E38B25]">Join Us</button>
                         <button className="px-6 py-2 rounded-full bg-[#FDB714] hover:bg-[#E38B25]">Login</button>
                     </div>
