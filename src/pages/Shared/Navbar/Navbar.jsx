@@ -91,8 +91,8 @@ const Navbar = () => {
     );
 
     return (
-        <div className="flex justify-between pl-12 mx-auto shadow-lg">
-            <NavLink to="/" className="flex items-center gap-1 font-sans">
+        <div className="fixed z-50 flex justify-between w-full pl-12 mx-auto mb-10 bg-white shadow-2xl">
+            <NavLink to="/" className="flex items-center gap-1 font-sans ">
                 <img className="w-[100px]" src={logo} alt="logo" />
                 <div className="text-red-900 uppercase whitespace-nowrap">
                     <h2 className="xl:text-[20px] leading-[20px] font-semibold">Jashore University of<br />Science & Technology</h2>
