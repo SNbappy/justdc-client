@@ -91,7 +91,7 @@ const Navbar = () => {
     );
 
     return (
-        <div className="fixed z-50 flex justify-between w-full pl-12 mx-auto mb-10 bg-white shadow-2xl">
+        <div className="fixed z-50 flex justify-between w-full pl-12 mx-auto mb-10 bg-white shadow-lg">
             <NavLink to="/" className="flex items-center gap-1 font-sans ">
                 <img className="w-[100px]" src={logo} alt="logo" />
                 <div className="text-red-900 uppercase whitespace-nowrap">

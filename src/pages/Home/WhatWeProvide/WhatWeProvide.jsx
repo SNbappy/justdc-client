@@ -1,0 +1,18 @@
+import React from 'react';
+import WhatWeProvideCard from '../../WhatWeProvideCard/WhatWeProvideCard';
+
+const WhatWeProvide = () => {
+    return (
+        <div>
+            <div className='font-sans text-[40px] font-bold uppercase text-[#98002E] text-center pt-24'>
+                What We Provide
+            </div>
+            <div className="w-24 h-[2px] bg-[#fdb714] mx-auto mt-6"></div>
+            <div>
+                <WhatWeProvideCard />
+            </div>
+        </div>
+    );
+};
+
+export default WhatWeProvide;
