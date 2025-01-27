@@ -1,3 +1,4 @@
+import MessageOfVc from "../../MessageOfVc/MessageOfVc";
 import OurAchievement from "../../OurAchievement/OurAchievement";
 import Banner from "../Banner/Banner";
 import ThinkBigSection from "../ThinkBigSection/ThinkBigSection";
@@ -10,6 +11,7 @@ const Home = () => {
             <ThinkBigSection />
             <WhatWeProvide />
             <OurAchievement />
+            <MessageOfVc />
         </div>
     );
 };
