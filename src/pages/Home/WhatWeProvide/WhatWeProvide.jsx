@@ -1,5 +1,5 @@
 import React from 'react';
-import WhatWeProvideCard from '../../WhatWeProvideCard/WhatWeProvideCard';
+import WhatWeProvideCard from '../WhatWeProvideCard/WhatWeProvideCard';
 import { RxDotFilled } from 'react-icons/rx';
 
 const WhatWeProvide = () => {

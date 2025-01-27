@@ -1,5 +1,5 @@
 import React from 'react';
-import cardImg from '../../assets/382149771_734130685395036_488278925793471851_n.jpg';
+import cardImg from '../../../assets/382149771_734130685395036_488278925793471851_n.jpg';
 
 const WhatWeProvideCard = () => {
     return (
