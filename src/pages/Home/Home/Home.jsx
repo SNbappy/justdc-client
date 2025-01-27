@@ -5,6 +5,8 @@ import ThinkBigSection from "../ThinkBigSection/ThinkBigSection";
 import WhatWeProvide from "../WhatWeProvide/WhatWeProvide";
 import WhatMakesUsStandOut from "../WhatMakesUsStandOut/WhatMakesUsStandOut";
 import PlatformForExcellence from "../PlatformForExcellence/PlatformForExcellence";
+import JustdcToday from "../JustDcToday/JustdcToday";
+import MeetOurTeams from "../MeetOurTeam/MeetOurTeam";
 
 const Home = () => {
     return (
@@ -16,6 +18,8 @@ const Home = () => {
             <MessageOfVc />
             <WhatMakesUsStandOut />
             <PlatformForExcellence />
+            <JustdcToday />
+            <MeetOurTeams />
         </div>
     );
 };

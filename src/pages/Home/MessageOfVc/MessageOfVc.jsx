@@ -28,7 +28,7 @@ const MessageOfVc = () => {
                         Vice Chancellor<br/>
                         Jashore University of Science and Technology
                         Jashore, Bangladesh</h2>
-                    <img className='items-end w-20' src="/src/assets/quote-close-pink.svg" alt="" />
+                    <img className='items-end w-20 pt-4 ml-auto' src="/src/assets/quote-close-pink.svg" alt="" />
                 </div>
             </div>
         </div>
