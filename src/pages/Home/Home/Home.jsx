@@ -4,6 +4,7 @@ import Banner from "../Banner/Banner";
 import ThinkBigSection from "../ThinkBigSection/ThinkBigSection";
 import WhatWeProvide from "../WhatWeProvide/WhatWeProvide";
 import WhatMakesUsStandOut from "../WhatMakesUsStandOut/WhatMakesUsStandOut";
+import PlatformForExcellence from "../PlatformForExcellence/PlatformForExcellence";
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <OurAchievement />
             <MessageOfVc />
             <WhatMakesUsStandOut />
+            <PlatformForExcellence />
         </div>
     );
 };
