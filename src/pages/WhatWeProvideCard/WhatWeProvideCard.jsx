@@ -15,7 +15,7 @@ const WhatWeProvideCard = () => {
                     <h2 className="card-title text-[#98002E] font-sans text-2xl">Expert-Led Training</h2>
                     <p className='py-2 text-lg'>Workshops and sessions to enhance public speaking, argumentation, and critical thinking skills.</p>
                     <div className="py-2 card-actions">
-                        <button className="font-semibold text-white bg-[#98002e] border-none rounded-2xl uppercase font-sans px-6 py-2">Learn More</button>
+                        <button className="font-semibold text-white bg-[#98002E] border-none rounded-2xl uppercase font-sans px-6 py-2">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@ const WhatWeProvideCard = () => {
                     <h2 className="card-title text-[#98002E] font-sans text-2xl">Competitive Platforms</h2>
                     <p className='py-2 text-lg'>Opportunities to participate in local, national, and international debate competitions.</p>
                     <div className="py-2 card-actions">
-                        <button className="font-semibold text-white bg-[#98002e] border-none rounded-2xl uppercase font-sans px-6 py-2">Learn More</button>
+                        <button className="font-semibold text-white bg-[#98002E] border-none rounded-2xl uppercase font-sans px-6 py-2">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@ const WhatWeProvideCard = () => {
                     <h2 className="card-title text-[#98002E] font-sans text-2xl">Skill Development</h2>
                     <p className='py-2 text-lg'>Build leadership, teamwork, and problem-solving abilities through engaging activities.</p>
                     <div className="py-2 card-actions">
-                        <button className="font-semibold text-white bg-[#98002e] border-none rounded-2xl uppercase font-sans px-6 py-2">Learn More</button>
+                        <button className="font-semibold text-white bg-[#98002E] border-none rounded-2xl uppercase font-sans px-6 py-2">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@ const WhatWeProvideCard = () => {
                     <h2 className="card-title text-[#98002E] font-sans text-2xl">Networking Opportunities</h2>
                     <p className='py-2 text-lg'>Connect with like-minded peers, mentors, and professionals from various fields.</p>
                     <div className="py-2 card-actions">
-                        <button className="font-semibold text-white bg-[#98002e] border-none rounded-2xl uppercase font-sans px-6 py-2">Learn More</button>
+                        <button className="font-semibold text-white bg-[#98002E] border-none rounded-2xl uppercase font-sans px-6 py-2">Learn More</button>
                     </div>
                 </div>
             </div>

@@ -15,17 +15,17 @@ const Banner = () => {
             {/* Overlay and content */}
             <div>
                 <div className="font-bold text-center text-white mt-[-540px] font-sans text-9xl drop-shadow-2xl">
-                    Unleash Your Voice,<br/>Shape the Future
+                    Unleash Your Voice,<br />Shape the Future
                 </div>
                 <div className="flex justify-center gap-5 mt-10">
                     <div>
-                        <button className="text-xl font-normal text-white bg-[#98002e] border-none rounded-full px-14 py-4">Our Achievements</button>
+                        <button className="text-xl font-normal text-white bg-[#98002E] border-none rounded-full px-14 py-4">Our Achievements</button>
                     </div>
                     <div>
-                        <button className="text-xl font-normal text-white bg-[#98002e] border-none rounded-full px-14 py-4">Why JUSTDC</button>
+                        <button className="text-xl font-normal text-white bg-[#98002E] border-none rounded-full px-14 py-4">Why JUSTDC</button>
                     </div>
                     <div>
-                        <button className="text-xl font-normal text-white bg-[#98002e] border-none rounded-full px-14 py-4">Join Us</button>
+                        <button className="text-xl font-normal text-white bg-[#98002E] border-none rounded-full px-14 py-4">Join Us</button>
                     </div>
                 </div>
             </div>

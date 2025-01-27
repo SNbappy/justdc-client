@@ -100,7 +100,7 @@ const Navbar = () => {
                 </div>
             </NavLink>
             <div className="grid justify-around">
-                <div className="flex justify-between bg-[#98002e] rounded-bl-[10px] mb-6">
+                <div className="flex justify-between bg-[#98002E] rounded-bl-[10px] mb-6">
                     <div>
                         <ul className="flex gap-10 text-lg font-medium text-white rounded-bl-[10px]">
                             {renderTinyNavOptions()}
