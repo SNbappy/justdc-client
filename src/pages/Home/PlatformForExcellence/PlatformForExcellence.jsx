@@ -1,4 +1,5 @@
 import CountUp from 'react-countup';
+import { RxDotFilled } from 'react-icons/rx';
 
 const PlatformForExcellence = () => {
     const stats = [
@@ -25,10 +26,10 @@ const PlatformForExcellence = () => {
     ];
 
     return (
-        <div className="py-16">
-            <div className="max-w-[1250px] mx-auto text-center">
+        <div className="">
+            <div className="max-w-[1250px] mx-auto text-center pt-16">
                 <div className='font-sans text-[40px] font-bold uppercase text-[#98002E]'>
-                    Our Achievements
+                    A Platform for Excellence
                 </div>
                 <div className="w-24 h-[2px] bg-[#fdb714] mt-6 mx-auto"></div>
                 <div className="grid grid-cols-4 gap-8 mt-14">
@@ -49,6 +50,17 @@ const PlatformForExcellence = () => {
                     ))}
                 </div>
             </div>
+            <div className='my-16'>
+                            <RxDotFilled className='mx-auto text-[#fdb714]' />
+                            <RxDotFilled className='mx-auto text-[#fdb714]' />
+                            <RxDotFilled className='mx-auto text-[#fdb714]' />
+                            <RxDotFilled className='mx-auto text-[#fdb714]' />
+                            <RxDotFilled className='mx-auto text-[#fdb714]' />
+                            <RxDotFilled className='mx-auto text-[#fdb714]' />
+                            <RxDotFilled className='mx-auto text-[#fdb714]' />
+                            <RxDotFilled className='mx-auto text-[#fdb714]' />
+                            <RxDotFilled className='mx-auto text-[#fdb714]' />
+                        </div>
         </div>
     );
 };
