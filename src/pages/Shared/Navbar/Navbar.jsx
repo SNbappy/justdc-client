@@ -52,7 +52,7 @@ const navOptionsLarge = [
 const Navbar = () => {
     const renderTinyNavOptions = () => (
         navOptionsTiny.map((option, index) => (
-            <li key={index} className={index === 0 ? "bg-[#740427] rounded-bl-[10px] px-3" : ""}>
+            <li key={index} className={index === 0 ? "rounded-bl-[10px] px-3" : ""}>
                 <NavLink to={option.path} className="hover:underline">
                     {option.name}
                 </NavLink>
@@ -100,7 +100,7 @@ const Navbar = () => {
                 </div>
             </NavLink>
             <div className="grid justify-around">
-                <div className="flex justify-between bg-[#98002E] rounded-bl-[10px] mb-6">
+                <div className="flex justify-between bg-[#003366] rounded-bl-[10px] mb-6">
                     <div>
                         <ul className="flex gap-10 text-lg font-medium text-white rounded-bl-[10px]">
                             {renderTinyNavOptions()}
@@ -115,8 +115,8 @@ const Navbar = () => {
                         {renderLargeNavOptions()}
                     </ul>
                     <div className="flex gap-4 font-semibold text-[#7D1E27] text-lg">
-                        <button className="px-6 py-2 rounded-full bg-[#FDB714] hover:bg-[#E38B25]">Join Us</button>
-                        <button className="px-6 py-2 rounded-full bg-[#FDB714] hover:bg-[#E38B25]">Login</button>
+                        <button className="px-6 py-2 rounded-full bg-[#fdb714] hover:bg-[#B91C1C] font-sans uppercase">Join Us</button>
+                        <button className="px-6 py-2 rounded-full bg-[#fdb714] font-sans uppercase">Login</button>
                     </div>
                 </div>
             </div>

@@ -4,8 +4,8 @@ import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 const MeetOurTeamCard = () => {
     const teamMembers = [
         {
-            name: "James Henry",
-            role: "Web Analyst",
+            name: "Ayman Faiyaz",
+            role: "President",
             image: "/src/assets/ayman.jpg",
             socials: [
                 { platform: "instagram", link: "#" },
@@ -14,8 +14,8 @@ const MeetOurTeamCard = () => {
             ],
         },
         {
-            name: "John Doe",
-            role: "UI/UX Designer",
+            name: "Nowsin Jahan Zerin",
+            role: "Secretary",
             image: "/src/assets/jerin.jpg",
             socials: [
                 { platform: "instagram", link: "#" },
@@ -24,8 +24,8 @@ const MeetOurTeamCard = () => {
             ],
         },
         {
-            name: "Mykel Smith",
-            role: "Front-End Web Developer",
+            name: "Sadeka Shahani Urmee ",
+            role: "Treasurer",
             image: "/src/assets/urmee.jpg",
             socials: [
                 { platform: "instagram", link: "#" },
@@ -34,9 +34,9 @@ const MeetOurTeamCard = () => {
             ],
         },
         {
-            name: "Alex Morgan",
-            role: "Back-End Web Developer",
-            image: "/src/assets/bappy.jpg",
+            name: "Md. Sabbir Hossain Bappy",
+            role: "Head of IT",
+            image: "/src/assets/bappy1.jpg",
             socials: [
                 { platform: "instagram", link: "#" },
                 { platform: "github", link: "#" },

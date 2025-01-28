@@ -28,7 +28,7 @@ const PlatformForExcellence = () => {
     return (
         <div className="">
             <div className="max-w-[1250px] mx-auto text-center pt-16">
-                <div className='font-sans text-[40px] font-bold uppercase text-[#98002E]'>
+                <div className='font-sans text-[40px] font-bold uppercase text-[#003366]'>
                     A Platform for Excellence
                 </div>
                 <div className="w-24 h-[2px] bg-[#fdb714] mt-6 mx-auto"></div>
@@ -38,7 +38,7 @@ const PlatformForExcellence = () => {
                             key={index}
                             className="p-6 text-center shadow-lg rounded-2xl"
                         >
-                            <h3 className="text-4xl font-extrabold text-[#98002E]">
+                            <h3 className="text-4xl font-extrabold text-[#003366]">
                                 <CountUp end={stat.count} duration={2} />
                                 +
                             </h3>

@@ -19,13 +19,13 @@ const Banner = () => {
                 </div>
                 <div className="flex justify-center gap-5 mt-10">
                     <div>
-                        <button className="text-xl font-normal text-white bg-[#98002E] border-none rounded-full px-14 py-4">Our Achievements</button>
+                        <button className="text-xl font-normal font-sans uppercase text-white font-semibold bg-[#003366] border-none rounded-full px-14 py-4">Our Achievements</button>
                     </div>
                     <div>
-                        <button className="text-xl font-normal text-white bg-[#98002E] border-none rounded-full px-14 py-4">Why JUSTDC</button>
+                        <button className="text-xl font-normal font-sans uppercase text-white font-semibold bg-[#003366] border-none rounded-full px-14 py-4">Why JUSTDC</button>
                     </div>
                     <div>
-                        <button className="text-xl font-normal text-white bg-[#98002E] border-none rounded-full px-14 py-4">Join Us</button>
+                        <button className="text-xl font-normal font-sans uppercase text-white font-semibold bg-[#003366] border-none rounded-full px-14 py-4">Join Us</button>
                     </div>
                 </div>
             </div>

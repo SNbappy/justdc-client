@@ -9,8 +9,8 @@ const WhatMakesUsStandOut = () => {
         }>
             <div className='bg-white bg-opacity-60 pb-[100px]'>
                 <div className='max-w-[1250px] mx-auto'>
-                    <div className='font-sans text-[40px] font-bold uppercase text-[#98002E] text-center pt-24'>
-                        What We Provide
+                    <div className='font-sans text-[40px] font-bold uppercase text-[#003366] text-center pt-24'>
+                        What Makes Us Stand Out
                     </div>
                     <div className="w-24 h-[2px] bg-[#fdb714] mx-auto mt-6"></div>
                     <p className='py-8 text-xl'>The JUST Debate Club is more than just a platform for debates; it’s a thriving community where passion meets purpose. Unlike
@@ -20,9 +20,9 @@ const WhatMakesUsStandOut = () => {
                         culture of excellence that inspires innovation and leadership. At JUST Debate Club, we don’t just debate – we create
                         changemakers.</p>
                     <div className='flex justify-center gap-4 font-sans uppercase'>
-                        <div><button className="text-xl font-normal text-white bg-[#98002E] border-none rounded-full px-14 py-4">Discover Our Story</button></div>
-                        <div><button className="text-xl font-normal text-white bg-[#98002E] border-none rounded-full px-14 py-4">Meet Our Team</button></div>
-                        <div><button className="text-xl font-normal text-white bg-[#98002E] border-none rounded-full px-14 py-4">Become a Member</button></div>
+                        <div><button className="text-xl font-semibold uppercase text-[#98002E] bg-[#fdb714] border-none rounded-full px-14 py-4">Discover Our Story</button></div>
+                        <div><button className="text-xl font-semibold uppercase text-[#98002E] bg-[#fdb714] border-none rounded-full px-14 py-4">Meet Our Team</button></div>
+                        <div><button className="text-xl font-semibold uppercase text-[#98002E] bg-[#fdb714] border-none rounded-full px-14 py-4">Become a Member</button></div>
                     </div>
                 </div>
             </div>

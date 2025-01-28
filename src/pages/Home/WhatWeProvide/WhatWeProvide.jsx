@@ -5,7 +5,7 @@ import { RxDotFilled } from 'react-icons/rx';
 const WhatWeProvide = () => {
     return (
         <div>
-            <div className='font-sans text-[40px] font-bold uppercase text-[#98002E] text-center pt-24'>
+            <div className='font-sans text-[40px] font-bold uppercase text-[#003366] text-center pt-24'>
                 What We Provide
             </div>
             <div className="w-24 h-[2px] bg-[#fdb714] mx-auto mt-6"></div>

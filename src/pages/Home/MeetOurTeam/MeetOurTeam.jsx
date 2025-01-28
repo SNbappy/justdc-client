@@ -6,7 +6,7 @@ const MeetOurTeam = () => {
     return (
         <div className='max-w-[1250px] mx-auto'>
             <div>
-                <div className='font-sans text-[40px] font-bold uppercase text-[#98002E] text-center pt-20'>
+                <div className='font-sans text-[40px] font-bold uppercase text-[#003366] text-center pt-20'>
                     Meet Our Team
                 </div>
                 <div className="w-24 h-[2px] bg-[#fdb714] mt-6 mx-auto"></div>

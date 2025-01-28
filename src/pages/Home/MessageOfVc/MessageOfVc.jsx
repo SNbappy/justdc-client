@@ -2,7 +2,7 @@ import React from 'react';
 
 const MessageOfVc = () => {
     return (
-        <div className='bg-[#98002E] py-20 mt-20'>
+        <div className='bg-[#003366] py-20 mt-20'>
             <div className='max-w-[1250px] mx-auto flex justify-between items-center gap-4'>
                 <div className='w-1/2'>
                     <img src="/src/assets/vc3.jpg" alt="" />
