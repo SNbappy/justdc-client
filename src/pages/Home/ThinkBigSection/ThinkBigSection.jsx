@@ -5,7 +5,7 @@ const ThinkBigSection = () => {
         <div
             className="mt-[184px] bg-[#98002E] text-center p-24"
             style={{
-                backgroundImage: `url(${myImage})`
+                backgroundImage: `url(${myImage})`,
             }}
         >
             <div className="text-[#FDB714] text-5xl font-semibold font-sans">Think Big, Speak Bold, Lead Fearlessly</div>

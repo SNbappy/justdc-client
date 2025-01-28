@@ -25,7 +25,7 @@ const WhatMakesUsStandOut = () => {
                         <div><button className="text-xl font-normal text-white bg-[#98002E] border-none rounded-full px-14 py-4">Become a Member</button></div>
                     </div>
                 </div>
-           </div>
+            </div>
         </div>
     );
 };

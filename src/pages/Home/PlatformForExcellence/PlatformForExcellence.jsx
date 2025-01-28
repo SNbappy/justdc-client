@@ -51,16 +51,16 @@ const PlatformForExcellence = () => {
                 </div>
             </div>
             <div className='my-16'>
-                            <RxDotFilled className='mx-auto text-[#fdb714]' />
-                            <RxDotFilled className='mx-auto text-[#fdb714]' />
-                            <RxDotFilled className='mx-auto text-[#fdb714]' />
-                            <RxDotFilled className='mx-auto text-[#fdb714]' />
-                            <RxDotFilled className='mx-auto text-[#fdb714]' />
-                            <RxDotFilled className='mx-auto text-[#fdb714]' />
-                            <RxDotFilled className='mx-auto text-[#fdb714]' />
-                            <RxDotFilled className='mx-auto text-[#fdb714]' />
-                            <RxDotFilled className='mx-auto text-[#fdb714]' />
-                        </div>
+                <RxDotFilled className='mx-auto text-[#fdb714]' />
+                <RxDotFilled className='mx-auto text-[#fdb714]' />
+                <RxDotFilled className='mx-auto text-[#fdb714]' />
+                <RxDotFilled className='mx-auto text-[#fdb714]' />
+                <RxDotFilled className='mx-auto text-[#fdb714]' />
+                <RxDotFilled className='mx-auto text-[#fdb714]' />
+                <RxDotFilled className='mx-auto text-[#fdb714]' />
+                <RxDotFilled className='mx-auto text-[#fdb714]' />
+                <RxDotFilled className='mx-auto text-[#fdb714]' />
+            </div>
         </div>
     );
 };

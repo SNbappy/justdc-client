@@ -7,8 +7,8 @@ const MessageOfVc = () => {
                 <div className='w-1/2'>
                     <img src="/src/assets/vc3.jpg" alt="" />
                     <div className='text-center text-white'>
-                        Professor Dr. Md. Abdul Mazid<br/>
-                        Vice Chancellor<br/>
+                        Professor Dr. Md. Abdul Mazid<br />
+                        Vice Chancellor<br />
                         Jashore University of Science and Technology
                         Jashore, Bangladesh
                     </div>
@@ -24,8 +24,8 @@ const MessageOfVc = () => {
                         creativity and confidence. The club's remarkable achievements and vibrant community reflect the
                         dedication and talent of its members. My heartfelt best wishes to
                         all its members and their endeavors.</p>
-                    <h2 className='font-sans text-lg font-semibold leading-6 text-right'>- Professor Dr. Md. Abdul Mazid<br/>
-                        Vice Chancellor<br/>
+                    <h2 className='font-sans text-lg font-semibold leading-6 text-right'>- Professor Dr. Md. Abdul Mazid<br />
+                        Vice Chancellor<br />
                         Jashore University of Science and Technology
                         Jashore, Bangladesh</h2>
                     <img className='items-end w-20 pt-4 ml-auto' src="/src/assets/quote-close-pink.svg" alt="" />
