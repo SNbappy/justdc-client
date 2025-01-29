@@ -1,105 +1,183 @@
 import React from "react";
-import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { FaTwitter, FaFacebookF, FaGooglePlusG, FaInstagram } from "react-icons/fa";
 
 const MeetOurTeamCard = () => {
     const teamMembers = [
         {
-            name: "Ayman Faiyaz",
-            role: "President",
-            image: "/src/assets/ayman.jpg",
-            socials: [
-                { platform: "instagram", link: "#" },
-                { platform: "github", link: "#" },
-                { platform: "linkedin", link: "#" },
-            ],
-        },
-        {
-            name: "Nowsin Jahan Zerin",
-            role: "Secretary",
-            image: "/src/assets/jerin.jpg",
-            socials: [
-                { platform: "instagram", link: "#" },
-                { platform: "github", link: "#" },
-                { platform: "linkedin", link: "#" },
-            ],
-        },
-        {
-            name: "Sadeka Shahani Urmee ",
-            role: "Treasurer",
-            image: "/src/assets/urmee.jpg",
-            socials: [
-                { platform: "instagram", link: "#" },
-                { platform: "github", link: "#" },
-                { platform: "linkedin", link: "#" },
-            ],
-        },
-        {
-            name: "Md. Sabbir Hossain Bappy",
-            role: "Head of IT",
+            id: 1,
+            name: "John Doe",
+            role: "Debate Coach",
             image: "/src/assets/bappy1.jpg",
             socials: [
+                { platform: "twitter", link: "#" },
+                { platform: "facebook", link: "#" },
+                { platform: "google", link: "#" },
                 { platform: "instagram", link: "#" },
-                { platform: "github", link: "#" },
-                { platform: "linkedin", link: "#" },
+            ],
+        },
+        {
+            id: 2,
+            name: "Jane Smith",
+            role: "Team Captain",
+            image: "/src/assets/bappy1.jpg",
+            socials: [
+                { platform: "twitter", link: "#" },
+                { platform: "facebook", link: "#" },
+                { platform: "google", link: "#" },
+                { platform: "instagram", link: "#" },
+            ],
+        },
+        {
+            id: 3,
+            name: "Alice Johnson",
+            role: "Event Coordinator",
+            image: "/src/assets/bappy1.jpg",
+            socials: [
+                { platform: "twitter", link: "#" },
+                { platform: "facebook", link: "#" },
+                { platform: "google", link: "#" },
+                { platform: "instagram", link: "#" },
+            ],
+        },
+        {
+            id: 4,
+            name: "Bob Brown",
+            role: "Public Relations",
+            image: "/src/assets/bappy1.jpg",
+            socials: [
+                { platform: "twitter", link: "#" },
+                { platform: "facebook", link: "#" },
+                { platform: "google", link: "#" },
+                { platform: "instagram", link: "#" },
+            ],
+        },
+        {
+            id: 5,
+            name: "John Doe",
+            role: "Debate Coach",
+            image: "/src/assets/bappy1.jpg",
+            socials: [
+                { platform: "twitter", link: "#" },
+                { platform: "facebook", link: "#" },
+                { platform: "google", link: "#" },
+                { platform: "instagram", link: "#" },
+            ],
+        },
+        {
+            id: 6,
+            name: "Jane Smith",
+            role: "Team Captain",
+            image: "/src/assets/bappy1.jpg",
+            socials: [
+                { platform: "twitter", link: "#" },
+                { platform: "facebook", link: "#" },
+                { platform: "google", link: "#" },
+                { platform: "instagram", link: "#" },
+            ],
+        },
+        {
+            id: 7,
+            name: "Alice Johnson",
+            role: "Event Coordinator",
+            image: "/src/assets/bappy1.jpg",
+            socials: [
+                { platform: "twitter", link: "#" },
+                { platform: "facebook", link: "#" },
+                { platform: "google", link: "#" },
+                { platform: "instagram", link: "#" },
+            ],
+        },
+        {
+            id: 8,
+            name: "Bob Brown",
+            role: "Public Relations",
+            image: "/src/assets/bappy1.jpg",
+            socials: [
+                { platform: "twitter", link: "#" },
+                { platform: "facebook", link: "#" },
+                { platform: "google", link: "#" },
+                { platform: "instagram", link: "#" },
             ],
         },
     ];
 
+    // Function to render social media icons
     const renderIcon = (platform) => {
         switch (platform) {
+            case "twitter":
+                return <FaTwitter className="text-sm" />;
+            case "facebook":
+                return <FaFacebookF className="text-sm" />;
+            case "google":
+                return <FaGooglePlusG className="text-md" />;
             case "instagram":
-                return <FaInstagram />;
-            case "github":
-                return <FaGithub />;
-            case "linkedin":
-                return <FaLinkedin />;
+                return <FaInstagram className="text-sm" />;
             default:
                 return null;
         }
     };
 
     return (
-        <div className="">
-            <div className="grid grid-cols-4 gap-6">
+        <section className="px-4 py-8">
+            <Swiper
+                modules={[Autoplay]}
+                spaceBetween={30}
+                slidesPerView={3}
+                autoplay={{
+                    delay: 8000,
+                    disableOnInteraction: false,
+                    // pauseOnMouseEnter: true,
+                }}
+                loop={true}
+                breakpoints={{
+                    0: { slidesPerView: 1 },
+                    640: { slidesPerView: 2 },
+                    1024: { slidesPerView: 4 },
+                }}
+            >
                 {teamMembers.map((member, index) => (
-                    <div
-                        key={index}
-                        className="relative overflow-hidden bg-purple-700 shadow-2xl w-72 h-96 bg-opacity-60 rounded-xl group"
-                    >
-                        <div className="w-full h-full">
-                            <img
-                                src={member.image}
-                                alt={member.name}
-                                className="object-cover w-full h-full"
-                            />
-                        </div>
-                        <div className="absolute bottom-[-160px] w-full h-40 flex flex-col items-center justify-center backdrop-blur-md shadow-inner border border-white/10 rounded-b-xl transition-all duration-500 group-hover:bottom-0">
-                            <div className="text-center">
-                                <h3 className="text-lg font-semibold text-white uppercase opacity-0 translate-y-[-20px] transition-transform duration-700 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
-                                    {member.name}
-                                    <br />
-                                    <span className="text-sm font-light normal-case">
-                                        {member.role}
-                                    </span>
-                                </h3>
+                    <SwiperSlide key={index} className="flex justify-center">
+                        <div className="relative group">
+                            {/* Image Section */}
+                            <div className="relative overflow-hidden max-h-[380px] w-full">
+                                <img
+                                    src={member.image}
+                                    alt={member.name}
+                                    className="object-cover w-full h-full transition-all duration-500 hover:brightness-[120%] brightness-[70%] group-hover:scale-110"
+                                />
+                                {/* Social Icons - Appears on Hover */}
+                                <ul className="absolute bottom-[-50px] w-full flex justify-center items-center space-x-5 transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:bottom-2">
+                                    {member.socials.map((social, idx) => (
+                                        <li key={idx}>
+                                            <a
+                                                href={social.link}
+                                                className="text-xl text-yellow-300 transition-colors duration-300 hover:text-yellow-400"
+                                            >
+                                                {renderIcon(social.platform)}
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
-                            <ul className="flex mt-4 space-x-5 transition-transform duration-700 ease-in-out translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
-                                {member.socials.map((social, idx) => (
-                                    <li key={idx}>
-                                        <a
-                                            href={social.link}
-                                            className="text-xl text-white transition-colors duration-300 hover:text-yellow-300"
-                                        >
-                                            {renderIcon(social.platform)}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
+
+                            {/* Name and Position - Always Visible */}
+                            <div className="py-2 text-center border rounded-b-lg border-1">
+                                <h3 className="font-sans text-2xl font-bold uppercase">
+                                    {member.name}
+                                </h3>
+                                <p className="font-light text-[#FDB714]">{member.role}</p>
+                            </div>
                         </div>
-                    </div>
+                    </SwiperSlide>
                 ))}
-            </div>
-        </div>
+            </Swiper>
+        </section>
     );
 };
 

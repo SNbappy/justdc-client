@@ -1,17 +1,16 @@
-import React from 'react';
 import MeetOurTeamCard from '../MeetOurTeamCard/MeetOurTeamCard';
-import TeamSection from '../MeetOurTeamCard/MeetOurTeamCard';
 
 const MeetOurTeam = () => {
     return (
-        <div className='max-w-[1250px] mx-auto'>
-            <div>
-                <div className='font-sans text-[40px] font-bold uppercase text-[#003366] text-center pt-20'>
-                    Meet Our Team
+        <div>
+            <div className=' text-center mx-auto max-w-[850px] mt-28'>
+                <div className='font-sans text-[40px] font-bold uppercase text-[#003366]'>
+                    Meet Our Executive Team
                 </div>
                 <div className="w-24 h-[2px] bg-[#fdb714] mt-6 mx-auto"></div>
+                <p className='mt-4 mb-10 text-lg'>Behind every great debate is a team of passionate leaders. Meet the <span className='font-bold'>JUST Debate Club</span> Executive Team, committed to fostering a vibrant community of thinkers and communicators.</p>
             </div>
-            <div className='pt-16'>
+            <div>
                 <MeetOurTeamCard />
             </div>
         </div>
