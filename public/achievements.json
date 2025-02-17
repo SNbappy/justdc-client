@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.ibb.co.com/fkjkZXf/logo-pro.jpg",
+        "title": "National Coding Championship",
+        "description": "Our team secured 1st place in the National Coding Championship 2024, competing against 500+ teams nationwide."
+    },
+    {
+        "id": 2,
+        "image": "https://i.ibb.co.com/fkjkZXf/logo-pro.jpg",
+        "title": "ICPC Regional Finalists",
+        "description": "Our university team qualified for the ICPC regional contest, competing with top programmers from South Asia."
+    },
+    {
+        "id": 3,
+        "image": "https://i.ibb.co.com/fkjkZXf/logo-pro.jpg",
+        "title": "Best Debate Team Award",
+        "description": "The JUST Debate Club won the Best Team Award in the National Debate Competition 2024."
+    },
+    {
+        "id": 4,
+        "image": "https://i.ibb.co.com/fkjkZXf/logo-pro.jpg",
+        "title": "Hackathon Winners",
+        "description": "Our students won the National Hackathon by developing an AI-powered smart assistant in just 36 hours."
+    },
+    {
+        "id": 5,
+        "image": "https://i.ibb.co.com/fkjkZXf/logo-pro.jpg",
+        "title": "Google Developer Certification",
+        "description": "Several students received official Google Developer certifications for their expertise in full-stack web development."
+    },
+    {
+        "id": 6,
+        "image": "https://i.ibb.co.com/fkjkZXf/logo-pro.jpg",
+        "title": "Startup Incubation Program",
+        "description": "Our university startup team secured funding and mentorship from a national business incubation program."
+    }
+]

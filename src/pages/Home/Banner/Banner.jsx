@@ -1,4 +1,4 @@
-import video from "../../../assets/homevideo2024.mp4";
+import video from "../../../assets/Untitled design.mp4";
 
 const Banner = () => {
     return (
@@ -14,7 +14,7 @@ const Banner = () => {
 
             {/* Overlay and content */}
             <div>
-                <div className="font-bold text-center text-white mt-[-540px] font-sans text-9xl drop-shadow-2xl">
+                <div className="font-bold text-center text-white mt-[-540px] font-sans text-9xl drop-shadow-[0_0_10px_black]">
                     Unleash Your Voice,<br />Shape the Future
                 </div>
                 <div className="flex justify-center gap-5 mt-10">

@@ -1,5 +1,5 @@
 import React from 'react';
-import JustdcTodayCard from '../../JustdcTodayCard/JustdcTodayCard';
+import JustdcTodayCard from '../JustdcTodayCard/JustdcTodayCard';
 
 const JustdcToday = () => {
     return (

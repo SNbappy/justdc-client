@@ -7,10 +7,14 @@ import WhatMakesUsStandOut from "../WhatMakesUsStandOut/WhatMakesUsStandOut";
 import PlatformForExcellence from "../PlatformForExcellence/PlatformForExcellence";
 import JustdcToday from "../JustDcToday/JustdcToday";
 import MeetOurTeams from "../MeetOurTeam/MeetOurTeam";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     return (
         <div>
+            <Helmet>
+                <title>JUST Debate Club | Home</title>
+            </Helmet>
             <Banner />
             <ThinkBigSection />
             <WhatWeProvide />

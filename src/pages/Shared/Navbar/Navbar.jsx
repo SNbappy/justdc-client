@@ -91,7 +91,8 @@ const Navbar = () => {
     );
 
     return (
-        <div className="fixed z-50 flex justify-between w-full pl-12 mx-auto mb-10 bg-white shadow-lg">
+        <div className="fixed z-50 flex justify-between w-full pl-12 mx-auto mb-10 bg-white shadow-[0_4px_13px_rgba(0,0,0,0.3)] top-0
+">
             <NavLink to="/" className="flex items-center gap-1 font-sans ">
                 <img className="w-[100px]" src={logo} alt="logo" />
                 <div className="text-red-900 uppercase whitespace-nowrap">
@@ -116,7 +117,7 @@ const Navbar = () => {
                     </ul>
                     <div className="flex gap-4 font-semibold text-[#7D1E27] text-lg">
                         <button className="px-6 py-2 rounded-full bg-[#fdb714] hover:bg-[#B91C1C] font-sans uppercase">Join Us</button>
-                        <button className="px-6 py-2 rounded-full bg-[#fdb714] font-sans uppercase">Login</button>
+                        <NavLink to={"/login"} className="px-6 py-2 rounded-full bg-[#fdb714] font-sans uppercase">Sign In</NavLink>
                     </div>
                 </div>
             </div>

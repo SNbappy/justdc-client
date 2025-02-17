@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import {  Autoplay } from "swiper/modules";
 import { FaTwitter, FaFacebookF, FaGooglePlusG, FaInstagram } from "react-icons/fa";
 
 const MeetOurTeamCard = () => {
@@ -149,7 +149,7 @@ const MeetOurTeamCard = () => {
                                 <img
                                     src={member.image}
                                     alt={member.name}
-                                    className="object-cover w-full h-full transition-all duration-500 hover:brightness-[120%] brightness-[70%] group-hover:scale-110"
+                                    className="object-cover w-full h-full transition-all duration-300 hover:brightness-[120%] brightness-[70%] group-hover:scale-110"
                                 />
                                 {/* Social Icons - Appears on Hover */}
                                 <ul className="absolute bottom-[-50px] w-full flex justify-center items-center space-x-5 transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:bottom-2">
