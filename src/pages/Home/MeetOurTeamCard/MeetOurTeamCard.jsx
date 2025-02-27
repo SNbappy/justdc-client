@@ -50,7 +50,7 @@ const MeetOurTeamCard = () => {
             id: 4,
             name: "Md. Muhaimenul Haque",
             role: "Joint Secretary (Debate)",
-            image: "",
+            image: "/src/assets/Executive members/prottoy.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -98,7 +98,7 @@ const MeetOurTeamCard = () => {
             id: 8,
             name: "Ashaba Hossain",
             role: "Office Secretary",
-            image: "",
+            image: "/src/assets/Executive members/ashaba.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
