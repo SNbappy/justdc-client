@@ -8,6 +8,8 @@ import PlatformForExcellence from "../PlatformForExcellence/PlatformForExcellenc
 import JustdcToday from "../JustDcToday/JustdcToday";
 import MeetOurTeams from "../MeetOurTeam/MeetOurTeam";
 import { Helmet } from "react-helmet-async";
+import TestimonialSection from "../TestimonialSection/TestimonialSection";
+import ImageGallery from "../ImageGallery/ImageGallery";
 
 const Home = () => {
     return (
@@ -24,6 +26,8 @@ const Home = () => {
             <PlatformForExcellence />
             <JustdcToday />
             <MeetOurTeams />
+            <TestimonialSection />
+            <ImageGallery />
         </div>
     );
 };

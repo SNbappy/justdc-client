@@ -6,7 +6,6 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import {  Autoplay } from "swiper/modules";
 import { FaTwitter, FaFacebookF, FaGooglePlusG, FaInstagram } from "react-icons/fa";
-import emptyImg from "../../../assets/Executive members/blank-profile-picture-973460_1280.png"
 
 const MeetOurTeamCard = () => {
     const teamMembers = [
@@ -408,7 +407,7 @@ const MeetOurTeamCard = () => {
                             </div>
 
                             {/* Name and Position - Always Visible */}
-                            <div className="py-2 text-center border rounded-b-lg border-1">
+                            <div className="py-2 text-center border border-black border-opacity-10 border-y-0">
                                 <h3 className="font-sans text-2xl font-bold uppercase">
                                     {member.name}
                                 </h3>
