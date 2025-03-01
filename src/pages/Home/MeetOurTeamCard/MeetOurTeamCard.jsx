@@ -289,7 +289,7 @@ const MeetOurTeamCard = () => {
             id: 24,
             name: "Rukhsana Zaman Miel",
             role: "Equity Officer",
-            image: "",
+            image: "/src/assets/Executive members/miel.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
