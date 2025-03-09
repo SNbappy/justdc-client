@@ -5,11 +5,11 @@ import ThinkBigSection from "../ThinkBigSection/ThinkBigSection";
 import WhatWeProvide from "../WhatWeProvide/WhatWeProvide";
 import WhatMakesUsStandOut from "../WhatMakesUsStandOut/WhatMakesUsStandOut";
 import PlatformForExcellence from "../PlatformForExcellence/PlatformForExcellence";
-import JustdcToday from "../JustDcToday/JustdcToday";
 import MeetOurTeams from "../MeetOurTeam/MeetOurTeam";
 import { Helmet } from "react-helmet-async";
 import TestimonialSection from "../TestimonialSection/TestimonialSection";
 import ImageGallery from "../ImageGallery/ImageGallery";
+import JustdcToday from "../JustdcToday/JustdcToday";
 
 const Home = () => {
     return (

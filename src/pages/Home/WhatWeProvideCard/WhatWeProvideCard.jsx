@@ -27,7 +27,7 @@ const cardVariants = {
 const WhatWeProvideCard = () => {
     return (
         <motion.div
-            className="grid grid-cols-4 max-w-[1250px] mx-auto mt-20 gap-4"
+            className="grid md:grid-cols-2 xl:grid-cols-4 max-w-[1250px] mx-auto mt-20 gap-4 justify-center px-4 sm:px-8 md:px-12 xl:px-0"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }} // Ensures animation starts when 20% visible
@@ -35,16 +35,16 @@ const WhatWeProvideCard = () => {
             {cardData.map((card, index) => (
                 <motion.div
                     key={index}
-                    className="transition-all transform rounded-md shadow-md hover:shadow-xl hover:-translate-y-1 card card-compact bg-base-100 max-w-72"
+                    className="mx-auto transition-all transform rounded-md shadow-md hover:shadow-xl hover:-translate-y-1 card card-compact bg-base-100 max-w-[510px]"
                     variants={cardVariants}
                     custom={index} // Pass index for stagger effect
                 >
-                    <figure className="w-full h-56 overflow-hidden">
+                    <figure className="w-full h-[250px] overflow-hidden">
                         <img className="object-cover w-full h-full brightness-125" src={card.img} alt="photo" />
                     </figure>
                     <div className="w-full h-[5px] bg-[#003366]"></div>
                     <div className="card-body">
-                        <h2 className="card-title text-[#003366] font-sans text-2xl">{card.title}</h2>
+                        <h2 className="card-title text-[#003366] font-sans lg:text-2xl text-xl">{card.title}</h2>
                         <p className="pb-2 text-lg">{card.description}</p>
                         <div className="pb-2 card-actions">
                             <button className="font-semibold text-white bg-[#003366] border-none rounded-full uppercase font-sans px-6 py-3">Learn More</button>

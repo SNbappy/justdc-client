@@ -10,10 +10,10 @@ const OurAchievement = () => {
     }, []);
 
     return (
-        <div className='flex items-center justify-between max-w-[1250px] mx-auto gap-8 mt-20'>
+        <div className='flex flex-col lg:flex-row items-center justify-between max-w-[1250px] mx-auto gap-8 py-10 md:py-20 xl:py-28 px-4 sm:px-8 md:px-12 xl:px-0'>
             {/* Left Section */}
             <motion.div
-                className='w-1/2'
+                className='lg:w-1/2'
                 initial="hidden"
                 animate="visible"
                 data-aos="fade-right"
@@ -62,12 +62,12 @@ const OurAchievement = () => {
 
             {/* Right Section - Image */}
             <motion.div
-                className='w-1/2'
+                className='lg:w-1/2'
                 data-aos="fade-left"
                 data-aos-delay="800"
                 data-aos-once="true"
             >
-                <img className='rounded-3xl brightness-110' src="/public/achievement.jpg" alt="Achievements" />
+                <img className='rounded-3xl brightness-110' src="achievement.jpg" alt="Achievements" />
             </motion.div>
         </div>
     );

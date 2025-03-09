@@ -4,64 +4,16 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-import {  Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { FaTwitter, FaFacebookF, FaGooglePlusG, FaInstagram } from "react-icons/fa";
 
 const MeetOurTeamCard = () => {
     const teamMembers = [
         {
-            id: 1,
-            name: "Ayman Faiyaz",
-            role: "President",
-            image: "/src/assets/Executive members/ayman.jpg",
-            socials: [
-                { platform: "twitter", link: "#" },
-                { platform: "facebook", link: "#" },
-                { platform: "google", link: "#" },
-                { platform: "instagram", link: "#" },
-            ],
-        },
-        {
-            id: 2,
-            name: "Nowshin Jahan Zerin",
-            role: "General Secretary",
-            image: "/src/assets/Executive members/jerin.jpg",
-            socials: [
-                { platform: "twitter", link: "#" },
-                { platform: "facebook", link: "#" },
-                { platform: "google", link: "#" },
-                { platform: "instagram", link: "#" },
-            ],
-        },
-        {
-            id: 3,
-            name: "Md. Sabbir Hossain Bappy",
-            role: "Head of IT",
-            image: "/src/assets/Executive members/bappy.JPG",
-            socials: [
-                { platform: "twitter", link: "#" },
-                { platform: "facebook", link: "#" },
-                { platform: "google", link: "#" },
-                { platform: "instagram", link: "#" },
-            ],
-        },
-        {
-            id: 4,
-            name: "Md. Muhaimenul Haque",
-            role: "Joint Secretary (Debate)",
-            image: "/src/assets/Executive members/prottoy.jpg",
-            socials: [
-                { platform: "twitter", link: "#" },
-                { platform: "facebook", link: "#" },
-                { platform: "google", link: "#" },
-                { platform: "instagram", link: "#" },
-            ],
-        },
-        {
             id: 5,
             name: "Mutaleb Hossain",
             role: "Organising Secretary",
-            image: "/src/assets/Executive members/Mutaleb.jpg",
+            image: "Executive members/Mutaleb.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -85,7 +37,44 @@ const MeetOurTeamCard = () => {
             id: 7,
             name: "Parvez Nabiul Islam",
             role: "Assistant Treasurer",
-            image: "/src/assets/Executive members/Parvez.jpg",
+            image: "Executive members/Parvez.jpg",
+            socials: [
+                { platform: "twitter", link: "#" },
+                { platform: "facebook", link: "#" },
+                { platform: "google", link: "#" },
+                { platform: "instagram", link: "#" },
+            ],
+        },
+
+        {
+            id: 1,
+            name: "Ayman Faiyaz",
+            role: "President",
+            image: "Executive members/ayman.jpg",
+            socials: [
+                { platform: "twitter", link: "#" },
+                { platform: "facebook", link: "#" },
+                { platform: "google", link: "#" },
+                { platform: "instagram", link: "#" },
+            ],
+        },
+        {
+            id: 2,
+            name: "Nowshin Jahan Zerin",
+            role: "General Secretary",
+            image: "Executive members/jerin.jpg",
+            socials: [
+                { platform: "twitter", link: "#" },
+                { platform: "facebook", link: "#" },
+                { platform: "google", link: "#" },
+                { platform: "instagram", link: "#" },
+            ],
+        },
+        {
+            id: 3,
+            name: "Md. Sabbir Hossain Bappy",
+            role: "Head of IT",
+            image: "Executive members/bappy.JPG",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -97,7 +86,7 @@ const MeetOurTeamCard = () => {
             id: 8,
             name: "Ashaba Hossain",
             role: "Office Secretary",
-            image: "/src/assets/Executive members/ashaba.jpg",
+            image: "Executive members/ashaba.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -109,7 +98,7 @@ const MeetOurTeamCard = () => {
             id: 9,
             name: "Istiak Quayum",
             role: "Vice President (Administration)",
-            image: "/src/assets/Executive members/istiak.jpg",
+            image: "Executive members/istiak.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -121,7 +110,7 @@ const MeetOurTeamCard = () => {
             id: 10,
             name: "Nilufar Maharuf",
             role: "Vice President (Debate)",
-            image: "/src/assets/Executive members/nilufar.jpg",
+            image: "Executive members/nilufar.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -130,10 +119,23 @@ const MeetOurTeamCard = () => {
             ],
         },
         {
+            id: 4,
+            name: "Md. Muhaimenul Haque",
+            role: "Joint Secretary (Debate)",
+            image: "Executive members/prottoy.jpg",
+            socials: [
+                { platform: "twitter", link: "#" },
+                { platform: "facebook", link: "#" },
+                { platform: "google", link: "#" },
+                { platform: "instagram", link: "#" },
+            ],
+        },
+
+        {
             id: 11,
             name: "Sadeka Shahani",
             role: "Treasurer",
-            image: "/src/assets/Executive members/sadeka.jpg",
+            image: "Executive members/sadeka.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -145,7 +147,7 @@ const MeetOurTeamCard = () => {
             id: 12,
             name: "Shahbaz Ahmed",
             role: "Publication Secretary",
-            image: "/src/assets/Executive members/Ricky.jpg",
+            image: "Executive members/Ricky.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -169,7 +171,7 @@ const MeetOurTeamCard = () => {
             id: 14,
             name: "Md. Jubaedur Rahman",
             role: "Head of Debate & Workshop",
-            image: "/src/assets/Executive members/jubaedur.jpg",
+            image: "Executive members/jubaedur.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -181,7 +183,7 @@ const MeetOurTeamCard = () => {
             id: 15,
             name: "Faria Binte Faruque",
             role: "Communication Secretary",
-            image: "/src/assets/Executive members/faria.jpg",
+            image: "Executive members/faria.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -193,7 +195,7 @@ const MeetOurTeamCard = () => {
             id: 16,
             name: "Aaiyaan Aqeeb",
             role: "Head of Corporate & External Affairs",
-            image: "/src/assets/Executive members/aqeeb.jpg",
+            image: "Executive members/aqeeb.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -205,7 +207,7 @@ const MeetOurTeamCard = () => {
             id: 17,
             name: "Md. Ashikul Islam",
             role: "Head of Human Resource Management",
-            image: "/src/assets/Executive members/ashik.jpg",
+            image: "Executive members/ashik.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -217,7 +219,7 @@ const MeetOurTeamCard = () => {
             id: 18,
             name: "Md. Atiqur Rahman",
             role: "Head of Event Management",
-            image: "/src/assets/Executive members/atique.jpg",
+            image: "Executive members/atique.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -241,7 +243,7 @@ const MeetOurTeamCard = () => {
             id: 20,
             name: "Shihab Uddin Sarker",
             role: "Equity Officer",
-            image: "/src/assets/Executive members/shihab.jpg",
+            image: "Executive members/shihab.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -253,7 +255,7 @@ const MeetOurTeamCard = () => {
             id: 21,
             name: "Rifat Rayhan",
             role: "Executive Member",
-            image: "/src/assets/Executive members/rifat.jpg",
+            image: "Executive members/rifat.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -265,7 +267,7 @@ const MeetOurTeamCard = () => {
             id: 22,
             name: "Oyan Chowdhury",
             role: "Executive Member",
-            image: "/src/assets/Executive members/oyan.jpg",
+            image: "Executive members/oyan.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -277,7 +279,7 @@ const MeetOurTeamCard = () => {
             id: 23,
             name: "Fahamid Rahman Siam",
             role: "Head of English Wing",
-            image: "/src/assets/Executive members/siam.jpg",
+            image: "Executive members/siam.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -289,7 +291,7 @@ const MeetOurTeamCard = () => {
             id: 24,
             name: "Rukhsana Zaman Miel",
             role: "Equity Officer",
-            image: "/src/assets/Executive members/miel.jpg",
+            image: "Executive members/miel.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -301,7 +303,7 @@ const MeetOurTeamCard = () => {
             id: 25,
             name: "Al Shahria Rafid",
             role: "Executive Member",
-            image: "/src/assets/Executive members/rafid.jpg",
+            image: "Executive members/rafid.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -313,7 +315,7 @@ const MeetOurTeamCard = () => {
             id: 26,
             name: "Md. Raihan Chowdhury",
             role: "Equity Officer",
-            image: "/src/assets/Executive members/raihan.jpg",
+            image: "Executive members/raihan.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -325,7 +327,7 @@ const MeetOurTeamCard = () => {
             id: 27,
             name: "Lamia Majhar Linta",
             role: "Equity Officer",
-            image: "/src/assets/Executive members/linta.jpg",
+            image: "Executive members/linta.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -337,7 +339,7 @@ const MeetOurTeamCard = () => {
             id: 24,
             name: "Lubna Yeasmin Jenny",
             role: "Equity Officer",
-            image: "",
+            image: "Executive members/jenny.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -370,7 +372,7 @@ const MeetOurTeamCard = () => {
                 spaceBetween={30}
                 slidesPerView={3}
                 autoplay={{
-                    delay: 8000,
+                    delay: 5000,
                     disableOnInteraction: false,
                     // pauseOnMouseEnter: true,
                 }}
@@ -385,11 +387,11 @@ const MeetOurTeamCard = () => {
                     <SwiperSlide key={index} className="flex justify-center">
                         <div className="relative group">
                             {/* Image Section */}
-                            <div className="relative overflow-hidden max-h-[380px] w-full">
+                            <div className="relative overflow-hidden max-h-[420px] w-full">
                                 <img
-                                    src={member.image || "/src/assets/Executive members/blank-profile-picture-973460_1280.png"}
+                                    src={member.image || "Executive members/blank-profile-picture-973460_1280.png"}
                                     alt={member.name}
-                                    className="object-cover w-full h-96 transition-all duration-300 hover:brightness-110 brightness-[70%] group-hover:scale-110"
+                                    className="object-cover w-full h-96 transition-all duration-100 hover:brightness-110 brightness-[50%] group-hover:scale-110"
                                 />
                                 {/* Social Icons - Appears on Hover */}
                                 <ul className="absolute bottom-[-50px] w-full flex justify-center items-center space-x-5 transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:bottom-2">
@@ -411,7 +413,7 @@ const MeetOurTeamCard = () => {
                                 <h3 className="font-sans text-2xl font-bold uppercase">
                                     {member.name}
                                 </h3>
-                                <p className="font-light text-[#FDB714]">{member.role}</p>
+                                <p className="font-light text-[#fdb714]">{member.role}</p>
                             </div>
                         </div>
                     </SwiperSlide>

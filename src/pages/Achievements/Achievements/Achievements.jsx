@@ -8,7 +8,7 @@ const Achievements = () => {
     useEffect(() => {
         fetch('/public/achievements.json')
             .then(res => res.json())
-        .then(data => setAchievements(data))
+            .then(data => setAchievements(data))
     }, [])
 
     return (
@@ -18,7 +18,7 @@ const Achievements = () => {
             </div>
             <div className="w-24 h-[2px] bg-[#fdb714] mx-auto mt-6"></div>
             {
-                achievements.map(achievement => <AchievementsCard achievement={achievement} key={achievement.id}/>)
+                achievements.map(achievement => <AchievementsCard achievement={achievement} key={achievement.id} />)
             }
         </div>
     );

@@ -1,34 +1,50 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import JustdcTodayCard from '../JustdcTodayCard/JustdcTodayCard';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
+const fadeUpVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeInOut' } }
+};
+
+const fadeRightVariant = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: 'easeInOut' } }
+};
 
 const JustdcToday = () => {
-    useEffect(() => {
-        AOS.init({ duration: 800, once: true, easing: 'ease-in-out', offset:200 });
-    }, []);
-
     return (
-        <div className='max-w-[1250px] mx-auto' data-aos="fade-up" data-aos-once="true">
-            <div className='font-sans text-[40px] font-bold uppercase text-[#003366] text-center'
-                data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
+        <motion.div
+            className='max-w-[1250px] mx-auto px-4 sm:px-8 md:px-12 xl:px-0 pt-10 md:pt-20 xl:pt-28'
+            initial="hidden"
+            animate="visible"
+            variants={fadeUpVariant}
+        >
+            <motion.div
+                className='font-sans text-[40px] font-bold uppercase text-[#003366] text-center'
+                variants={fadeUpVariant}
+            >
                 JUSTDC Today
-            </div>
-            <div className="w-24 h-[2px] bg-[#fdb714] mx-auto mt-6"
-                data-aos="fade-up" data-aos-delay="300" data-aos-once="true"></div>
+            </motion.div>
+            <motion.div
+                className="w-24 h-[2px] bg-[#fdb714] mx-auto mt-6"
+                variants={fadeUpVariant}
+            ></motion.div>
 
-            <div className='p-16 mt-8 bg-white shadow-md rounded-xl'
+            <motion.div
+                className='px-4 py-16 mt-8 bg-white shadow-md sm:px-8 md:px-12 xl:px-16 rounded-x'
                 style={{ boxShadow: '0 4px 10px rgba(0, 0, 0, 0.15)' }}
-                data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
-
-                <h2 className='font-sans text-3xl font-semibold text-[#003366] pb-12'
-                    data-aos="fade-right" data-aos-delay="500" data-aos-once="true">
+                variants={fadeUpVariant}
+            >
+                <motion.h2
+                    className='font-sans text-3xl font-semibold text-[#003366] pb-12'
+                    variants={fadeRightVariant}
+                >
                     Upcoming Events
-                </h2>
-
+                </motion.h2>
                 <JustdcTodayCard />
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 };
 

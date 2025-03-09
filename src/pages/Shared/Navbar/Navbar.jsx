@@ -1,126 +1,114 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../../assets/logo-pro.jpg";
-import { IoSearch } from "react-icons/io5";
-import { FaAngleDown } from "react-icons/fa";
+import logo from "../../../assets/logo-bgremoved.svg";
+import { FaBars, FaTimes, FaAngleDown } from "react-icons/fa";
 
-const navOptionsTiny = [
-    { name: "Notice", path: "/notice" },
-    { name: "Executive Members", path: "/executive-members" },
-    { name: "Alumni", path: "/alumni" },
-    { name: "Gallery", path: "/gallery" },
-    { name: "Donate", path: "/donate" },
-];
-
-const navOptionsLarge = [
-    {
-        name: "Home",
-        path: "/"
-    },
-    {
-        name: "About",
-        subOptions: [
-            { name: "Mission", path: "/about/mission" },
-            { name: "Vision", path: "/about/vision" },
-            { name: "Team", path: "/about/team" },
-        ]
-    },
-    {
-        name: "Achievements",
-        subOptions: [
-            { name: "Awards", path: "/achievements/awards" },
-            { name: "Recognition", path: "/achievements/recognition" },
-            { name: "Media Coverage", path: "/achievements/media-coverage" },
-        ]
-    },
+const navOptions = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/notice" },
+    { name: "Achievements", path: "/alumni" },
     {
         name: "Events",
         subOptions: [
-            { name: "Workshops", path: "/events/workshops" },
-            { name: "Competitions", path: "/events/competitions" },
-            { name: "Guest Lectures", path: "/events/guest-lectures" },
-        ]
+            { name: "Upcoming Events", path: "/about/mission" },
+            { name: "Past Events", path: "about/vision" },
+        ],
     },
     {
-        name: "Debate",
+        name: "Members",
         subOptions: [
-            { name: "Topics", path: "/debate/topics" },
-            { name: "Guideline", path: "/debate/guideline" },
-        ]
+            { name: "Alumni", path: "/debate/topics" },
+            { name: "Executive Members", path: "/debate/guideline" },
+            { name: "General Members", path: "/debate/guideline" },
+        ],
     },
+    { name: "Gallery", path: "/donate" },
+    { name: "Donate", path: "/donate" },
+    
+    
 ];
 
 const Navbar = () => {
-    const renderTinyNavOptions = () => (
-        navOptionsTiny.map((option, index) => (
-            <li key={index} className={index === 0 ? "rounded-bl-[10px] px-3" : ""}>
-                <NavLink to={option.path} className="hover:underline">
-                    {option.name}
-                </NavLink>
-            </li>
-        ))
-    );
-
-    const renderLargeNavOptions = () => (
-        navOptionsLarge.map((option, index) => (
-            <li key={index} className="relative">
-                {option.subOptions ? (
-                    <div className="group">
-                        <NavLink to="#" className="flex items-center hover:underline">
-                            {option.name}
-                            <span className="ml-2 transition-all duration-300 transform group-hover:rotate-180"><FaAngleDown className="font-light" /></span> {/* Caret symbol */}
-                        </NavLink>
-                        <div className="absolute left-0 hidden w-full bg-white shadow-lg group-hover:block top-10">
-                            <ul className="p-2 rounded shadow-lg bg-base-100">
-                                {option.subOptions.map((subOption, subIndex) => (
-                                    <li key={subIndex}>
-                                        <NavLink to={subOption.path} className="p-1 text-lg rounded hover:bg-gray-200">
-                                            {subOption.name}
-                                        </NavLink>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                ) : (
-                    <NavLink to={option.path} className="hover:underline">
-                        {option.name}
-                    </NavLink>
-                )}
-            </li>
-        ))
-    );
+    const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <div className="fixed z-50 flex justify-between w-full pl-12 mx-auto mb-10 bg-white shadow-[0_4px_13px_rgba(0,0,0,0.3)] top-0
-">
-            <NavLink to="/" className="flex items-center gap-1 font-sans ">
-                <img className="w-[100px]" src={logo} alt="logo" />
-                <div className="text-red-900 uppercase whitespace-nowrap">
-                    <h2 className="xl:text-[20px] leading-[20px] font-semibold">Jashore University of<br />Science & Technology</h2>
-                    <h1 className="xl:text-[36px] font-bold leading-[30px]">Debate Club</h1>
+        <div className="fixed top-0 left-0 right-0 z-10 bg-white shadow-md">
+            <nav className="flex items-center justify-between w-full px-4 border sm:px-8 md:px-12">
+                {/* Logo */}
+                <NavLink to="/" className="flex items-center gap-2">
+                    <img src={logo} alt="logo" className="w-12 sm:w-14 lg:w-20" />
+                    <h1 className="font-extrabold leading-tight uppercase sm:text-xl lg:text-3xl text-[#003366]">JUST Debate Club</h1>
+                </NavLink>
+
+                {/* Navigation Links */}
+                <ul className="items-center hidden space-x-5 text-lg font-medium xl:flex">
+                    {navOptions.map((option, index) => (
+                        <li key={index} className="relative group">
+                            {option.subOptions ? (
+                                <>
+                                    <button className="flex items-center gap-1 hover:text-[#003366] hover:underline">
+                                        {option.name} <FaAngleDown />
+                                    </button>
+                                    <ul className="absolute left-0 hidden bg-white shadow-md rounded-md p-2 space-y-1 min-w-[150px] group-hover:block">
+                                        {option.subOptions.map((sub, subIndex) => (
+                                            <li key={subIndex}>
+                                                <NavLink to={sub.path} className="block px-4 py-2 text-sm hover:bg-gray-200">
+                                                    {sub.name}
+                                                </NavLink>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </>
+                            ) : (
+                                <NavLink to={option.path} className="hover:text-[#003366] hover:underline">
+                                    {option.name}
+                                </NavLink>
+                            )}
+                        </li>
+                    ))}
+                </ul>
+
+                {/* Right Section (Search & Buttons) */}
+                <div className="flex items-center gap-4 font-sans font-semibold uppercase">
+                    {/* <IoSearch className="hidden text-2xl cursor-pointer xl:block" /> */}
+                    <button className="hidden px-4 py-2 text-sm text-[#98002E] uppercase bg-[#fdb714] rounded-full hover:bg-red-700 xl:block">Join Us</button>
+                    <NavLink to="/login" className="hidden px-4 py-2 text-sm text-[#98002E] bg-[#fdb714] rounded-full xl:block">Sign In</NavLink>
+                    {/* Mobile Menu Toggle */}
+                    <button className="sm:text-lg lg:text-2xl xl:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+                        {menuOpen ? <FaTimes /> : <FaBars />}
+                    </button>
                 </div>
-            </NavLink>
-            <div className="grid justify-around">
-                <div className="flex justify-between bg-[#003366] rounded-bl-[10px] mb-6">
-                    <div>
-                        <ul className="flex gap-10 text-lg font-medium text-white rounded-bl-[10px]">
-                            {renderTinyNavOptions()}
-                        </ul>
+
+                {/* Mobile Menu */}
+                {menuOpen && (
+                    <div className="absolute left-0 flex flex-col items-center w-full py-2 bg-white shadow-md top-16 xl:hidden">
+                        {navOptions.map((option, index) => (
+                            <div key={index} className="w-full text-center">
+                                {option.subOptions ? (
+                                    <details>
+                                        <summary className="flex items-center justify-center gap-1 py-2 cursor-pointer">
+                                            {option.name} <FaAngleDown className="text-sm" />
+                                        </summary>
+                                        <ul className="">
+                                            {option.subOptions.map((sub, subIndex) => (
+                                                <li key={subIndex}>
+                                                    <NavLink to={sub.path} className="block text-sm text-gray-700 hover:bg-gray-200">
+                                                        {sub.name}
+                                                    </NavLink>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </details>
+                                ) : (
+                                    <NavLink to={option.path} className="block py-2 font-medium">
+                                        {option.name}
+                                    </NavLink>
+                                )}
+                            </div>
+                        ))}
                     </div>
-                    <div className="pr-20">
-                        <IoSearch className="mt-[7px] font-black text-white " />
-                    </div>
-                </div>
-                <div className="flex items-center justify-between pb-2 pr-12">
-                    <ul className="gap-4 pl-10 text-xl menu menu-horizontal">
-                        {renderLargeNavOptions()}
-                    </ul>
-                    <div className="flex gap-4 font-semibold text-[#7D1E27] text-lg">
-                        <button className="px-6 py-2 rounded-full bg-[#fdb714] hover:bg-[#B91C1C] font-sans uppercase">Join Us</button>
-                        <NavLink to={"/login"} className="px-6 py-2 rounded-full bg-[#fdb714] font-sans uppercase">Sign In</NavLink>
-                    </div>
-                </div>
-            </div>
+                )}
+            </nav>
         </div>
     );
 };

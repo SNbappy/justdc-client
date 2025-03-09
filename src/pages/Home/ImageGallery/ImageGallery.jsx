@@ -2,28 +2,17 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes, FaInstagram } from "react-icons/fa";
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const images = [
-    "https://daffodilvarsity.edu.bd/gallery/february-2022/71e65aef92fe72ca521c5b0b5a8789c8.webp",
-    "https://daffodilvarsity.edu.bd/gallery/february-2022/e81e760dd28b5bfa07d7c8ba0f9b0344.webp",
-    "https://daffodilvarsity.edu.bd/gallery/february-2022/e9ac09beaf46b8f65152c31a52778b26.webp",
-    "https://daffodilvarsity.edu.bd/gallery/february-2022/7857dcf23f7ec50314485f2c4db6ef10.webp",
+    "Gallery/Gallery3.JPG",
+    "Gallery/Gallery1.jpg",
+    "Gallery/Gallery4.JPG",
+    "Gallery/Gallery2.jpg",
 ];
 
 const ImageGallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
-
-    useEffect(() => {
-        AOS.init({
-            duration: 200,
-            once: true,
-            easing: "ease-in-out",
-            offset: 200,
-        });
-    }, []);
 
     const openModal = (index) => {
         setSelectedImage(images[index]);
@@ -47,15 +36,16 @@ const ImageGallery = () => {
     };
 
     return (
-        <div className="w-full">
+        <div className="w-full pt-10 md:pt-20 xl:pt-28">
             {/* Image Grid */}
-            <div className="flex w-full">
+            <div className="w-full lg:flex">
                 {images.map((img, index) => (
-                    <div
+                    <motion.div
                         key={index}
-                        className="relative w-1/4"
-                        data-aos="fade-up"
-                        data-aos-delay={index * 200} // Delays animation for each image
+                        className="relative lg:w-1/4"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: index * 0.1 }}
                     >
                         {/* Image */}
                         <img
@@ -74,7 +64,7 @@ const ImageGallery = () => {
                                 <FaInstagram className="text-white" />
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
 
@@ -86,33 +76,34 @@ const ImageGallery = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.1 }}
-                        data-aos=""
+                        transition={{ duration: 0.3 }}
                     >
                         <div
                             className="relative flex items-center justify-center w-full h-full"
-                            data-aos="fade-up"
-                            data-aos-delay="200"
                         >
                             {/* Close Button (Top-Right) */}
-                            <button
+                            <motion.button
                                 className="absolute top-0 right-0 z-50 p-3 text-white"
                                 onClick={closeModal}
-                                data-aos="fade"
-                                data-aos-delay="400"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.2 }}
                             >
                                 <FaTimes className="opacity-70" />
-                            </button>
+                            </motion.button>
 
                             {/* Previous Button */}
-                            <button
+                            <motion.button
                                 className="absolute text-white left-5"
                                 onClick={prevImage}
-                                data-aos="fade-left"
-                                data-aos-delay="300"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.2 }}
                             >
                                 <IoMdArrowDropleft className="text-6xl opacity-80 hover:opacity-100" />
-                            </button>
+                            </motion.button>
 
                             {/* Image */}
                             <motion.img
@@ -123,18 +114,20 @@ const ImageGallery = () => {
                                 initial={{ opacity: 0, x: -50 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: 50 }}
-                                transition={{ duration: 0.1 }}
+                                transition={{ duration: 0.3 }}
                             />
 
                             {/* Next Button */}
-                            <button
+                            <motion.button
                                 className="absolute text-white right-5"
                                 onClick={nextImage}
-                                data-aos="fade-right"
-                                data-aos-delay="300"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.2 }}
                             >
                                 <IoMdArrowDropright className="text-6xl opacity-80 hover:opacity-100" />
-                            </button>
+                            </motion.button>
                         </div>
                     </motion.div>
                 )}

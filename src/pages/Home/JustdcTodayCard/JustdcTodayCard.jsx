@@ -9,11 +9,11 @@ const JustdcTodayCard = () => {
     }, []);
 
     return (
-        <div className='grid grid-cols-3 gap-4'>
+        <div className='grid gap-4 md:grid-cols-2 xl:grid-cols-3'>
             {[...Array(3)].map((_, index) => (
                 <div
                     key={index}
-                    className="relative transition-all transform rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 card card-compact bg-base-100 max-w-[345px]"
+                    className="relative transition-all transform rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 card card-compact bg-base-100 max-w-[500px]"
                     data-aos="fade-up"
                     data-aos-delay={index * 300}
                     data-aos-once="true" // Ensures it animates only once
@@ -29,6 +29,7 @@ const JustdcTodayCard = () => {
                             <span className="text-2xl font-medium">27</span><br />Mar 2025
                         </p>
                     </div>
+                    <button className='bg-[#003366] text-white font-sans py-2 rounded-b-lg uppercase'>Learn More</button>
                 </div>
             ))}
         </div>

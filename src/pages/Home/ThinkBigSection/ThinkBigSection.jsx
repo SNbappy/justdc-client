@@ -1,45 +1,46 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css"; // Import AOS styles
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import myImage from "../../../assets/content_area_pattern_triangle.svg";
 
 const ThinkBigSection = () => {
-    useEffect(() => {
-        AOS.init({
-            duration: 1000, // Animation duration (1s)
-            once: true, // Ensures animation runs once when scrolled into view
-        });
-    }, []);
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: true });
 
     return (
         <div
-            className="mt-[184px] bg-[#003366] text-center pt-36 pb-32"
+            ref={sectionRef}
+            className="bg-[#003366] text-center py-10 md:py-20 px-4 xl:py-28 sm:px-8 md:px-12"
             style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0.8)), url(${myImage})`,
             }}
         >
             <div className="max-w-[800px] mx-auto">
-                <div
-                    className="text-[#fdb714] text-4xl font-semibold font-sans"
-                    data-aos="fade-up"
+                <motion.div
+                    className="text-[#fdb714] text-3xl md:text-4xl font-semibold font-sans"
+                    initial={{ opacity: 0, y: -30 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 1 }}
                 >
                     Does your voice go unheard? Not here.
-                </div>
-                <div
-                    className="pt-8 text-xl text-white"
-                    data-aos="fade-up"
-                    data-aos-delay="300"
+                </motion.div>
+                <motion.div
+                    className="pt-4 text-lg text-white md:pt-8 md:text-xl xl:pt-10"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 1, delay: 0.3 }}
                 >
-                    At JUST Debate Club, every voice holds power, and every idea deserves
-                    to be heard. We provide a platform where students can express
-                    themselves freely, challenge diverse perspectives, and engage in
-                    thought-provoking discussions.
-                </div>
-                <div className="pt-6" data-aos="zoom-in" data-aos-delay="600">
-                    <button className="px-6 py-2 rounded-full bg-[#fdb714] hover:bg-[#E38B25] text-xl font-sans uppercase font-semibold text-[#98002E] mt-4">
+                    At JUST Debate Club, every voice holds power, and every idea deserves to be heard. We provide a platform where students can express themselves freely, challenge diverse perspectives, and engage in thought-provoking discussions.
+                </motion.div>
+                <motion.div
+                    className="pt-4 md:pt-6 xl:pt-8"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                    transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 120 }}
+                >
+                    <button className="px-6 py-2 rounded-full bg-[#fdb714] hover:bg-[#E38B25] md:text-lg font-sans uppercase font-semibold text-[#98002E]">
                         Join Us
                     </button>
-                </div>
+                </motion.div>
             </div>
         </div>
     );
