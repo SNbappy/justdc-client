@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -63,7 +63,11 @@ const TestimonialSection = () => {
                         slideShadows: false,
                     }}
                     pagination={{ clickable: true }}
-                    modules={[EffectCoverflow, Pagination]}
+                    autoplay={{
+                        delay: 4000, // 3 seconds delay
+                        disableOnInteraction: false, // Keeps autoplay running even after user interaction
+                    }}
+                    modules={[EffectCoverflow, Pagination, Autoplay]} // Add Autoplay module
                     className="w-full font-sans"
                     onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                 >
@@ -92,7 +96,7 @@ const TestimonialSection = () => {
                     ))}
                 </Swiper>
             </div>
-            <button className="flex px-4 py-2 mx-auto mt-6 text-white bg-blue-600 rounded-lg hover:bg-blue-700">
+            <button className="flex px-4 py-2 mx-auto mt-6 text-white bg-[#003366] rounded-lg hover:bg-blue-700">
                 View Details
             </button>
         </div>

@@ -39,12 +39,12 @@ const PlatformForExcellence = () => {
 
     return (
         <div ref={sectionRef} data-aos="fade-up" data-aos-once="true">
-            <div className="max-w-[1250px] mx-auto text-center pt-10 md:pt-20 xl:pt-28 px-4 sm:px-8 md:px-12 xl:px-0">
+            <div className="max-w-[1250px] mx-auto text-center pt-10 md:pt-20 xl:pt-[90px] px-4 sm:px-8 md:px-12 xl:px-0">
                 <div className="font-sans text-[40px] font-bold uppercase text-[#003366]"
                     data-aos="fade-up" data-aos-delay="600" data-aos-once="true">
                     A Platform for Excellence
                 </div>
-                <div className="w-24 h-[2px] bg-[#fdb714] mt-6 mx-auto"
+                <div className="w-[140px] h-[3px] bg-[#fdb714] mt-6 mx-auto"
                     data-aos="fade-up" data-aos-delay="300" data-aos-once="true"></div>
 
                 {/* Stats Section */}
@@ -72,10 +72,16 @@ const PlatformForExcellence = () => {
             </div>
 
             {/* Decorative Dots */}
-            <div className='pt-10 md:pt-20 xl:pt-28' data-aos="fade-in" data-aos-delay="500" data-aos-once="true">
-                {[...Array(9)].map((_, i) => (
-                    <RxDotFilled key={i} className='mx-auto text-[#fdb714]' />
-                ))}
+            <div className='pt-[90px]'>
+                <RxDotFilled className='mx-auto text-[#fdb714]' />
+                <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px]' />
+                <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px]' />
+                <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px]' />
+                <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px]' />
+                <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px]' />
+                <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px]' />
+                <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px]' />
+                <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px]' />
             </div>
         </div>
     );

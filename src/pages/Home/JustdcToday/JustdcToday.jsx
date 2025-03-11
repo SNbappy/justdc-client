@@ -15,7 +15,7 @@ const fadeRightVariant = {
 const JustdcToday = () => {
     return (
         <motion.div
-            className='max-w-[1250px] mx-auto px-4 sm:px-8 md:px-12 xl:px-0 pt-10 md:pt-20 xl:pt-28'
+            className='max-w-[1250px] mx-auto px-4 sm:px-8 md:px-12 xl:px-0 pt-10 md:pt-20 xl:pt-[90px]'
             initial="hidden"
             animate="visible"
             variants={fadeUpVariant}
@@ -27,7 +27,7 @@ const JustdcToday = () => {
                 JUSTDC Today
             </motion.div>
             <motion.div
-                className="w-24 h-[2px] bg-[#fdb714] mx-auto mt-6"
+                className="w-[140px] h-[3px] bg-[#fdb714] mx-auto mt-6"
                 variants={fadeUpVariant}
             ></motion.div>
 
@@ -43,6 +43,9 @@ const JustdcToday = () => {
                     Upcoming Events
                 </motion.h2>
                 <JustdcTodayCard />
+                <div className='mt-16'>
+                    <button className="rounded-full px-14 py-4 font-sans uppercase font-semibold text-[#003366] flex mx-auto border-2 border-[#003366] hover:bg-[#003366] hover:text-white text-base">See All Events</button>
+                </div>
             </motion.div>
         </motion.div>
     );

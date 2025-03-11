@@ -10,6 +10,7 @@ import { Helmet } from "react-helmet-async";
 import TestimonialSection from "../TestimonialSection/TestimonialSection";
 import ImageGallery from "../ImageGallery/ImageGallery";
 import JustdcToday from "../JustdcToday/JustdcToday";
+import Gallery from "../Gallery/Gallery";
 
 const Home = () => {
     return (
@@ -27,6 +28,7 @@ const Home = () => {
             <JustdcToday />
             <MeetOurTeams />
             <TestimonialSection />
+            {/* <Gallery /> */}
             <ImageGallery />
         </div>
     );

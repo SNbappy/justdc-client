@@ -37,7 +37,7 @@ const ThinkBigSection = () => {
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 120 }}
                 >
-                    <button className="px-6 py-2 rounded-full bg-[#fdb714] hover:bg-[#E38B25] md:text-lg font-sans uppercase font-semibold text-[#98002E]">
+                    <button className="px-6 py-2 rounded-full bg-[#fdb714] hover:bg-[#E38B25] md:text-lg font-sans uppercase font-semibold text-[#003366]">
                         Join Us
                     </button>
                 </motion.div>
