@@ -1,13 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import CountUp from 'react-countup';
 import { RxDotFilled } from 'react-icons/rx';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const PlatformForExcellence = () => {
-    useEffect(() => {
-        AOS.init({ duration: 800, once: true, easing: 'ease-in-out' });
-    }, []);
 
     const [startCount, setStartCount] = useState(false);
     const sectionRef = useRef(null);
@@ -38,20 +33,17 @@ const PlatformForExcellence = () => {
     ];
 
     return (
-        <div ref={sectionRef} data-aos="fade-up" data-aos-once="true">
+        <div ref={sectionRef}>
             <div className="max-w-[1250px] mx-auto text-center pt-10 md:pt-20 xl:pt-[90px] px-4 sm:px-8 md:px-12 xl:px-0">
-                <div className="font-sans text-[40px] font-bold uppercase text-[#003366]"
-                    data-aos="fade-up" data-aos-delay="600" data-aos-once="true">
+                <div className="font-sans text-[40px] font-bold uppercase text-[#003366]">
                     A Platform for Excellence
                 </div>
-                <div className="w-[140px] h-[3px] bg-[#fdb714] mt-6 mx-auto"
-                    data-aos="fade-up" data-aos-delay="300" data-aos-once="true"></div>
+                <div className="w-[140px] h-[3px] bg-[#fdb714] mt-6 mx-auto"></div>
 
                 {/* Stats Section */}
                 <div className="grid gap-12 md:grid-cols-2 xl:grid-cols-4 mt-14">
                     {stats.map((stat, index) => (
-                        <div key={index} className="text-center"
-                            data-aos="zoom-in" data-aos-delay={200 * index} data-aos-once="true">
+                        <div key={index} className="text-center">
                             <div className='font-sans'
                                 style={{ filter: "drop-shadow(3px 3px 0 white) drop-shadow(6px 6px 0 #fdb714)" }}>
                                 <h3 className="text-7xl font-bold text-[#003366]">

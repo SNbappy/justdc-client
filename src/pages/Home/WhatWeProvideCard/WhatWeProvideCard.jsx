@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import cardImg from "../../../assets/382149771_734130685395036_488278925793471851_n.jpg";
 import expert from "../../../assets/expert-leading.jpg";
 import network from "../../../assets/networking.jpg";
@@ -12,34 +11,18 @@ const cardData = [
     { img: network, title: "Networking Opportunities", description: "Connect with like-minded peers, mentors, and professionals from various fields." }
 ];
 
-const cardVariants = {
-    hidden: { opacity: 0, y: 0 },
-    visible: (i) => ({
-        opacity: 1,
-        y: 0,
-        transition: {
-            delay: i * 0.3,
-            ease: [0.25, 1, 0.5, 1]
-        }
-    })
-};
 
 const WhatWeProvideCard = () => {
     return (
-        <motion.div
-            className="grid md:grid-cols-2 xl:grid-cols-4 max-w-[1250px] mx-auto mt-20 gap-4 justify-center px-4 sm:px-8 md:px-12 xl:px-0"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }} // Ensures animation starts when 20% visible
+        <div
+            className="grid md:grid-cols-2 xl:grid-cols-4 max-w-[1250px] mx-auto mt-20 gap-7 justify-center px-4 sm:px-8 md:px-12 xl:px-0"
         >
             {cardData.map((card, index) => (
-                <motion.div
+                <div
                     key={index}
-                    className="mx-auto transition-all transform rounded-md shadow-md hover:shadow-xl hover:-translate-y-1 card card-compact bg-base-100 max-w-[510px]"
-                    variants={cardVariants}
-                    custom={index} // Pass index for stagger effect
+                    className="mx-auto rounded-md shadow-md  hover:shadow-xl  hover:-translate-y-1 card card-compact max-w-[510px]"
                 >
-                    <figure className="w-full h-[250px] overflow-hidden">
+                    <figure className="w-full h-[250px]">
                         <img className="object-cover w-full h-full brightness-125" src={card.img} alt="photo" />
                     </figure>
                     <div className="w-full h-[5px] bg-[#003366]"></div>
@@ -50,9 +33,9 @@ const WhatWeProvideCard = () => {
                             <button className="font-semibold text-white bg-[#003366] border-none rounded-full uppercase font-sans px-6 py-3">Learn More</button>
                         </div>
                     </div>
-                </motion.div>
+                </div>
             ))}
-        </motion.div>
+        </div>
     );
 };
 
