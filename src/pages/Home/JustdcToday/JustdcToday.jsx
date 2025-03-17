@@ -4,11 +4,11 @@ import JustdcTodayCard from '../JustdcTodayCard/JustdcTodayCard';
 const JustdcToday = () => {
     return (
         <div
-            className='max-w-[1250px] mx-auto px-4 sm:px-8 md:px-12 xl:px-0 pt-10 md:pt-20 xl:pt-[90px]'
+            className='lg:max-w-[1110px] xl:max-w-[1250px] mx-auto px-4 sm:px-8 md:px-12 xl:px-0 pt-14 md:pt-20 xl:pt-[60px]'
             
         >
             <div
-                className='font-sans text-[40px] font-bold uppercase text-[#003366] text-center'
+                className='font-sans lg:text-[40px] font-bold uppercase text-[#003366] text-center text-[26px]'
                 >
                 JUSTDC Today
             </div>
@@ -17,11 +17,11 @@ const JustdcToday = () => {
             ></div>
 
             <div
-                className='px-4 py-16 mt-8 bg-white shadow-md sm:px-8 md:px-12 xl:px-16 rounded-x'
+                className='px-3 sm:px-12 md:px-14 py-7 lg:py-16 bg-white shadow-md mt-14  rounded-xl max-w-[510px] md:max-w-[690px] lg:max-w-[930px] xl:max-w-[1250px] mx-auto'
                 style={{ boxShadow: '0 4px 10px rgba(0, 0, 0, 0.15)' }}
             >
                 <h2
-                    className='font-sans text-3xl font-semibold text-[#003366] pb-12'
+                    className='font-sans lg:text-3xl font-semibold text-[#003366] pb-10 lg:pb-12 text-[26px] text-center xl:text-left'
                 >
                     Upcoming Events
                 </h2>

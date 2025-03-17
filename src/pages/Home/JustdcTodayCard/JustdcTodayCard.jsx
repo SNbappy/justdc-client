@@ -1,27 +1,30 @@
-import React, { useEffect } from 'react';
-import cardImg from "../../../assets/coming_soon.avif";
+import React from 'react';
+import cardImg from "../../../assets/Update Music Concept Album.png"
 
 const JustdcTodayCard = () => {
-
     return (
-        <div className='grid gap-4 md:grid-cols-2 xl:grid-cols-3'>
+        <div className='grid justify-center gap-8 mx-auto lg:grid-cols-2 xl:grid-cols-3'>
             {[...Array(3)].map((_, index) => (
                 <div
                     key={index}
-                    className="relative transition-all transform rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 card card-compact bg-base-100 max-w-[500px]"
+                    className="relative mx-auto overflow-hidden shadow-lg cursor-pointer rounded-xl hover:shadow-2xl card card-compact justify-items-center group max-w-[420px]"
                 >
-                    <figure>
-                        <img src={cardImg} alt="photo" />
+                    <figure className='overflow-hidden'>
+                        <img
+                            src={cardImg}
+                            alt="photo"
+                            className="object-cover w-full h-[259px] transition-transform duration-300 group-hover:scale-110 group-focus-within:scale-110"
+                        />
                     </figure>
                     <div className="card-body">
-                        <p className='py-2 text-2xl font-medium'>Intra University Debate Competition</p>
+                        <p className='py-2 font-sans text-xl lg:text-2xl'>Intra University Debate Competition</p>
+                        <p className='text-base'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius earum veritatis inventore a atque temporibus sed illum labore nulla harum.</p>
                     </div>
-                    <div className="absolute top-4 left-4 p-2 font-sans text-white rounded-b-xl max-w-24 bg-[#003366]">
-                        <p className="text-center">
-                            <span className="text-2xl font-medium">27</span><br />Mar 2025
-                        </p>
+                    <div className="absolute top-0 left-4 px-3 pb-3 font-sans text-white rounded-b-lg max-w-24 bg-[#003366] text-center">
+                        <h1 className='text-[30px] leading-tight'>27</h1>
+                        <p className='leading-tight whitespace-nowrap'>Mar 2025</p>
                     </div>
-                    <button className='bg-[#003366] text-white font-sans py-2 rounded-b-lg uppercase'>Learn More</button>
+                    <button className='bg-[#003366] text-white font-sans py-2 rounded-b-lg uppercase text-xs sm:text-base'>Learn More</button>
                 </div>
             ))}
         </div>

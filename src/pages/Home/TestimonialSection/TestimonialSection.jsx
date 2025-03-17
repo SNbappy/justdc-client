@@ -3,7 +3,7 @@ import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { FaQuoteLeft } from "react-icons/fa";
 
 const testimonials = [
@@ -34,11 +34,20 @@ const testimonials = [
     },
 ];
 
+function getLen(arr) {
+    console.log("I am recounting")
+    let count = 0;
+    for (let i = 0; i < arr.length; i++)
+        count++;
+    return count;
+}
+
 const TestimonialSection = () => {
-    const [activeIndex, setActiveIndex] = useState(Math.floor(testimonials.length / 2));
+    const testimonialCount = useMemo(() => getLen(testimonials), [testimonials]);
+    const [activeIndex, setActiveIndex] = useState(Math.floor(testimonialCount / 2));
 
     return (
-        <div className="pt-10 md:pt-20 xl:pt-28 max-w-[1250px] mx-auto">
+        <div className="pt-10 md:pt-20 xl:pt-28 max-w-[1250px] mx-auto px-4">
             <div className="font-sans text-[40px] font-bold uppercase text-[#003366] text-center">
                 What Our Community Says
             </div>
@@ -64,32 +73,33 @@ const TestimonialSection = () => {
                     }}
                     pagination={{ clickable: true }}
                     autoplay={{
-                        delay: 4000, // 3 seconds delay
-                        disableOnInteraction: false, // Keeps autoplay running even after user interaction
+                        delay: 4000,
+                        disableOnInteraction: false,
                     }}
-                    modules={[EffectCoverflow, Pagination, Autoplay]} // Add Autoplay module
+                    modules={[EffectCoverflow, Pagination, Autoplay]}
                     className="w-full font-sans"
                     onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                 >
                     {testimonials.map((testimonial, index) => (
                         <SwiperSlide
                             key={index}
-                            className={`flex flex-col items-center p-6 rounded-lg transition-all duration-300 my-10 ${index === activeIndex ? "opacity-100 transform-none" : "opacity-20 transform-none"}`}
+                            className={`flex items-center p-6 rounded-lg transition-all duration-300 my-10 ${index === activeIndex ? "opacity-100 transform-none" : "opacity-20 transform-none"}`}
                             style={{
                                 transition: "opacity 0.3s ease-out, transform 0.3s ease-out",
-                                width: "600px",
+                                width: "90%",
+                                maxWidth: "600px",
                             }}
                         >
-                            <div className="flex items-center justify-between gap-8">
+                            <div className="flex items-center justify-between gap-8 text-center md:flex-row md:text-left">
                                 <img
                                     src={testimonial.image}
                                     alt={testimonial.name}
-                                    className="rounded-full w-28 h-28"
+                                    className="w-24 h-24 rounded-full md:w-28 md:h-28"
                                 />
                                 <div>
                                     <FaQuoteLeft className="text-8xl mb-[-50px] text-[rgba(216,17,89,1)] opacity-20" />
-                                    <p className="mt-4 text-xl">{testimonial.text}</p>
-                                    <h3 className="mt-4 text-xl font-semibold">{testimonial.name}</h3>
+                                    <p className="mt-4 text-lg md:text-xl">{testimonial.text}</p>
+                                    <h3 className="mt-4 text-lg font-semibold md:text-xl">{testimonial.name}</h3>
                                 </div>
                             </div>
                         </SwiperSlide>

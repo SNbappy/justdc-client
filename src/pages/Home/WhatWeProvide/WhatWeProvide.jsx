@@ -5,7 +5,7 @@ import { RxDotFilled } from "react-icons/rx";
 const WhatWeProvide = () => {
     return (
         <div
-            className="pt-10 md:pt-20 xl:pt-[90px]"
+            className="pt-14 lg:pt-[90px]"
         >
             <div className="font-sans lg:text-[40px] font-bold uppercase text-[#003366] text-center text-[26px]">
                 What We Provide
@@ -17,16 +17,16 @@ const WhatWeProvide = () => {
                 <WhatWeProvideCard />
             </div>
 
-            <div className='pt-[90px]'>
+            <div className='pt-[80px]'>
                 <RxDotFilled className='mx-auto text-[#fdb714]' />
                 <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px]' />
                 <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px]' />
                 <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px]' />
                 <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px]' />
-                <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px]' />
-                <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px]' />
-                <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px]' />
-                <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px]' />
+                <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px] hidden lg:flex' />
+                <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px] hidden lg:flex' />
+                <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px] hidden lg:flex' />
+                <RxDotFilled className='mx-auto text-[#fdb714] mt-[-3px] hidden lg:flex' />
             </div>
         </div>
     );

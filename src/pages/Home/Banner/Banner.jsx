@@ -24,13 +24,13 @@ const Banner = () => {
 
                     {/* Buttons (Visible in Overlay on Large Screens) */}
                     <div className="hidden gap-6 pt-20 lg:flex">
-                        <button className="bg-[#003366] py-3 px-14 rounded-full font-sans text-xl">
+                        <button className="bg-[#003366] py-3 px-14 rounded-full font-sans uppercase">
                             Our Achievements
                         </button>
-                        <button className="bg-[#003366] py-3 px-16 rounded-full font-sans text-xl">
+                        <button className="bg-[#003366] py-3 px-16 rounded-full font-sans uppercase">
                             Why JUSTDC
                         </button>
-                        <button className="bg-[#003366] py-3 px-16 rounded-full font-sans text-xl">
+                        <button className="bg-[#003366] py-3 px-16 rounded-full font-sans uppercase">
                             Join Us
                         </button>
                     </div>
@@ -38,14 +38,14 @@ const Banner = () => {
             </div>
 
             {/* Buttons for Small Screens (Appears as a separate section below the video) */}
-            <div className="flex flex-col items-center gap-4 pt-4 pb-4 font-sans lg:hidden">
-                <button className="w-4/5 md:w-3/5 px-6 py-3 font-semibold text-white bg-[#003366] rounded-full hover:bg-red-700">
+            <div className="flex flex-col items-center gap-4 py-8 font-sans lg:hidden md:py-10">
+                <button className="w-3/5 sm:w-2/5 md:w-[30%] px-6 py-3 font-medium text-white bg-[#003366] rounded-full hover:bg-red-700 uppercase drop-shadow-xl">
                     Our Achievements
                 </button>
-                <button className="w-4/5 md:w-3/5 px-6 py-3 font-semibold text-white rounded-full bg-[#003366] hover:bg-blue-700">
+                <button className="w-3/5 sm:w-2/5 md:w-[30%] px-6 py-3 font-medium text-white rounded-full bg-[#003366] hover:bg-blue-700 uppercase drop-shadow-xl">
                     Why JUSTDC
                 </button>
-                <button className="w-4/5 md:w-3/5 px-6 py-3 font-semibold text-white bg-[#003366] rounded-full hover:bg-green-700">
+                <button className="w-3/5 sm:w-2/5 md:w-[30%] px-6 py-3 font-medium text-white bg-[#003366] rounded-full hover:bg-green-700 uppercase drop-shadow-xl">
                     Join Us
                 </button>
             </div>
