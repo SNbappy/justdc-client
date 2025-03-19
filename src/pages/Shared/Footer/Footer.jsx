@@ -47,7 +47,7 @@ const Footer = () => {
                         </a>
                     </p>
                     <p className="flex items-center gap-2 text-gray-300 text-[16px] lg:text-lg">
-                        <IoCallSharp /> +123 456 789
+                        <IoCallSharp /> +88 01581-055022
                     </p>
                     <div className="flex mt-4 space-x-4">
                         {["facebook", "x icon", "youtube", "instagram"].map((icon, index) => (

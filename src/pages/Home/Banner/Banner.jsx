@@ -27,15 +27,17 @@ const Banner = () => {
                     {[1, 2, 3, 4, 5, 6].map((num, index) => (
                         <div key={num} className="relative overflow-hidden">
                             <img
-                                src={`/public/Slider Img/img${num}.JPG`}
+                                src={`Slider Img/img${num}.JPG`}
                                 alt={`Slide ${num}`}
-                                className={`object-cover w-full h-[300px] sm:h-[400px] md:h-[780px] transition-transform duration-[1500ms] ease-in-out 
+                                className={`object-cover w-full h-[300px] sm:h-[400px] md:h-[780px] transition-transform duration-[1500ms] ease-in-out
                                     ${index === activeSlide ? "scale-100" : "scale-110"}`}
                             />
                         </div>
                     ))}
                 </Slider>
                 {/* Overlay */}
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-transparent backdrop-blur-[2px]"></div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center px-4 pt-10 mx-auto text-center text-white sm:max-w-full lg:pb-0">
                     <h2 className="font-sans text-5xl font-black sm:text-7xl md:text-[90px] lg:text-9xl [text-shadow:_4px_4px_0px_black]">
                         Think Sharp
