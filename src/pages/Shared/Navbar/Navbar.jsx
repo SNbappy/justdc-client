@@ -32,7 +32,7 @@ const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <div className="fixed top-0 left-0 right-0 z-10 py-2 bg-white shadow-md shadow-gray-300">
+        <div className="fixed top-0 left-0 right-0 z-10 py-2 bg-white shadow-xl md:py-0">
             <nav className="flex items-center justify-between w-full px-4 sm:px-8 md:px-12">
                 {/* Logo */}
                 <NavLink to="/" className="flex items-center gap-1 sm:gap-2">

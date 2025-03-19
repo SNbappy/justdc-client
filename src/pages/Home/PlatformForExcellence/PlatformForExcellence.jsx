@@ -55,7 +55,7 @@ const PlatformForExcellence = () => {
                                     +
                                 </h3>
                             </div>
-                            <h4 className="font-sans text-xl lg:mt-2">
+                            <h4 className="font-sans text-xl text-gray-600 lg:mt-2">
                                 {stat.title}
                             </h4>
                         </div>

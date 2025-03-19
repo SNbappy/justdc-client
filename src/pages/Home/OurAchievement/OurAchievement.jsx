@@ -32,7 +32,7 @@ const OurAchievement = () => {
 
                 {/* Paragraph */}
                 <p
-                    className='text-lg lg:text-xl py-9'
+                    className='text-lg text-gray-700 lg:text-xl py-9'
                     
                 >
                     The JUST Debate Club stands as a beacon of excellence and intellectual rigor, proudly showcasing

@@ -28,7 +28,7 @@ const WhatWeProvideCard = () => {
                     <div className="w-full h-[5px] bg-[#003366]"></div>
                     <div className="card-body">
                         <h2 className="card-title text-[#003366] font-sans lg:text-2xl text-xl">{card.title}</h2>
-                        <p className="pb-2 text-lg">{card.description}</p>
+                        <p className="pb-2 text-lg text-gray-700">{card.description}</p>
                         <div className="pb-2 card-actions">
                             <button className="font-semibold text-white bg-[#003366] border-none rounded-full uppercase font-sans px-6 py-3">Learn More</button>
                         </div>

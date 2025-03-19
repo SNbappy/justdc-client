@@ -17,7 +17,7 @@ const ThinkBigSection = () => {
                     Does your voice go unheard? Not here.
                 </div>
                 <div
-                    className="pt-4 text-lg text-white lg:text-xl md:pt-8 xl:pt-10"
+                    className="pt-4 text-white text-gray-200 7text-lg lg:text-xl md:pt-8 xl:pt-10"
                 >
                     At JUST Debate Club, every voice holds power, and every idea deserves to be heard. We provide a platform where students can express themselves freely, challenge diverse perspectives, and engage in thought-provoking discussions.
                 </div>

@@ -18,7 +18,7 @@ const JustdcTodayCard = () => {
                     </figure>
                     <div className="card-body">
                         <p className='py-2 font-sans text-xl lg:text-2xl'>Intra University Debate Competition</p>
-                        <p className='text-base'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius earum veritatis inventore a atque temporibus sed illum labore nulla harum.</p>
+                        <p className='text-lg'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius earum veritatis inventore a atque temporibus sed illum labore nulla harum.</p>
                     </div>
                     <div className="absolute top-0 left-4 px-3 pb-3 font-sans text-white rounded-b-lg max-w-24 bg-[#003366] text-center">
                         <h1 className='text-[30px] leading-tight'>27</h1>

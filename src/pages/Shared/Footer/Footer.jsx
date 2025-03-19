@@ -51,7 +51,7 @@ const Footer = () => {
                     </p>
                     <div className="flex mt-4 space-x-4">
                         {["facebook", "x icon", "youtube", "instagram"].map((icon, index) => (
-                            <img key={index} className="w-[20px] h-[20px] hover:scale-110 transition-transform" src={`/public/FooterIcon/${icon}.png`} alt={icon} />
+                            <img key={index} className="w-[20px] h-[20px] hover:scale-110 transition-transform" src={`FooterIcon/${icon}.png`} alt={icon} />
                         ))}
                     </div>
                 </div>

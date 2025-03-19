@@ -19,19 +19,17 @@ const Home = () => {
                 <title>JUST Debate Club | Home</title>
             </Helmet>
             <Banner />
-            <ThinkBigSection />
+            {/* <ThinkBigSection /> */}
             <WhatWeProvide />
             <OurAchievement />
-
             <MessageOfVc />
             <WhatMakesUsStandOut />
             <PlatformForExcellence />
             <JustdcToday />
             <MeetOurTeams />
             <TestimonialSection />
-            {/* <NewsSection /> */}
-            {/* <ImageGallery /> */}
-            <Gallery />
+            <ImageGallery />
+            {/* <Gallery /> */}
         </div>
     );
 };

@@ -6,10 +6,10 @@ const MessageOfVc = () => {
             <div className='max-w-[1250px] px-4 sm:px-8 md:px-12 lg:px-20 xl:px-0 py-10 md:py-20 xl:py-28 mx-auto xl:flex hidden'>
                 <div className='w-1/2 '>
                     <img className='object-cover rounded-3xl h-[430px]' src="ayman-cover.jpg" alt="" />
-                    <img src="/public/Quote/quote-open-yellowOL.svg" className="w-[116px] mt-[-510px]" alt="" />
+                    <img src="Quote/quote-open-yellowOL.svg" className="w-[116px] mt-[-510px]" alt="" />
                 </div>
                 <div className='w-1/2 mt-10 ml-[-40px] bg-white rounded-3xl p-16'>
-                    <p className='text-2xl'>Welcome to the JUST Debate Club, where passionate minds come together to engage in thought-provoking discussions. We believe in the power of debate to inspire change, build confidence, and sharpen critical thinking. Join us in shaping ideas, challenging perspectives, and making a lasting impact!</p>
+                    <p className='text-2xl text-gray-700'>Welcome to the JUST Debate Club, where passionate minds come together to engage in thought-provoking discussions. We believe in the power of debate to inspire change, build confidence, and sharpen critical thinking. Join us in shaping ideas, challenging perspectives, and making a lasting impact!</p>
                     <p className='pt-4 font-sans text-xl font-bold text-right text-[#003366]'>~Ayman Faiyaz</p>
                     <p className='font-sans font-bold text-right text-[#003366]'>President, JUSTDC</p>
                     <svg
@@ -33,12 +33,12 @@ const MessageOfVc = () => {
             <div className='px-4 py-14 sm:px-0 md:px-0 xl:px-0 lg:px-0 md:py-20 xl:py-28 xl:hidden sm:max-w-[510px] mx-auto md:max-w-[690px] lg:max-w-[930px]'>
                 <div className=''>
                     <div className='relative'>
-                        <img src="/public/Quote/quote-open-yellowOL.svg" className="absolute w-[70px] mt-[-43px]" alt="" />
+                        <img src="Quote/quote-open-yellowOL.svg" className="absolute w-[70px] mt-[-43px]" alt="" />
                         <img className='object-cover w-full h-[300px] rounded-t-3xl sm:h-[400px] md:h-[500px] lg:h-[600px]' src="ayman-cover.jpg" alt="" />
                         
                     </div>
                     <div className='relative p-5 bg-white sm:p-16 rounded-b-2xl'>
-                        <p className='pt-4 text-lg lg:text-2xl'>Welcome to the JUST Debate Club, a place where ideas ignite and voices inspire. Our club is more than just debates—it's a platform for critical thinking, confidence, and leadership. Here, we challenge perspectives, refine arguments, and grow together. Join us in shaping a future where words have the power to create change!</p>
+                        <p className='pt-4 text-lg text-gray-700 lg:text-2xl'>Welcome to the JUST Debate Club, a place where ideas ignite and voices inspire. Our club is more than just debates—it's a platform for critical thinking, confidence, and leadership. Here, we challenge perspectives, refine arguments, and grow together. Join us in shaping a future where words have the power to create change!</p>
                         <p className='pt-4 font-sans text-lg lg:text-xl font-bold text-right text-[#003366]'>~Ayman Faiyaz</p>
                         <p className='lg:pt-4 font-sans font-bold text-right text-sm lg:text-base text-[#003366] pb-8'>President, JUSTDC</p>
                         <svg

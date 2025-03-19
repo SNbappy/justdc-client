@@ -13,7 +13,7 @@ const WhatMakesUsStandOut = () => {
                         What Makes Us Stand Out
                     </div>
                     <div className="w-[140px] h-[3px] bg-[#fdb714] mx-auto mt-6"></div>
-                    <p className='py-8 text-lg text-center lg:text-xl'>The JUST Debate Club is more than just a platform for debates; it’s a thriving community where passion meets purpose. Unlike
+                    <p className='py-8 text-lg text-center text-gray-600 lg:text-xl'>The JUST Debate Club is more than just a platform for debates; it’s a thriving community where passion meets purpose. Unlike
                         others, we prioritize inclusivity, ensuring that every voice is heard and valued, regardless of prior experience. Our dynamic
                         approach blends rigorous training with creative freedom, empowering members to explore new perspectives and challenge
                         conventional thinking. With opportunities to compete on global stages and a focus on personal and intellectual growth, we foster a
