@@ -8,10 +8,10 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 const testimonials = [
     {
-        name: "Md. Sabbir Hossain Bappy",
-        position: "Head of IT",
-        text: "A fantastic place for students to express their opinions and develop confidence. The club's environment is friendly and intellectually stimulating!",
-        image: "Executive members/bappy.JPG",
+        name: "Aruneka Haque Shamma",
+        position: "Alumni",
+        text: "নিজের অনেক স্বপ্নের ক্লাব কে যখন এতো সুন্দরভাবে এগিয়ে যেতে দেখি, দারুণ সব আয়োজন, অসংখ্য অর্জন দেখে কি যে শান্তি লাগে!!! অনেক শুভকামনা, ক্লাব এগিয়ে যাক বহুদূর",
+        image: "Reviews/Aruneka.jpg",
     },
     {
         name: "MD ATIF-UL-ISLAM NOOR",
@@ -31,6 +31,12 @@ const testimonials = [
         text: "যুক্তি, চিন্তাশক্তি এবং আত্মবিশ্বাসের এক অনন্য মঞ্চ হলো JUST ডিবেট ক্লাব। এখানে বিতর্কগুলো সুচিন্তিত, আকর্ষণীয় এবং সমালোচনামূলক চিন্তাকে উৎসাহিত করে। আত্মবিশ্বাস তৈরি করতে এবং প্রভাবশালী বক্তা হতে চাইলে এই ক্লাবের অংশ হওয়া অবশ্যই দরকার!",
         image: "Reviews/Nayem.jpg",
     },
+    {
+        name: "Mostafijur Rahman",
+        position: "Member",
+        text: "ভার্সিটিতে এসে একমাত্র এই ক্লাবেই যুক্ত হয়েছি।আর জাস্টডিসি আমাকে কখনোই হতাশ করেনি। এই ক্লাবের ইভেন্ট ম্যানেজমেন্ট,অরগানাইজেশান,অ্যাডজুডিকেশন বরাবরই আমাকে মুগ্ধ করেছে এবং অন্যান্য ক্লাব থেকে এটাকে অনন্য করে তুলেছে। সর্বোপরি এই জাস্টডিসি কে আমি নিজে Own করি এবং এর উত্তরোত্তর সাফল্য কামনা করি।",
+        image: "Reviews/Mostafij.jpg",
+    },
 ];
 
 function getLen(arr) {
@@ -47,13 +53,13 @@ const TestimonialSection = () => {
 
     return (
         <div className="pt-16 max-w-[1250px] mx-auto md:px-4">
-            <div className="font-sans lg:text-[40px] font-bold uppercase text-[#003366] text-center text-[26px]">
+            <div className="font-sans lg:text-[40px] font-bold uppercase text-[#003366] text-center text-[26px] w-4/5 mx-auto">
                 What Our Community Says
             </div>
             <div className="w-24 h-[2px] bg-[#fdb714] mt-6 mx-auto"></div>
-            <p className="mt-4 mb-10 text-lg max-w-[900px] mx-auto text-center">
+            {/* <p className="mt-4 mb-10 text-lg max-w-[900px] mx-auto text-center w-4/5">
                 Our alumni and members share their experiences, insights, and memories from their journey with us. Their words reflect the impact, learning, and growth they have gained through our community.
-            </p>
+            </p> */}
             <div className="mx-auto">
                 <Swiper
                     effect={"coverflow"}

@@ -9,7 +9,7 @@ const WhatMakesUsStandOut = () => {
         }>
             <div className='px-4 py-10 bg-white bg-opacity-80 md:py-16 lg:py-[90px] sm:px-8 md:px-12 xl:px-0'>
                 <div className='max-w-[970px] mx-auto'>
-                    <div className='font-sans lg:text-[40px] font-bold uppercase text-[#003366] text-center text-[26px]'>
+                    <div className='font-sans lg:text-[40px] font-bold uppercase text-[#003366] text-center text-[26px] w-3/5 mx-auto'>
                         What Makes Us Stand Out
                     </div>
                     <div className="w-[140px] h-[3px] bg-[#fdb714] mx-auto mt-6"></div>

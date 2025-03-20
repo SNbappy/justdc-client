@@ -1,8 +1,8 @@
 import React from "react";
-import cardImg from "../../../assets/382149771_734130685395036_488278925793471851_n.jpg";
-import expert from "../../../assets/expert-leading.jpg";
-import network from "../../../assets/networking.jpg";
-import skill from "../../../assets/skilldev.jpg";
+import cardImg from "../../../assets/whatWeProvide/cardImg.webp";
+import expert from "../../../assets/whatWeProvide/expert-leading.webp";
+import network from "../../../assets/whatWeProvide/networking.webp";
+import skill from "../../../assets/whatWeProvide/skilldev.webp";
 
 const cardData = [
     { img: expert, title: "Expert-Led Training", description: "Workshops and sessions to enhance public speaking, argumentation, and critical thinking skills." },
@@ -27,8 +27,8 @@ const WhatWeProvideCard = () => {
                     </figure>
                     <div className="w-full h-[5px] bg-[#003366]"></div>
                     <div className="card-body">
-                        <h2 className="card-title text-[#003366] font-sans lg:text-2xl text-xl">{card.title}</h2>
-                        <p className="pb-2 text-lg text-gray-700">{card.description}</p>
+                        <h2 className="card-title text-[#003366] font-sans lg:text-2xl text-xl ">{card.title}</h2>
+                        <p className="pb-2 text-lg text-gray-600">{card.description}</p>
                         <div className="pb-2 card-actions">
                             <button className="font-semibold text-white bg-[#003366] border-none rounded-full uppercase font-sans px-6 py-3">Learn More</button>
                         </div>

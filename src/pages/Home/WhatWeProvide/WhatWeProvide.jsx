@@ -7,7 +7,7 @@ const WhatWeProvide = () => {
         <div
             className="pt-14 lg:pt-[90px]"
         >
-            <div className="font-sans lg:text-[40px] font-bold uppercase text-[#003366] text-center text-[26px]">
+            <div className="font-sans lg:text-[40px] font-bold uppercase text-[#003366] text-center text-[26px] w-4/5 mx-auto">
                 What We Provide
             </div>
             <div className="w-[140px] h-[3px] bg-[#fdb714] mx-auto mt-6"></div>

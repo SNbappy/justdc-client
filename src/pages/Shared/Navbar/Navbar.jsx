@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../../assets/logo-bgremoved.svg";
+import logo from "../../../assets/svg-bgnai1.svg";
 import { FaBars, FaTimes, FaAngleDown } from "react-icons/fa";
 
 const navOptions = [

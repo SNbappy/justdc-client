@@ -1,17 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
-// Title & Content Animation (Faster)
-const fadeVariants = {
-    hidden: { opacity: 0, y: 30, willChange: "transform, opacity" },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } }
-};
-
-// Image Animation (Less Impact)
-const imageVariants = {
-    hidden: { opacity: 0, scale: 0.95, willChange: "transform, opacity" },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } }
-};
 
 const OurAchievement = () => {
     return (
@@ -20,7 +8,7 @@ const OurAchievement = () => {
             <div className='px-4 text-center xl:w-1/2 xl:text-left sm:px-8 md:px-12 xl:px-0'>
                 {/* Title */}
                 <h2
-                    className='font-sans lg:text-[40px] font-bold uppercase text-[#003366] text-[26px]'
+                    className='font-sans lg:text-[40px] font-bold uppercase text-[#003366] text-[26px] w-4/5 mx-auto xl:mx-0'
                 >
                     Our Achievements
                 </h2>
@@ -32,7 +20,7 @@ const OurAchievement = () => {
 
                 {/* Paragraph */}
                 <p
-                    className='text-lg text-gray-700 lg:text-xl py-9'
+                    className='text-lg text-gray-600 lg:text-xl py-9'
                     
                 >
                     The JUST Debate Club stands as a beacon of excellence and intellectual rigor, proudly showcasing
@@ -54,7 +42,7 @@ const OurAchievement = () => {
             <div
                 className='xl:w-1/2'
             >
-                <img className='pt-6 lg:pt-12 xl:rounded-xl brightness-110' src="achievement-khulna.JPG" alt="Achievements" />
+                <img className='pt-6 lg:pt-12 xl:rounded-xl brightness-110' src="achievement-khulna.webp" alt="Achievements" />
             </div>
         </div>
     );

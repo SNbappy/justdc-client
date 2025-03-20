@@ -9,7 +9,7 @@ const MessageOfVc = () => {
                     <img src="Quote/quote-open-yellowOL.svg" className="w-[116px] mt-[-510px]" alt="" />
                 </div>
                 <div className='w-1/2 mt-10 ml-[-40px] bg-white rounded-3xl p-16'>
-                    <p className='text-2xl text-gray-700'>Welcome to the JUST Debate Club, where passionate minds come together to engage in thought-provoking discussions. We believe in the power of debate to inspire change, build confidence, and sharpen critical thinking. Join us in shaping ideas, challenging perspectives, and making a lasting impact!</p>
+                    <p className='text-2xl text-gray-600'>Welcome to the JUST Debate Club, where passionate minds come together to engage in thought-provoking discussions. We believe in the power of debate to inspire change, build confidence, and sharpen critical thinking. Join us in shaping ideas, challenging perspectives, and making a lasting impact!</p>
                     <p className='pt-4 font-sans text-xl font-bold text-right text-[#003366]'>~Ayman Faiyaz</p>
                     <p className='font-sans font-bold text-right text-[#003366]'>President, JUSTDC</p>
                     <svg

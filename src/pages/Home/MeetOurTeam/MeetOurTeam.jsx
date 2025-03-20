@@ -7,7 +7,7 @@ const MeetOurTeam = () => {
         >
             {/* Section Title */}
             <div className='text-center mx-auto max-w-[850px] mt-20 xl:mt-28'>
-                <div className='font-sans lg:text-[40px] font-bold uppercase text-[#003366] text-[26px]'>
+                <div className='font-sans lg:text-[40px] font-bold uppercase text-[#003366] text-[26px] w-4/5 mx-auto'>
                     Meet Our Executive Team
                 </div>
                 <div className="w-[140px] h-[3px] bg-[#fdb714] my-6 mx-auto"></div>
