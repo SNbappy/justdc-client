@@ -24,7 +24,7 @@ const JustdcTodayCard = () => {
                         <h1 className='text-[30px] leading-tight'>27</h1>
                         <p className='leading-tight whitespace-nowrap'>Mar 2025</p>
                     </div>
-                    <button className='bg-[#003366] text-white font-sans py-2 rounded-b-lg uppercase text-xs sm:text-base'>Learn More</button>
+                    <button className='bg-[#003366] text-white font-sans py-2 rounded-b-lg uppercase text-xs sm:text-base hover:bg-[#004477]'>See Details</button>
                 </div>
             ))}
         </div>

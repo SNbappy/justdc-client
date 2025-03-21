@@ -1,8 +1,17 @@
 import { IoLocationOutline } from "react-icons/io5";
 import { IoMailOutline } from "react-icons/io5";
 import { IoCallSharp } from "react-icons/io5";
+import { FaInfoCircle, FaCalendarAlt, FaUsers, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
+
+    const links = [
+        { name: "About Us", icon: <FaInfoCircle />, href: "#about" },
+        { name: "Upcoming Events", icon: <FaCalendarAlt />, href: "#events" },
+        { name: "Join Us", icon: <FaUsers />, href: "#join" },
+        { name: "Contact", icon: <FaEnvelope />, href: "#contact" },
+    ];
+    
     return (
         <footer className="pt-16 pb-6 text-white bg-gradient-to-br from-gray-900 via-gray-800 to-black">
             <div className="container grid grid-cols-1 gap-12 px-6 mx-auto lg:w-10/12 md:grid-cols-2 xl:grid-cols-4">
@@ -19,15 +28,13 @@ const Footer = () => {
                 <div>
                     <h3 className="mb-4 font-sans text-[22px] font-bold uppercase">Quick Links</h3>
                     <ul className="space-y-3 text-gray-300 text-[16px] lg:text-lg">
-                        {[
-                            { name: "About Us", icon: "fas fa-info-circle", href: "#about" },
-                            { name: "Upcoming Events", icon: "fas fa-calendar-alt", href: "#events" },
-                            { name: "Join Us", icon: "fas fa-users", href: "#join" },
-                            { name: "Contact", icon: "fas fa-envelope", href: "#contact" },
-                        ].map((link, index) => (
+                        {links.map((link, index) => (
                             <li key={index}>
-                                <a href={link.href} className="flex items-center transition-all duration-300 ease-in-out hover:text-pink-400">
-                                    <i className={`mr-2 ${link.icon}`}></i> {link.name}
+                                <a
+                                    href={link.href}
+                                    className="flex items-center transition-all duration-300 ease-in-out hover:text-blue-400"
+                                >
+                                    <span className="mr-2">{link.icon}</span> {link.name}
                                 </a>
                             </li>
                         ))}
@@ -37,17 +44,20 @@ const Footer = () => {
                 {/* Contact Information */}
                 <div>
                     <h3 className="mb-4 font-sans text-2xl font-bold uppercase text-[22px]">Contact Us</h3>
-                    <p className="flex items-center gap-2 text-gray-300 text-[16px] lg:text-lg">
+                    <p className="flex items-center gap-2 text-gray-300 text-[16px] lg:text-lg hover:text-blue-400">
                         <IoLocationOutline className="font-bold"/>JUST Debate Club Office
                     </p>
-                    <p className="flex items-center gap-2 text-gray-300 text-[16px] lg:text-lg py-2">
+                    <p className="flex items-center gap-2 text-gray-300 text-[16px] lg:text-lg py-2 hover:text-blue-400">
                         <IoMailOutline />
-                        <a href="mailto:justdebateclub2018@gmail.com" className="flex items-center gap-2 hover:text-pink-400">
+                        <a href="mailto:justdebateclub2018@gmail.com" className="flex items-center gap-2">
                            justdebateclub2018@gmail.com
                         </a>
                     </p>
-                    <p className="flex items-center gap-2 text-gray-300 text-[16px] lg:text-lg">
-                        <IoCallSharp /> +88 01581-055022
+                    <p className="flex items-center gap-2 text-gray-300 text-[16px] lg:text-lg hover:text-blue-400">
+                        <IoCallSharp />
+                        <a href="tel:+8801581055022" className="transition-all duration-300">
+                            +88 01581-055022
+                        </a>
                     </p>
                     <div className="flex mt-4 space-x-4">
                         {["facebook", "x icon", "youtube", "instagram"].map((icon, index) => (
@@ -60,10 +70,10 @@ const Footer = () => {
                 <div>
                     <h3 className="mb-4 font-sans text-[22px] font-bold uppercase">Send Us a Message</h3>
                     <form action="mailto:justdebateclub2018@gmail.com" method="post" encType="text/plain" className="space-y-3">
-                        <input type="text" placeholder="Your Name" className="w-full p-2 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 text-[14px]" required />
-                        <input type="email" placeholder="Your Email" className="w-full p-2 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 text-[14px]" required />
-                        <textarea placeholder="Your Message" className="w-full p-2 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400 text-[14px]" rows="3" required></textarea>
-                        <button type="submit" className="w-full p-2 font-bold text-white transition-all duration-300 bg-[#003366] rounded-md hover:bg-pink-600 text-[14px]">
+                        <input type="text" placeholder="Your Name" className="w-full p-2 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-[14px]" required />
+                        <input type="email" placeholder="Your Email" className="w-full p-2 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-[14px]" required />
+                        <textarea placeholder="Your Message" className="w-full p-2 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-[14px]" rows="3" required></textarea>
+                        <button type="submit" className="w-full p-2 font-bold text-white transition-all duration-300 bg-[#003366] rounded-md hover:bg-blue-600 text-[14px]">
                             Send Message
                         </button>
                     </form>

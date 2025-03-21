@@ -30,7 +30,7 @@ const WhatWeProvideCard = () => {
                         <h2 className="card-title text-[#003366] font-sans lg:text-2xl text-xl ">{card.title}</h2>
                         <p className="pb-2 text-lg text-gray-600">{card.description}</p>
                         <div className="pb-2 card-actions">
-                            <button className="font-semibold text-white bg-[#003366] border-none rounded-full uppercase font-sans px-6 py-3">Learn More</button>
+                            <button className="font-semibold text-white bg-[#003366] border-none rounded-full uppercase font-sans px-6 py-3 hover:bg-[#004477]">Learn More</button>
                         </div>
                     </div>
                 </div>

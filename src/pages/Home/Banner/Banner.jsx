@@ -48,13 +48,13 @@ const Banner = () => {
 
                     {/* Buttons (Visible in Overlay on Large Screens) */}
                     <div className="hidden gap-6 pt-20 md:flex">
-                        <button className="bg-[#003366] py-3 px-14 rounded-full font-sans uppercase">
+                        <button className="bg-[#003366] py-3 px-14 rounded-full font-sans uppercase hover:bg-[#004477]">
                             Our Achievements
                         </button>
-                        <button className="bg-[#003366] py-3 px-16 rounded-full font-sans uppercase">
+                        <button className="bg-[#003366] py-3 px-16 rounded-full font-sans uppercase hover:bg-[#004477]">
                             Why JUSTDC
                         </button>
-                        <button className="bg-[#003366] py-3 px-16 rounded-full font-sans uppercase">
+                        <button className="bg-[#003366] py-3 px-16 rounded-full font-sans uppercase hover:bg-[#004477]">
                             Join Us
                         </button>
                     </div>
@@ -66,10 +66,10 @@ const Banner = () => {
                 <button className="w-3/5 sm:w-2/5 md:w-[30%] px-6 py-3 font-medium text-white bg-[#003366] rounded-full hover:bg-red-700 uppercase drop-shadow-xl">
                     Our Achievements
                 </button>
-                <button className="w-3/5 sm:w-2/5 md:w-[30%] px-6 py-3 font-medium text-white rounded-full bg-[#003366] hover:bg-blue-700 uppercase drop-shadow-xl">
+                <button className="w-3/5 sm:w-2/5 md:w-[30%] px-6 py-3 font-medium text-white rounded-full bg-[#003366] hover:bg-[#004477] uppercase drop-shadow-xl">
                     Why JUSTDC
                 </button>
-                <button className="w-3/5 sm:w-2/5 md:w-[30%] px-6 py-3 font-medium text-white bg-[#003366] rounded-full hover:bg-green-700 uppercase drop-shadow-xl">
+                <button className="w-3/5 sm:w-2/5 md:w-[30%] px-6 py-3 font-medium text-white bg-[#003366] rounded-full hover:bg-[#004477] uppercase drop-shadow-xl">
                     Join Us
                 </button>
             </div>

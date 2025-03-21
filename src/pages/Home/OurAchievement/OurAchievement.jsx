@@ -31,7 +31,7 @@ const OurAchievement = () => {
 
                 {/* Button */}
                 <button
-                    className="bg-[#003366] border-none rounded-full px-10 py-4 font-sans uppercase font-semibold text-white hover:bg-[#002855] transition-all text-xs sm:text-base"
+                    className="bg-[#003366] border-none rounded-full px-10 py-4 font-sans uppercase font-semibold text-white hover:bg-[#004477] transition-all text-xs sm:text-base"
                     
                 >
                     See All Achievements

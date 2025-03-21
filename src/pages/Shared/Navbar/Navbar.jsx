@@ -5,7 +5,7 @@ import { FaBars, FaTimes, FaAngleDown } from "react-icons/fa";
 
 const navOptions = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/notice" },
+    { name: "About", path: "/about" },
     { name: "Achievements", path: "/alumni" },
     {
         name: "Events",
@@ -71,8 +71,8 @@ const Navbar = () => {
                 {/* Right Section (Search & Buttons) */}
                 <div className="flex items-center gap-4 font-sans font-semibold uppercase">
                     {/* <IoSearch className="hidden text-2xl cursor-pointer xl:block" /> */}
-                    <button className="hidden px-4 py-2 text-sm text-[#003366] uppercase bg-[#fdb714] rounded-full hover:bg-red-700 xl:block">Join Us</button>
-                    <NavLink to="/login" className="hidden px-4 py-2 text-sm text-[#003366] bg-[#fdb714] rounded-full xl:block">Sign In</NavLink>
+                    <button className="hidden px-4 py-2 text-sm text-[#003366] uppercase bg-[#fdb714] rounded-full xl:block hover:bg-[#eab12a]">Join Us</button>
+                    <NavLink to="/login" className="hidden px-4 py-2 text-sm text-[#003366] bg-[#fdb714] rounded-full xl:block hover:bg-[#eab12a]">Sign In</NavLink>
                     {/* Mobile Menu Toggle */}
                     <button className="sm:text-lg lg:text-2xl xl:hidden" onClick={() => setMenuOpen(!menuOpen)}>
                         {menuOpen ? <FaTimes /> : <FaBars />}

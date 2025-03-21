@@ -391,7 +391,7 @@ const MeetOurTeamCard = () => {
                                 <img
                                     src={member.image || "Executive members/blank-profile-picture-973460_1280.png"}
                                     alt={member.name}
-                                    className="object-cover w-full h-96 transition-all duration-100 hover:brightness-110 brightness-[50%] group-hover:scale-110"
+                                    className="object-cover w-full h-[400px] transition-all duration-100 hover:brightness-110 brightness-[50%] group-hover:scale-110"
                                 />
                                 {/* Social Icons - Appears on Hover */}
                                 <ul className="absolute bottom-[-50px] w-full flex justify-center items-center space-x-5 transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:bottom-2">

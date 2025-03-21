@@ -34,7 +34,7 @@ const testimonials = [
     {
         name: "Mostafijur Rahman",
         position: "Member",
-        text: "ভার্সিটিতে এসে একমাত্র এই ক্লাবেই যুক্ত হয়েছি।আর জাস্টডিসি আমাকে কখনোই হতাশ করেনি। এই ক্লাবের ইভেন্ট ম্যানেজমেন্ট,অরগানাইজেশান,অ্যাডজুডিকেশন বরাবরই আমাকে মুগ্ধ করেছে এবং অন্যান্য ক্লাব থেকে এটাকে অনন্য করে তুলেছে। সর্বোপরি এই জাস্টডিসি কে আমি নিজে Own করি এবং এর উত্তরোত্তর সাফল্য কামনা করি।",
+        text: "ভার্সিটিতে এসে একমাত্র এই ক্লাবেই যুক্ত হয়েছি। আর জাস্টডিসি আমাকে কখনোই হতাশ করেনি। এই ক্লাবের ইভেন্ট ম্যানেজমেন্ট,অরগানাইজেশান,অ্যাডজুডিকেশন বরাবরই আমাকে মুগ্ধ করেছে এবং অন্যান্য ক্লাব থেকে এটাকে অনন্য করে তুলেছে। সর্বোপরি এই জাস্টডিসি কে আমি নিজে Own করি এবং এর উত্তরোত্তর সাফল্য কামনা করি।",
         image: "Reviews/Mostafij.jpg",
     },
 ];
@@ -112,7 +112,7 @@ const TestimonialSection = () => {
                     ))}
                 </Swiper>
             </div>
-            <button className="flex px-6 py-2 mx-auto mt-10 text-white bg-[#003366] rounded-full hover:bg-blue-700 uppercase font-sans">
+            <button className="flex px-6 py-2 mx-auto text-white bg-[#003366] rounded-full hover:bg-[#004477] uppercase font-sans">
                 View Details
             </button>
         </div>
