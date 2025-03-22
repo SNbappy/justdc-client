@@ -5,6 +5,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { useState, useMemo } from "react";
 import { FaQuoteLeft } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const testimonials = [
     {
@@ -76,7 +77,7 @@ const TestimonialSection = () => {
                         modifier: 2.5,
                         slideShadows: false,
                     }}
-                    
+
                     autoplay={{
                         delay: 4000,
                         disableOnInteraction: false,
@@ -112,9 +113,11 @@ const TestimonialSection = () => {
                     ))}
                 </Swiper>
             </div>
-            <button className="flex px-6 py-2 mx-auto text-white bg-[#003366] rounded-full hover:bg-[#004477] uppercase font-sans">
-                View Details
-            </button>
+            <div className="mx-auto">
+                <NavLink to="/testimonials" className="inline-block px-6 py-2 text-white bg-[#003366] rounded-full hover:bg-[#004477] uppercase font-sans text-center">
+                    View Details
+                </NavLink>
+           </div>
         </div>
     );
 };

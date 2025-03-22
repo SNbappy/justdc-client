@@ -6,23 +6,23 @@ import { FaBars, FaTimes, FaAngleDown } from "react-icons/fa";
 const navOptions = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Achievements", path: "/alumni" },
+    { name: "Achievements", path: "/achievements" },
     {
         name: "Events",
         subOptions: [
-            { name: "Upcoming Events", path: "/about/mission" },
-            { name: "Past Events", path: "about/vision" },
+            { name: "Upcoming Events", path: "/events" },
+            { name: "Past Events", path: "events" },
         ],
     },
     {
         name: "Members",
         subOptions: [
-            { name: "Alumni", path: "/debate/topics" },
-            { name: "Executive Members", path: "/debate/guideline" },
-            { name: "General Members", path: "/debate/guideline" },
+            { name: "Alumni", path: "/alumni" },
+            { name: "Executive Members", path: "/executive-members" },
+            { name: "General Members", path: "/general-members" },
         ],
     },
-    { name: "Gallery", path: "/donate" },
+    { name: "Gallery", path: "/gallery" },
     { name: "Donate", path: "/donate" },
     
     
