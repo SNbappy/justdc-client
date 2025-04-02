@@ -1,5 +1,4 @@
 import React from 'react';
-import cardImg from "../../../assets/Update Music Concept Album.png"
 
 const JustdcTodayCard = () => {
     return (
@@ -11,7 +10,7 @@ const JustdcTodayCard = () => {
                 >
                     <figure className='overflow-hidden'>
                         <img
-                            src={cardImg}
+                            src="upcomingEvents.jpg"
                             alt="photo"
                             className="object-cover w-full h-[259px] transition-transform duration-300 group-hover:scale-110 group-focus-within:scale-110"
                         />

@@ -2,7 +2,7 @@ import { FaHandsHelping, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Donate = () => {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen px-6 pb-10 text-center bg-gray-100 pt-28">
+        <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-24 pb-10 text-center bg-gray-100 lg:pt-32 sm:px-8 md:px-12 xl:px-0">
             <div className="max-w-2xl p-8 bg-white shadow-lg rounded-2xl">
                 <h1 className="flex items-center justify-center gap-2 mb-4 text-3xl font-bold text-green-600">
                     <FaHandsHelping className="text-2xl" /> Support Our Cause
@@ -15,7 +15,7 @@ const Donate = () => {
 
                 <div className="p-4 mb-6 bg-yellow-100 rounded-lg shadow-md">
                     <h2 className="text-xl font-semibold text-yellow-700">📢 Current Donation Campaign</h2>
-                    <p className="text-gray-700">We are currently raising funds to help a student in need of medical treatment. Your support can make a difference.</p>
+                    <p className="text-gray-700">We are not currently raising funds. Thank you for your support and stay tuned for future campaigns.</p>
                 </div>
 
                 <p className="mb-6 text-lg text-gray-600">

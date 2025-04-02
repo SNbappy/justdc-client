@@ -4,10 +4,10 @@ import { FaTimes, FaInstagram } from "react-icons/fa";
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
 
 const images = [
-    "Gallery/Gallery3.JPG",
-    "Gallery/Gallery1.jpg",
-    "Gallery/Gallery4.JPG",
-    "Gallery/Gallery2.jpg",
+    "Gallery/Gallery3.webp",
+    "Gallery/Gallery1.webp",
+    "Gallery/Gallery4.webp",
+    "Gallery/Gallery2.webp",
 ];
 
 const ImageGallery = () => {
@@ -35,10 +35,24 @@ const ImageGallery = () => {
         setSelectedImage(images[newIndex]);
     };
 
+    const [loadedCount, setLoadedCount] = useState(0);
+    const [imagesLoaded, setImagesLoaded] = useState(false);
+
+    useEffect(() => {
+        if (loadedCount === images.length) {
+            setImagesLoaded(true);
+        }
+    }, [loadedCount]);
+
+    const handleImageLoad = () => {
+        setLoadedCount((prev) => prev + 1);
+    };
+
+
     return (
         <div className="w-full pt-10 md:pt-20 xl:pt-28">
-            {/* Image Grid */}
-            <div className="w-full lg:flex">
+            {/* Image Grid (Always Rendered) */}
+            <div className={`w-full lg:flex transition-opacity duration-500 ${imagesLoaded ? "opacity-100" : "opacity-0"}`}>
                 {images.map((img, index) => (
                     <motion.div
                         key={index}
@@ -47,15 +61,13 @@ const ImageGallery = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: index * 0.1 }}
                     >
-                        {/* Image */}
                         <img
                             src={img}
                             alt={`Gallery ${index + 1}`}
                             className="object-cover w-full cursor-pointer h-[350px]"
                             onClick={() => openModal(index)}
+                            onLoad={handleImageLoad}
                         />
-
-                        {/* Hover Icon */}
                         <div
                             className="absolute inset-0 flex items-center justify-center transition-opacity opacity-0 hover:opacity-100"
                             onClick={() => openModal(index)}

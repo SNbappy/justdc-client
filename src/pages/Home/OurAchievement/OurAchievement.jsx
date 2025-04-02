@@ -3,7 +3,7 @@ import React from 'react';
 
 const OurAchievement = () => {
     return (
-        <div className='flex flex-col xl:flex-row items-center justify-between max-w-[1250px] mx-auto gap-8 pt-10 md:pt-14 lg:pb-14'>
+        <div className='flex flex-col xl:flex-row items-center justify-between max-w-[1250px] mx-auto gap-8 pt-10 md:pt-14 xl:pb-14'>
             {/* Left Section */}
             <div className='px-4 text-center xl:w-1/2 xl:text-left sm:px-8 md:px-12 xl:px-0'>
                 {/* Title */}
@@ -42,7 +42,7 @@ const OurAchievement = () => {
             <div
                 className='xl:w-1/2'
             >
-                <img className='pt-6 lg:pt-12 xl:rounded-xl brightness-110' src="achievement-khulna.webp" alt="Achievements" />
+                <img className='xl:rounded-xl brightness-110' src="achievement-khulna.webp" alt="Achievements" />
             </div>
         </div>
     );

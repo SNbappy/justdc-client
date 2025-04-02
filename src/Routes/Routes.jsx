@@ -11,6 +11,9 @@ import Gallery from "../pages/Gallery/Gallery";
 import Donate from "../pages/Donate/Donate";
 import UpcomingEvents from "../pages/Events/UpcomingEvents/UpcomingEvents";
 import TestimonialPage from "../pages/TestimonialPage/TestimonialPage";
+import NotFound from "../pages/NotFound/NotFound";
+import PrivateRoute from "./PrivateRoute";
+import Secret from "../pages/Shared/Secret/Secret";
 
 
 export const router = createBrowserRouter([
@@ -62,6 +65,14 @@ export const router = createBrowserRouter([
                 path: 'donate',
                 element: <Donate />
             },
+            {
+                path: 'secret',
+                element: <PrivateRoute><Secret /></PrivateRoute>
+            }
         ]
+    },
+             {
+        path: '*',
+        element: <NotFound />
     },
 ]);

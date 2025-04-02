@@ -16,8 +16,7 @@
     "@mui/icons-material": "^6.4.1",
     "@mui/material": "^6.4.1",
     "aos": "^2.3.4",
-    "daisyui": "^4.12.23",
-    "firebase": "^11.2.0",
+    "firebase": "^11.5.0",
     "framer-motion": "^12.4.7",
     "localforage": "^1.10.0",
     "match-sorter": "^8.0.0",
@@ -25,6 +24,7 @@
     "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",
     "react-helmet-async": "^2.0.5",
+    "react-hook-form": "^7.55.0",
     "react-icons": "^5.5.0",
     "react-intersection-observer": "^9.15.1",
     "react-lazy-load-image-component": "^1.6.3",
@@ -34,6 +34,7 @@
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",
     "sort-by": "^1.2.0",
+    "sweetalert2": "^11.17.2",
     "swiper": "^11.2.5"
   },
   "devDependencies": {
@@ -42,6 +43,7 @@
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
+    "daisyui": "^5.0.9",
     "eslint": "^9.17.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",

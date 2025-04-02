@@ -114,7 +114,7 @@ const TestimonialSection = () => {
                 </Swiper>
             </div>
             <div className="mx-auto">
-                <NavLink to="/testimonials" className="inline-block px-6 py-2 text-white bg-[#003366] rounded-full hover:bg-[#004477] uppercase font-sans text-center">
+                <NavLink to="/testimonials" className="px-6 py-2 text-white bg-[#003366] rounded-full hover:bg-[#004477] uppercase font-sans text-center grid mx-auto max-w-[150px]">
                     View Details
                 </NavLink>
            </div>

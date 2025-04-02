@@ -1,9 +1,9 @@
 const About = () => {
     return (
-        <div className="pb-20 bg-gray-100 pt-36">
+        <div className="px-4 pt-24 pb-10 bg-gray-100 lg:pb-20 lg:pt-36 sm:px-8 md:px-12 xl:px-0">
             <section className="px-6 py-16 text-gray-800 bg-white md:px-12 lg:px-20 max-w-[1250px] mx-auto border shadow-xl   rounded-lg">
                 <div className="mx-auto text-center max-w-7xl ">
-                    <h2 className="mb-10 font-sans text-4xl font-extrabold text-[#003366]">About JUST Debate Club</h2>
+                    <h2 className="mb-10 font-sans text-4xl font-extrabold text-[#003366] uppercase">About JUST Debate Club</h2>
                     <p className="mb-8 text-lg leading-relaxed">
                         Established in 2018, the JUST Debate Club has become a cornerstone of intellectual engagement at Jashore University of Science and Technology. Our mission is to foster critical thinking, articulate expression, and a passion for informed discourse among students.
                     </p>
