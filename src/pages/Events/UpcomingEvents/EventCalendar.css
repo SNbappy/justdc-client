@@ -1,0 +1,11 @@
+/* Highlight event dates on the calendar */
+.highlight-event {
+    background-color: #003366;
+    color: white;
+    border-radius: 50%;
+}
+
+/* Hover effect for event dates */
+.react-calendar__tile--active.highlight-event {
+    background-color: #0055a5;
+}

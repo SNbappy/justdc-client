@@ -14,6 +14,9 @@ import TestimonialPage from "../pages/TestimonialPage/TestimonialPage";
 import NotFound from "../pages/NotFound/NotFound";
 import PrivateRoute from "./PrivateRoute";
 import Secret from "../pages/Shared/Secret/Secret";
+import Dashboard from "../Layout/Dashboard";
+import Cart from "../pages/Dashboard/Cart/Cart";
+import AddEvent from "../pages/Events/AddEvent/AddEvent";
 
 
 export const router = createBrowserRouter([
@@ -71,7 +74,21 @@ export const router = createBrowserRouter([
             }
         ]
     },
-             {
+    {
+        path: 'dashboard',
+        element: <Dashboard />,
+        children: [
+            {
+                path: 'cart',
+                element: <Cart />
+            },
+            {
+                path: 'add-event',
+                element: <AddEvent />
+            },
+        ]
+    },
+    {
         path: '*',
         element: <NotFound />
     },

@@ -1,5 +1,6 @@
 import React from 'react';
 import JustdcTodayCard from '../JustdcTodayCard/JustdcTodayCard';
+import { NavLink } from 'react-router-dom';
 
 const JustdcToday = () => {
     return (
@@ -27,7 +28,7 @@ const JustdcToday = () => {
                 </h2>
                 <JustdcTodayCard />
                 <div className='mt-16'>
-                    <button className="rounded-full px-14 py-4 font-sans uppercase font-semibold text-[#003366] flex mx-auto border-2 border-[#003366] hover:bg-[#003366] hover:text-white text-base">See All Events</button>
+                    <NavLink to="/events" className="rounded-full px-14 py-4 font-sans uppercase font-semibold text-[#003366] flex mx-auto border-2 border-[#003366] hover:bg-[#003366] hover:text-white text-base">See All Events</NavLink>
                 </div>
             </div>
         </div>

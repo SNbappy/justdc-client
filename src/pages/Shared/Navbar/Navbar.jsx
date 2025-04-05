@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/justdc-fb-min.png";
 import { FaBars, FaTimes, FaAngleDown } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
@@ -85,6 +85,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-4 font-sans font-semibold uppercase">
                     {/* <IoSearch className="hidden text-2xl cursor-pointer xl:block" /> */}
                     {user ? <>
+                        <Link to="/dashboard/cart" className="hidden px-4 py-2 text-xs lg:text-sm text-[#003366] uppercase bg-[#fdb714] rounded-full md:block hover:bg-[#eab12a]">Dashboard</Link>
                         <button onClick={handleLogOut} className="hidden px-4 py-2 text-xs lg:text-sm text-[#003366] uppercase bg-[#fdb714] rounded-full md:block hover:bg-[#eab12a]">Logout</button>
                     </>
                         :
