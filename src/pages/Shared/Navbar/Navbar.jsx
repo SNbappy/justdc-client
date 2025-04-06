@@ -11,18 +11,11 @@ const navOptions = [
     { name: "Achievements", path: "/achievements" },
     {
         name: "Events",
-        subOptions: [
-            { name: "Upcoming Events", path: "/events" },
-            { name: "Past Events", path: "events" },
-        ],
+        path: "/events"
     },
     {
-        name: "Members",
-        subOptions: [
-            { name: "Alumni", path: "/alumni" },
-            { name: "Executive Members", path: "/executive-members" },
-            { name: "General Members", path: "/general-members" },
-        ],
+        name: "Alumni",
+        path: "/alumni"
     },
     { name: "Gallery", path: "/gallery" },
     { name: "Donate", path: "/donate" },

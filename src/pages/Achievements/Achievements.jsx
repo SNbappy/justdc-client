@@ -1,17 +1,35 @@
 import React from 'react';
 import { FaTrophy, FaStar, FaMedal } from 'react-icons/fa';
 import { motion } from 'framer-motion'; // For animations
-import UnderDevelopmentPage from '../../Components/UnderDevelopmentPage/UnderDevelopmentPage';
 
 const Achievements = () => {
     return (
-        <div className="bg-gray-50">
-            <div className="relative overflow-hidden bg-center bg-cover h-80"
+        <div className='pt-20'>
+            {/* <div className="relative overflow-hidden bg-center bg-cover h-80"
                 style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?debate')" }}>
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <div className="relative z-10 py-24 text-center text-white">
                     <h1 className="text-5xl font-bold">Achievements</h1>
                     <p className="mt-4 text-xl">Celebrating our success and dedication in the world of debates!</p>
+                </div>
+            </div> */}
+            <div className="relative w-full">
+                <div>
+                    <img
+                        src="/public/Hero Section/Achievement.JPG"
+                        alt="Gallery Hero"
+                        className={`object-cover w-full h-[300px] transition-transform duration-[1500ms] ease-in-out`}
+                    />
+                </div>
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#4A7EB4]/50 via-[#6EA8DB]/50 to-[#9EC4EC]/50 mix-blend-multiply backdrop-blur-[4px]"></div>
+                <div className="absolute inset-0 flex flex-col items-center justify-center px-4 mx-auto text-center text-white sm:max-w-full lg:pb-0">
+                    <h2 className="font-sans text-5xl font-black uppercase">
+                        JUSTDC Gallery
+                    </h2>
+                    <p className="mt-2 font-sans text-xl font-medium">
+                        A glimpse into our events, achievements, and the vibrant spirit of the JUST Debate Club.
+                    </p>
                 </div>
             </div>
 

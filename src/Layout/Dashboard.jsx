@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaCalendar, FaEvernote, FaHome, FaShoppingCart } from 'react-icons/fa';
+import { FaCalendar, FaEvernote, FaHome, FaImage, FaPeopleArrows, FaShoppingCart } from 'react-icons/fa';
 import { NavLink, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
@@ -10,7 +10,7 @@ const Dashboard = () => {
                 <ul className='p-4 menu'>
                     <li>
 
-                        <NavLink to="/dashboard/userHome">
+                        <NavLink to="/">
                             <FaHome />
                             User Home</NavLink>
                     </li>
@@ -19,6 +19,12 @@ const Dashboard = () => {
                         <NavLink to="/dashboard/add-event">
                             <FaCalendar />
                             Add Event</NavLink>
+                    </li>
+                    <li>
+
+                        <NavLink to="/dashboard/add-gallery">
+                            <FaImage />
+                            Add Gallery</NavLink>
                     </li>
                     <li>
 

@@ -21,6 +21,7 @@
     "framer-motion": "^12.4.7",
     "html-react-parser": "^5.2.3",
     "localforage": "^1.10.0",
+    "lucide-react": "^0.487.0",
     "match-sorter": "^8.0.0",
     "object-path": "^0.11.8",
     "react": "^18.3.1",

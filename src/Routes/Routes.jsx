@@ -9,7 +9,6 @@ import About from "../pages/About/About";
 import Achievements from "../pages/Achievements/Achievements";
 import Gallery from "../pages/Gallery/Gallery";
 import Donate from "../pages/Donate/Donate";
-import UpcomingEvents from "../pages/Events/UpcomingEvents/UpcomingEvents";
 import TestimonialPage from "../pages/TestimonialPage/TestimonialPage";
 import NotFound from "../pages/NotFound/NotFound";
 import PrivateRoute from "./PrivateRoute";
@@ -17,6 +16,9 @@ import Secret from "../pages/Shared/Secret/Secret";
 import Dashboard from "../Layout/Dashboard";
 import Cart from "../pages/Dashboard/Cart/Cart";
 import AddEvent from "../pages/Events/AddEvent/AddEvent";
+import AddGalleryItem from "../pages/Gallery/AddGalleryItem";
+import AlumniPage from "../pages/Alumni/AlumniPage";
+import Events from "../pages/Events/UpcomingEvents/Events";
 
 
 export const router = createBrowserRouter([
@@ -46,7 +48,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'events',
-                element: <UpcomingEvents />
+                element: <Events />
             },
             {
                 path: 'gallery',
@@ -69,6 +71,10 @@ export const router = createBrowserRouter([
                 element: <Donate />
             },
             {
+                path: 'alumni',
+                element: <AlumniPage />
+            },
+            {
                 path: 'secret',
                 element: <PrivateRoute><Secret /></PrivateRoute>
             }
@@ -85,6 +91,10 @@ export const router = createBrowserRouter([
             {
                 path: 'add-event',
                 element: <AddEvent />
+            },
+            {
+                path: 'add-gallery',
+                element: <AddGalleryItem />
             },
         ]
     },
