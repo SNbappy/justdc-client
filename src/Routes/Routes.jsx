@@ -19,6 +19,7 @@ import AddEvent from "../pages/Events/AddEvent/AddEvent";
 import AddGalleryItem from "../pages/Gallery/AddGalleryItem";
 import AlumniPage from "../pages/Alumni/AlumniPage";
 import Events from "../pages/Events/UpcomingEvents/Events";
+import AddAlumniPage from "../pages/Alumni/AddAlumniPage";
 
 
 export const router = createBrowserRouter([
@@ -95,6 +96,10 @@ export const router = createBrowserRouter([
             {
                 path: 'add-gallery',
                 element: <AddGalleryItem />
+            },
+            {
+                path: 'add-alumni',
+                element: <AddAlumniPage />
             },
         ]
     },

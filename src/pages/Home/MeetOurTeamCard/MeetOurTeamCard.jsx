@@ -159,7 +159,7 @@ const MeetOurTeamCard = () => {
             id: 13,
             name: "Farhana Yasmin Sultana",
             role: "Head of Content Creation and Branding",
-            image: "",
+            image: "Executive members/farhana.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -231,7 +231,7 @@ const MeetOurTeamCard = () => {
             id: 19,
             name: "Shahrin Afrin Shipla",
             role: "Head of Social & Cultural Wing",
-            image: "",
+            image: "Executive members/Shipla.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },

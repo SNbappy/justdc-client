@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 
 const GallerySection = () => {
     const [images, setImages] = useState([]); // State to hold gallery data
@@ -45,43 +44,40 @@ const GallerySection = () => {
                     <img
                         src="/public/Hero Section/Gallery.jpg"
                         alt="Gallery Hero"
-                        className={`object-cover w-full h-[300px] transition-transform duration-[1500ms] ease-in-out`}
+                        className={`object-cover w-full h-[200px] transition-transform duration-[1500ms] ease-in-out`}
                     />
                 </div>
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[#4A7EB4]/50 via-[#6EA8DB]/50 to-[#9EC4EC]/50 mix-blend-multiply backdrop-blur-[4px]"></div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center px-4 mx-auto text-center text-white sm:max-w-full lg:pb-0">
-                    <h2 className="font-sans text-5xl font-black uppercase">
+                    <h2 className="font-sans text-5xl font-bold uppercase">
                         JUSTDC Gallery
                     </h2>
-                    <p className="mt-2 font-sans text-xl font-medium">
+                    <p className='flex items-center pt-2 text-xl font-semibold'>Home / Image Gallery</p>
+                    {/* <p className="mt-2 font-sans text-xl font-medium">
                         A glimpse into our events, achievements, and the vibrant spirit of the JUST Debate Club.
-                    </p>
+                    </p> */}
                 </div>
             </div>
-            <section className="pt-28 pb-16 max-w-[1250px] mx-auto  px-4 sm:px-8 md:px-12 xl:px-0">
+            <section className="pb-16 max-w-[1250px] mx-auto  px-4 sm:px-8 md:px-12 xl:px-0">
                 <div className="container">
-                    <div className="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-8 pt-10 sm:grid-cols-2 lg:grid-cols-4">
                         {images.length > 0 ? (
                             images.map((image) => (
-                                <motion.div
+                                <div
                                     key={image._id} // Assuming _id is unique
-                                    className="relative overflow-hidden rounded-lg shadow-lg group"
-                                    whileHover={{ scale: 1.05 }}
-                                    transition={{ type: 'spring', stiffness: 300 }}
+                                    className=""
+                                    
                                 >
-                                    <img
-                                        src={image.image} // Assuming the image URL is in 'image' field
-                                        alt={image.caption}
-                                        className="object-cover w-full h-64 transition-transform duration-300 transform group-hover:scale-110"
-                                    />
-                                    <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white transition-opacity duration-300 opacity-0 bg-gradient-to-b from-transparent via-black/60 to-black/90 group-hover:opacity-100">
-                                        <p className="text-lg font-semibold">{image.caption}</p>
-                                        <button className="px-4 py-2 mt-4 text-sm font-medium text-gray-900 bg-white rounded-full hover:bg-gray-100">
-                                            View More
-                                        </button>
-                                    </div>
-                                </motion.div>
+                                    <div className='relative overflow-hidden border-2 border-gray-200 group'>
+                                        <img
+                                            src={image.image} // Assuming the image URL is in 'image' field
+                                            alt={image.caption}
+                                            className="object-cover w-full px-12 py-8 h-[200px]"
+                                        />
+                                   </div>
+                                    <p className='pt-4 font-sans text-xl font-semibold text-center'>{image.caption}</p>
+                                </div>
                             ))
                         ) : (
                             <div>No gallery images available.</div>

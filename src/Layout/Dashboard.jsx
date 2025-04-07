@@ -28,6 +28,12 @@ const Dashboard = () => {
                     </li>
                     <li>
 
+                        <NavLink to="/dashboard/add-alumni">
+                            <FaPeopleArrows />
+                            Add Alumni</NavLink>
+                    </li>
+                    <li>
+
                         <NavLink to="/dashboard/cart">
                             <FaShoppingCart />My Cart</NavLink>
                     </li>
