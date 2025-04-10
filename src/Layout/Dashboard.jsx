@@ -1,10 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { FaCalendar, FaEvernote, FaHome, FaImage, FaPeopleArrows, FaShoppingCart } from 'react-icons/fa';
 import { NavLink, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
     return (
         <div className='flex'>
+            <Helmet>
+                <title>JUST Debate Club | Dashboard</title>
+            </Helmet>
             {/* dashboard side bar */}
             <div className='w-64 min-h-full bg-orange-400'>
                 <ul className='p-4 menu'>

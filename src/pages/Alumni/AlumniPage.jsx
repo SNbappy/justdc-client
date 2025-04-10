@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const AlumniPage = () => {
     const [alumniData, setAlumniData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
+    const { user } = useContext(AuthContext);
 
     useEffect(() => {
         const fetchAlumni = async () => {
@@ -20,6 +22,27 @@ const AlumniPage = () => {
 
         fetchAlumni();
     }, []);
+
+    const handleDelete = async (id) => {
+        if (!user) return;
+
+        const confirmDelete = window.confirm("Are you sure you want to delete this alumni?");
+        if (!confirmDelete) return;
+
+        try {
+            const token = await user.getIdToken();
+            await axios.delete(`http://localhost:5000/alumni/${id}`, {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
+
+            setAlumniData(prev => prev.filter(alumni => alumni._id !== id));
+        } catch (err) {
+            alert("Failed to delete alumni");
+            console.error(err);
+        }
+    };
 
     return (
         <div className="w-full">
@@ -62,6 +85,15 @@ const AlumniPage = () => {
                                 <h3 className="text-2xl font-bold text-gray-800">{alumni.name}</h3>
                                 <p className="text-sm text-gray-600">{alumni.batch} • {alumni.position}</p>
                                 <p className="text-gray-700">{alumni.bio}</p>
+
+                                {user && (
+                                    <button
+                                        onClick={() => handleDelete(alumni._id)}
+                                        className="px-4 py-2 mt-4 text-white bg-red-500 rounded hover:bg-red-600"
+                                    >
+                                        Delete
+                                    </button>
+                                )}
                             </div>
                         </div>
                     ))
