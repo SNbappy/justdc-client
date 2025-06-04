@@ -13,23 +13,25 @@ const Achievements = () => {
                     <p className="mt-4 text-xl">Celebrating our success and dedication in the world of debates!</p>
                 </div>
             </div> */}
+            {/* Hero */}
             <div className="relative w-full">
                 <div>
                     <img
-                        src="/public/Hero Section/Achievement.JPG"
+                        src="/public/Hero Section/Gallery.jpg"
                         alt="Gallery Hero"
-                        className={`object-cover w-full h-[300px] transition-transform duration-[1500ms] ease-in-out`}
+                        className={`object-cover w-full h-[200px] transition-transform duration-[1500ms] ease-in-out`}
                     />
                 </div>
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[#4A7EB4]/50 via-[#6EA8DB]/50 to-[#9EC4EC]/50 mix-blend-multiply backdrop-blur-[4px]"></div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center px-4 mx-auto text-center text-white sm:max-w-full lg:pb-0">
-                    <h2 className="font-sans text-5xl font-black uppercase">
-                        JUSTDC Gallery
+                    <h2 className="font-sans text-5xl font-bold uppercase">
+                        JUSTDC Achievements
                     </h2>
-                    <p className="mt-2 font-sans text-xl font-medium">
+                    <p className='flex items-center pt-2 text-xl font-semibold'>Home / Achievements</p>
+                    {/* <p className="mt-2 font-sans text-xl font-medium">
                         A glimpse into our events, achievements, and the vibrant spirit of the JUST Debate Club.
-                    </p>
+                    </p> */}
                 </div>
             </div>
 

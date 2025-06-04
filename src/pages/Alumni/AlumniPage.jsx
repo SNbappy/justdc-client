@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../../providers/AuthProvider';
+import { Link } from 'react-router-dom';
 
 const AlumniPage = () => {
     const [alumniData, setAlumniData] = useState([]);
@@ -45,23 +46,28 @@ const AlumniPage = () => {
     };
 
     return (
-        <div className="w-full">
-            {/* Hero Section */}
+        <div className="pt-20">
+            {/* Hero */}
             <div className="relative w-full">
-                <img
-                    src="/public/Hero Section/Achievement.JPG"
-                    alt="Gallery Hero"
-                    className="object-cover w-full h-[300px] transition-transform duration-[1500ms] ease-in-out"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#4A7EB4]/50 via-[#6EA8DB]/50 to-[#9EC4EC]/50 mix-blend-multiply backdrop-blur-[4px]" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white">
-                    <h2 className="font-sans text-5xl font-black uppercase">JUSTDC Alumni</h2>
-                    <p className="max-w-3xl mt-2 font-sans text-xl font-medium">
-                        Celebrating the trailblazers who once led JUST Debate Club with passion, dedication, and unmatched eloquence.
-                    </p>
+                <div>
+                    <img
+                        src="/public/Hero Section/Gallery.jpg"
+                        alt="Gallery Hero"
+                        className={`object-cover w-full h-[200px] transition-transform duration-[1500ms] ease-in-out`}
+                    />
+                </div>
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#4A7EB4]/50 via-[#6EA8DB]/50 to-[#9EC4EC]/50 mix-blend-multiply backdrop-blur-[4px]"></div>
+                <div className="absolute inset-0 flex flex-col items-center justify-center px-4 mx-auto text-center text-white sm:max-w-full lg:pb-0">
+                    <h2 className="font-sans text-5xl font-bold uppercase">
+                        JUSTDC Alumni
+                    </h2>
+                    <p className='flex items-center pt-2 text-xl font-semibold'>Home / Alumni</p>
+                    {/* <p className="mt-2 font-sans text-xl font-medium">
+                        A glimpse into our events, achievements, and the vibrant spirit of the JUST Debate Club.
+                    </p> */}
                 </div>
             </div>
-
             {/* Alumni List */}
             <div className="max-w-6xl px-4 py-12 mx-auto space-y-10">
                 {loading ? (
@@ -87,12 +93,19 @@ const AlumniPage = () => {
                                 <p className="text-gray-700">{alumni.bio}</p>
 
                                 {user && (
-                                    <button
-                                        onClick={() => handleDelete(alumni._id)}
-                                        className="px-4 py-2 mt-4 text-white bg-red-500 rounded hover:bg-red-600"
-                                    >
-                                        Delete
-                                    </button>
+                                    <div className="flex gap-4 mt-4">
+                                        <button
+                                            onClick={() => handleDelete(alumni._id)}
+                                            className="px-4 py-2 text-white bg-red-500 rounded hover:bg-red-600"
+                                        >
+                                            Delete
+                                        </button>
+                                        <Link to={`/dashboard/update-alumni/${alumni._id}`}>
+                                            <button className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600">
+                                                Update
+                                            </button>
+                                        </Link>
+                                    </div>
                                 )}
                             </div>
                         </div>

@@ -4,12 +4,11 @@ import axios from 'axios';
 
 const AddGalleryItem = () => {
     const { user } = useContext(AuthContext);
-    const [galleryItem, setGalleryItem] = useState({
-        title: '',
-        caption: '',
-        image: null,
-    });
+    const [title, setTitle] = useState('');
+    const [images, setImages] = useState([]); // will hold File objects
+    const [loading, setLoading] = useState(false);
 
+    // Compress image (same as before)
     const compressImage = (file, maxWidth = 800, maxHeight = 600, quality = 0.7) => {
         return new Promise((resolve) => {
             const reader = new FileReader();
@@ -40,83 +39,119 @@ const AddGalleryItem = () => {
         });
     };
 
-    const handleImageUpload = async (imageFile) => {
-        try {
-            const compressedImage = await compressImage(imageFile);
-            const formData = new FormData();
-            formData.append('image', compressedImage, 'compressed.jpg');
+    const handleImageUpload = async (file) => {
+        const compressed = await compressImage(file);
+        const formData = new FormData();
+        formData.append('image', compressed, 'compressed.jpg');
 
-            const res = await axios.post('https://api.imgbb.com/1/upload', formData, {
-                headers: { 'Content-Type': 'multipart/form-data' },
-                params: { key: '24baa728d298bbb9d014b2a241a98e99' },
-            });
+        const res = await axios.post('https://api.imgbb.com/1/upload', formData, {
+            headers: { 'Content-Type': 'multipart/form-data' },
+            params: { key: '24baa728d298bbb9d014b2a241a98e99' },
+        });
 
-            return res.data.data.url;
-        } catch (err) {
-            console.error('Image upload failed:', err.response?.data || err.message);
-            return null;
-        }
+        return res.data.data.url;
+    };
+
+    // Add new files cumulatively instead of replacing
+    const handleFileChange = (e) => {
+        const newFiles = Array.from(e.target.files);
+        // Combine existing images with new ones
+        setImages(prev => [...prev, ...newFiles]);
+    };
+
+    // Remove a selected image by index
+    const removeImage = (index) => {
+        setImages(prev => prev.filter((_, i) => i !== index));
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!user) return alert('You must be logged in to add a gallery item!');
+        if (images.length === 0) return alert('Please select at least one image.');
 
+        setLoading(true);
         try {
             const token = await user.getIdToken();
 
-            let imageUrl = '';
-            if (galleryItem.image) {
-                imageUrl = await handleImageUpload(galleryItem.image);
-                if (!imageUrl) return alert('Image upload failed!');
-            }
+            const uploadPromises = images.map(file => handleImageUpload(file));
+            const uploadedUrls = await Promise.all(uploadPromises);
 
             await axios.post(
                 'http://localhost:5000/gallery',
                 {
-                    title: galleryItem.title,
-                    caption: galleryItem.caption,
-                    image: imageUrl,
+                    title,
+                    coverImage: uploadedUrls[0], // First image as cover
+                    images: uploadedUrls,
                 },
                 {
                     headers: { Authorization: `Bearer ${token}` },
                 }
             );
 
-            alert('Gallery item added successfully!');
-            setGalleryItem({ title: '', caption: '', image: null });
+            alert('Event gallery created successfully!');
+            setTitle('');
+            setImages([]);
         } catch (err) {
-            alert('Failed to add gallery item: ' + err.message);
+            alert('Failed to create gallery event: ' + err.message);
+        } finally {
+            setLoading(false);
         }
     };
 
     return (
         <div className="max-w-lg mx-auto mt-10">
-            <h2 className="mb-5 text-2xl font-bold text-center">Add Gallery Item</h2>
+            <h2 className="mb-5 text-2xl font-bold text-center">Create New Gallery Event</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
                 <input
                     type="text"
-                    placeholder="Image Title"
+                    placeholder="Event Title"
                     className="w-full p-2 border"
-                    onChange={(e) => setGalleryItem((prev) => ({ ...prev, title: e.target.value }))}
-                    required
-                />
-                <input
-                    type="text"
-                    placeholder="Caption"
-                    className="w-full p-2 border"
-                    onChange={(e) => setGalleryItem((prev) => ({ ...prev, caption: e.target.value }))}
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
                     required
                 />
                 <input
                     type="file"
                     accept="image/*"
+                    multiple
                     className="w-full p-2 border"
-                    onChange={(e) => setGalleryItem((prev) => ({ ...prev, image: e.target.files[0] }))}
-                    required
+                    onChange={handleFileChange}
                 />
-                <button type="submit" className="w-full p-2 text-white bg-blue-500 rounded hover:bg-blue-700">
-                    Submit
+
+                {/* Preview selected images */}
+                {images.length > 0 && (
+                    <div className="flex flex-wrap gap-3 mt-4">
+                        {images.map((file, index) => {
+                            const url = URL.createObjectURL(file);
+                            return (
+                                <div key={index} className="relative w-24 h-24 overflow-hidden border rounded">
+                                    <img
+                                        src={url}
+                                        alt={`preview-${index}`}
+                                        className="object-cover w-full h-full"
+                                        onLoad={() => URL.revokeObjectURL(url)} // free memory
+                                    />
+                                    <button
+                                        type="button"
+                                        onClick={() => removeImage(index)}
+                                        className="absolute flex items-center justify-center w-6 h-6 text-xs text-white bg-red-600 rounded-full top-1 right-1 hover:bg-red-800"
+                                        title="Remove image"
+                                    >
+                                        &times;
+                                    </button>
+                                </div>
+                            );
+                        })}
+                    </div>
+                )}
+
+                <button
+                    type="submit"
+                    disabled={loading}
+                    className={`w-full p-2 text-white rounded ${loading ? 'bg-gray-400' : 'bg-blue-500 hover:bg-blue-700'
+                        }`}
+                >
+                    {loading ? 'Uploading...' : 'Create Event'}
                 </button>
             </form>
         </div>

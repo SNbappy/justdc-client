@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const GallerySection = () => {
-    const [images, setImages] = useState([]); // State to hold gallery data
-    const [loading, setLoading] = useState(true); // State for loading
-    const [error, setError] = useState(null); // State for error handling
+    const [images, setImages] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        // Fetch gallery data from the backend API
         const fetchGalleryData = async () => {
             try {
                 const response = await fetch('http://localhost:5000/gallery');
                 const data = await response.json();
 
                 if (response.ok) {
-                    setImages(data); // Directly set the response data (since it's an array of images)
+                    setImages(data);
                     setLoading(false);
                 } else {
                     setError(data.message || 'Error fetching gallery data');
@@ -28,17 +28,12 @@ const GallerySection = () => {
         fetchGalleryData();
     }, []);
 
-    if (loading) {
-        return <div>Loading...</div>;
-    }
-
-    if (error) {
-        return <div>{error}</div>;
-    }
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>{error}</div>;
 
     return (
         <div className='pt-20'>
-            {/* Hero */}
+            {/* Hero Section */}
             <div className="relative w-full">
                 <div>
                     <img
@@ -59,30 +54,28 @@ const GallerySection = () => {
                     </p> */}
                 </div>
             </div>
-            <section className="pb-16 max-w-[1250px] mx-auto  px-4 sm:px-8 md:px-12 xl:px-0">
-                <div className="container">
-                    <div className="grid grid-cols-1 gap-8 pt-10 sm:grid-cols-2 lg:grid-cols-4">
-                        {images.length > 0 ? (
-                            images.map((image) => (
-                                <div
-                                    key={image._id} // Assuming _id is unique
-                                    className=""
-                                    
-                                >
-                                    <div className='relative overflow-hidden border-2 border-gray-200 group'>
-                                        <img
-                                            src={image.image} // Assuming the image URL is in 'image' field
-                                            alt={image.caption}
-                                            className="object-cover w-full px-12 py-8 h-[200px]"
-                                        />
-                                   </div>
-                                    <p className='pt-4 font-sans text-xl font-semibold text-center'>{image.caption}</p>
+
+            {/* Image Grid */}
+            <section className="pb-16 max-w-[1250px] mx-auto px-4 sm:px-8 md:px-12 xl:px-0">
+                <div className="grid grid-cols-1 gap-8 pt-10 sm:grid-cols-2 lg:grid-cols-4">
+                    {images.length > 0 ? (
+                        images.map((event) => (
+                            <Link key={event._id} to={`/event/${event._id}`}>
+                                <div className="relative overflow-hidden transition border-2 border-gray-200 group hover:shadow-lg">
+                                    <img
+                                        src={event.coverImage}
+                                        alt={event.title}
+                                        className="object-cover w-full px-12 py-8 h-[200px]"
+                                    />
+                                    <p className="pt-4 text-xl font-semibold text-center">{event.title}</p>
                                 </div>
-                            ))
-                        ) : (
-                            <div>No gallery images available.</div>
-                        )}
-                    </div>
+                            </Link>
+                        ))
+                    ) : (
+                        <div>No gallery events available.</div>
+                    )}
+
+
                 </div>
             </section>
         </div>
