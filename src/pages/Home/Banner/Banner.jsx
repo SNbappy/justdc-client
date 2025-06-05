@@ -1,6 +1,8 @@
+import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 import { useState } from "react";
 
 const Banner = () => {
@@ -38,7 +40,12 @@ const Banner = () => {
                 {/* Overlay */}
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[#4A7EB4] via-[#6EA8DB] to-[#9EC4EC] opacity-50 mix-blend-multiply"></div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center px-4 pt-10 mx-auto text-center text-white sm:max-w-full lg:pb-0">
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    className="absolute inset-0 flex flex-col items-center justify-center px-4 pt-10 mx-auto text-center text-white sm:max-w-full lg:pb-0"
+                >
                     <h2 className="font-sans text-5xl font-black sm:text-7xl md:text-[90px] lg:text-9xl [text-shadow:_4px_4px_0px_black]">
                         Think Sharp
                     </h2>
@@ -58,7 +65,7 @@ const Banner = () => {
                             Join Us
                         </button>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
             {/* Buttons for Small Screens (Appears as a separate section below the video) */}
