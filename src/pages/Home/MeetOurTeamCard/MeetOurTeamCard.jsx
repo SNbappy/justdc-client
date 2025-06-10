@@ -12,7 +12,7 @@ const MeetOurTeamCard = () => {
         {
             id: 5,
             name: "Mutaleb Hossain",
-            role: "Organising Secretary",
+            role: "President",
             image: "Executive members/Mutaleb.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
@@ -23,9 +23,9 @@ const MeetOurTeamCard = () => {
         },
         {
             id: 6,
-            name: "Tanha Islam",
-            role: "Joint Secretary (Administration)",
-            image: "",
+            name: "S. M. Nazmus Sakib",
+            role: "Cultural Secretary",
+            image: "Executive members/Nazmus.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -36,7 +36,7 @@ const MeetOurTeamCard = () => {
         {
             id: 7,
             name: "Parvez Nabiul Islam",
-            role: "Assistant Treasurer",
+            role: "Treasurer",
             image: "Executive members/Parvez.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
@@ -46,22 +46,22 @@ const MeetOurTeamCard = () => {
             ],
         },
 
-        {
-            id: 1,
-            name: "Ayman Faiyaz",
-            role: "President",
-            image: "Executive members/ayman.jpg",
-            socials: [
-                { platform: "twitter", link: "#" },
-                { platform: "facebook", link: "#" },
-                { platform: "google", link: "#" },
-                { platform: "instagram", link: "#" },
-            ],
-        },
+        // {
+        //     id: 1,
+        //     name: "Ayman Faiyaz",
+        //     role: "President",
+        //     image: "Executive members/ayman.jpg",
+        //     socials: [
+        //         { platform: "twitter", link: "#" },
+        //         { platform: "facebook", link: "#" },
+        //         { platform: "google", link: "#" },
+        //         { platform: "instagram", link: "#" },
+        //     ],
+        // },
         {
             id: 2,
-            name: "Nowshin Jahan Zerin",
-            role: "General Secretary",
+            name: "Mostafijur Rahaman",
+            role: "IT Secretary",
             image: "Executive members/jerin.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
@@ -73,7 +73,7 @@ const MeetOurTeamCard = () => {
         {
             id: 3,
             name: "Md. Sabbir Hossain Bappy",
-            role: "Head of IT",
+            role: "General Secretary",
             image: "Executive members/bappy.JPG",
             socials: [
                 { platform: "twitter", link: "#" },
@@ -84,9 +84,9 @@ const MeetOurTeamCard = () => {
         },
         {
             id: 8,
-            name: "Ashaba Hossain",
-            role: "Office Secretary",
-            image: "Executive members/ashaba.jpg",
+            name: "Md Ashraful Haque",
+            role: "Head of Content Creation & Brand",
+            image: "Executive members/Ashraful.png",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -94,59 +94,59 @@ const MeetOurTeamCard = () => {
                 { platform: "instagram", link: "#" },
             ],
         },
-        {
-            id: 9,
-            name: "Istiak Quayum",
-            role: "Vice President (Administration)",
-            image: "Executive members/istiak.jpg",
-            socials: [
-                { platform: "twitter", link: "#" },
-                { platform: "facebook", link: "#" },
-                { platform: "google", link: "#" },
-                { platform: "instagram", link: "#" },
-            ],
-        },
-        {
-            id: 10,
-            name: "Nilufar Maharuf",
-            role: "Vice President (Debate)",
-            image: "Executive members/nilufar.jpg",
-            socials: [
-                { platform: "twitter", link: "#" },
-                { platform: "facebook", link: "#" },
-                { platform: "google", link: "#" },
-                { platform: "instagram", link: "#" },
-            ],
-        },
-        {
-            id: 4,
-            name: "Md. Muhaimenul Haque",
-            role: "Joint Secretary (Debate)",
-            image: "Executive members/prottoy.jpg",
-            socials: [
-                { platform: "twitter", link: "#" },
-                { platform: "facebook", link: "#" },
-                { platform: "google", link: "#" },
-                { platform: "instagram", link: "#" },
-            ],
-        },
+        // {
+        //     // id: 9,
+        //     // name: "Istiak Quayum",
+        //     // role: "Vice President (Administration)",
+        //     // image: "Executive members/istiak.jpg",
+        //     // socials: [
+        //     //     { platform: "twitter", link: "#" },
+        //     //     { platform: "facebook", link: "#" },
+        //     //     { platform: "google", link: "#" },
+        //     //     { platform: "instagram", link: "#" },
+        //     // ],
+        // },
+        // {
+        //     // id: 10,
+        //     // name: "Nilufar Maharuf",
+        //     // role: "Vice President (Debate)",
+        //     // image: "Executive members/nilufar.jpg",
+        //     // socials: [
+        //     //     { platform: "twitter", link: "#" },
+        //     //     { platform: "facebook", link: "#" },
+        //     //     { platform: "google", link: "#" },
+        //     //     { platform: "instagram", link: "#" },
+        //     // ],
+        // },
+        // {
+        //     // id: 4,
+        //     // name: "Md. Muhaimenul Haque",
+        //     // role: "Joint Secretary (Debate)",
+        //     // image: "Executive members/prottoy.jpg",
+        //     // socials: [
+        //     //     { platform: "twitter", link: "#" },
+        //     //     { platform: "facebook", link: "#" },
+        //     //     { platform: "google", link: "#" },
+        //     //     { platform: "instagram", link: "#" },
+        //     // ],
+        // },
 
-        {
-            id: 11,
-            name: "Sadeka Shahani",
-            role: "Treasurer",
-            image: "Executive members/sadeka.jpg",
-            socials: [
-                { platform: "twitter", link: "#" },
-                { platform: "facebook", link: "#" },
-                { platform: "google", link: "#" },
-                { platform: "instagram", link: "#" },
-            ],
-        },
+        // {
+        //     // id: 11,
+        //     // name: "Sadeka Shahani",
+        //     // role: "Treasurer",
+        //     // image: "Executive members/sadeka.jpg",
+        //     // socials: [
+        //     //     { platform: "twitter", link: "#" },
+        //     //     { platform: "facebook", link: "#" },
+        //     //     { platform: "google", link: "#" },
+        //     //     { platform: "instagram", link: "#" },
+        //     // ],
+        // },
         {
             id: 12,
             name: "Shahbaz Ahmed",
-            role: "Publication Secretary",
+            role: "Vice President (Administration)",
             image: "Executive members/Ricky.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
@@ -158,7 +158,7 @@ const MeetOurTeamCard = () => {
         {
             id: 13,
             name: "Farhana Yasmin Sultana",
-            role: "Head of Content Creation and Branding",
+            role: "Vice President (Publications)",
             image: "Executive members/farhana.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
@@ -169,8 +169,8 @@ const MeetOurTeamCard = () => {
         },
         {
             id: 14,
-            name: "Md. Jubaedur Rahman",
-            role: "Head of Debate & Workshop",
+            name: "DEWAN MD. TANZILUL HAMIM",
+            role: "Head of English Debate",
             image: "Executive members/jubaedur.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
@@ -182,7 +182,7 @@ const MeetOurTeamCard = () => {
         {
             id: 15,
             name: "Faria Binte Faruque",
-            role: "Communication Secretary",
+            role: "",
             image: "Executive members/faria.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
@@ -193,8 +193,8 @@ const MeetOurTeamCard = () => {
         },
         {
             id: 16,
-            name: "Aaiyaan Aqeeb",
-            role: "Head of Corporate & External Affairs",
+            name: "MD Asif Karim Alvi",
+            role: "Head of Debate and Workshop",
             image: "Executive members/aqeeb.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
@@ -206,8 +206,8 @@ const MeetOurTeamCard = () => {
         {
             id: 17,
             name: "Md. Ashikul Islam",
-            role: "Head of Human Resource Management",
-            image: "Executive members/ashik.jpg",
+            role: "Organizing secretary",
+            image: "/public/Executive members/Ashik.jpeg",
             socials: [
                 { platform: "twitter", link: "#" },
                 { platform: "facebook", link: "#" },
@@ -218,7 +218,7 @@ const MeetOurTeamCard = () => {
         {
             id: 18,
             name: "Md. Atiqur Rahman",
-            role: "Head of Event Management",
+            role: "Vice-president",
             image: "Executive members/atique.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
@@ -229,8 +229,8 @@ const MeetOurTeamCard = () => {
         },
         {
             id: 19,
-            name: "Shahrin Afrin Shipla",
-            role: "Head of Social & Cultural Wing",
+            name: "Md. Abdullah Al Mamun",
+            role: "Executive Member",
             image: "Executive members/Shipla.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
@@ -239,22 +239,22 @@ const MeetOurTeamCard = () => {
                 { platform: "instagram", link: "#" },
             ],
         },
-        {
-            id: 20,
-            name: "Shihab Uddin Sarker",
-            role: "Equity Officer",
-            image: "Executive members/shihab.jpg",
-            socials: [
-                { platform: "twitter", link: "#" },
-                { platform: "facebook", link: "#" },
-                { platform: "google", link: "#" },
-                { platform: "instagram", link: "#" },
-            ],
-        },
+        // {
+            // id: 20,
+            // name: "Shihab Uddin Sarker",
+            // role: "Equity Officer",
+            // image: "Executive members/shihab.jpg",
+            // socials: [
+            //     { platform: "twitter", link: "#" },
+            //     { platform: "facebook", link: "#" },
+            //     { platform: "google", link: "#" },
+            //     { platform: "instagram", link: "#" },
+            // ],
+        // },
         {
             id: 21,
             name: "Rifat Rayhan",
-            role: "Executive Member",
+            role: "Event Management Secretary",
             image: "Executive members/rifat.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
@@ -263,22 +263,22 @@ const MeetOurTeamCard = () => {
                 { platform: "instagram", link: "#" },
             ],
         },
-        {
-            id: 22,
-            name: "Oyan Chowdhury",
-            role: "Executive Member",
-            image: "Executive members/oyan.jpg",
-            socials: [
-                { platform: "twitter", link: "#" },
-                { platform: "facebook", link: "#" },
-                { platform: "google", link: "#" },
-                { platform: "instagram", link: "#" },
-            ],
-        },
+        // {
+            // id: 22,
+            // name: "Oyan Chowdhury",
+            // role: "Executive Member",
+            // image: "Executive members/oyan.jpg",
+            // socials: [
+            //     { platform: "twitter", link: "#" },
+            //     { platform: "facebook", link: "#" },
+            //     { platform: "google", link: "#" },
+            //     { platform: "instagram", link: "#" },
+            // ],
+        // },
         {
             id: 23,
-            name: "Fahamid Rahman Siam",
-            role: "Head of English Wing",
+            name: "S.M. Fahamid Rahman",
+            role: "Communication Secretary",
             image: "Executive members/siam.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
@@ -289,8 +289,8 @@ const MeetOurTeamCard = () => {
         },
         {
             id: 24,
-            name: "Rukhsana Zaman Miel",
-            role: "Equity Officer",
+            name: "Mst. Shormili Aktar",
+            role: "Publication secretary",
             image: "Executive members/miel.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
@@ -302,7 +302,7 @@ const MeetOurTeamCard = () => {
         {
             id: 25,
             name: "Al Shahria Rafid",
-            role: "Executive Member",
+            role: "Office secretary",
             image: "Executive members/rafid.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
@@ -314,7 +314,7 @@ const MeetOurTeamCard = () => {
         {
             id: 26,
             name: "Md. Raihan Chowdhury",
-            role: "Equity Officer",
+            role: "",
             image: "Executive members/raihan.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
@@ -325,8 +325,8 @@ const MeetOurTeamCard = () => {
         },
         {
             id: 27,
-            name: "Lamia Majhar Linta",
-            role: "Equity Officer",
+            name: "Md. Abdulla Hil Maruf Munsi",
+            role: "Joint Secretary (publication)",
             image: "Executive members/linta.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
@@ -338,7 +338,7 @@ const MeetOurTeamCard = () => {
         {
             id: 24,
             name: "Lubna Yeasmin Jenny",
-            role: "Equity Officer",
+            role: "",
             image: "Executive members/jenny.jpg",
             socials: [
                 { platform: "twitter", link: "#" },
