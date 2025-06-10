@@ -5,7 +5,7 @@ import { useRef } from 'react';
 
 const MeetOurTeam = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-600px" });
+    const isInView = useInView(ref, { once: true, margin: "" });
 
     return (
         <div ref={ref}>

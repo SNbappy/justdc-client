@@ -5,7 +5,7 @@ import { motion, useInView } from 'framer-motion';
 
 const JustdcToday = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-600px" });
+    const isInView = useInView(ref, { once: true, margin: "" });
 
     return (
         <div

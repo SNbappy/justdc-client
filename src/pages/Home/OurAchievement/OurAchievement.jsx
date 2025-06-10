@@ -4,7 +4,7 @@ import { useInView } from 'framer-motion';
 
 const OurAchievement = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-600px" });
+    const isInView = useInView(ref, { once: true, margin: "" });
 
     return (
         <div

@@ -4,7 +4,7 @@ import image from '../../../assets/381979843_734132018728236_564759029073434333_
 
 const WhatMakesUsStandOut = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-600px" });
+    const isInView = useInView(ref, { once: true, margin: "" });
 
     return (
         <div

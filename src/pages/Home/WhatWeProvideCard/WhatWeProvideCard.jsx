@@ -16,7 +16,7 @@ const cardData = [
 
 const WhatWeProvideCard = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-600px" });
+    const isInView = useInView(ref, { once: true, margin: "" });
 
     return (
         <div
