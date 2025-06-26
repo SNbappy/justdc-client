@@ -17,7 +17,7 @@ const Achievements = () => {
             <div className="relative w-full">
                 <div>
                     <img
-                        src="/public/Hero Section/Gallery.jpg"
+                        src="Hero Section/Gallery.webp"
                         alt="Gallery Hero"
                         className={`object-cover w-full h-[200px] transition-transform duration-[1500ms] ease-in-out`}
                     />
