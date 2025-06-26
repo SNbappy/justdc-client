@@ -169,7 +169,7 @@ const MeetOurTeamCard = () => {
         },
         {
             id: 14,
-            name: "DEWAN MD. TANZILUL HAMIM",
+            name: "MD. TANZILUL HAMIM",
             role: "Head of English Debate",
             image: "Executive members/jubaedur.jpg",
             socials: [
@@ -325,7 +325,7 @@ const MeetOurTeamCard = () => {
         },
         {
             id: 27,
-            name: "Md. Abdulla Hil Maruf Munsi",
+            name: "Md. Abdulla Hil Maruf",
             role: "Joint Secretary (publication)",
             image: "Executive members/linta.jpg",
             socials: [
