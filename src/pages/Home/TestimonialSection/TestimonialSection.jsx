@@ -76,6 +76,10 @@ const TestimonialSection = () => {
             </p> */}
             <div className="mx-auto">
                 <Swiper
+                    onSwiper={(swiper) => {
+                        swiper.el.addEventListener('mouseenter', () => swiper.autoplay.stop());
+                        swiper.el.addEventListener('mouseleave', () => swiper.autoplay.start());
+                      }}
                     effect={"coverflow"}
                     grabCursor={true}
                     centeredSlides={true}

@@ -53,7 +53,7 @@ const JustdcToday = () => {
                 >
                     <NavLink
                         to="/events"
-                        className="rounded-full px-14 py-4 font-sans uppercase font-semibold text-[#003366] flex mx-auto border-2 border-[#003366] hover:bg-[#003366] hover:text-white text-base"
+                        className="rounded-full px-14 py-4 font-sans uppercase font-semibold text-[#003366] flex mx-auto border-2 border-[#003366] hover:bg-[#003366] hover:text-white text-base w-fit"
                     >
                         See All Events
                     </NavLink>
