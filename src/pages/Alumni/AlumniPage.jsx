@@ -12,7 +12,7 @@ const AlumniPage = () => {
     useEffect(() => {
         const fetchAlumni = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/alumni');
+                const response = await axios.get('https://just-debate-club-server.vercel.app/alumni');
                 setAlumniData(response.data);
             } catch (err) {
                 setError("Failed to load alumni data");
@@ -32,7 +32,7 @@ const AlumniPage = () => {
 
         try {
             const token = await user.getIdToken();
-            await axios.delete(`http://localhost:5000/alumni/${id}`, {
+            await axios.delete(`https://just-debate-club-server.vercel.app/alumni/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

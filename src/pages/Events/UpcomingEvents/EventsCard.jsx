@@ -7,7 +7,7 @@ const EventsCard = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/events'); // Update with your correct server URL
+                const res = await axios.get('https://just-debate-club-server.vercel.app/events'); // Update with your correct server URL
                 setEventsData(res.data);
             } catch (error) {
                 console.error("Error fetching events:", error);

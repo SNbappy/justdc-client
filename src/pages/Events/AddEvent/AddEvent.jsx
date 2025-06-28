@@ -76,7 +76,7 @@ const AddEvent = () => {
 
             // Send event data to backend
             await axios.post(
-                'http://localhost:5000/events',
+                'https://just-debate-club-server.vercel.app/events',
                 {
                     title: event.title,
                     date: isoDate,

@@ -18,7 +18,7 @@ const EventGallery = () => {
     useEffect(() => {
         const fetchEventImages = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/gallery/${eventId}`);
+                const response = await fetch(`https://just-debate-club-server.vercel.app/gallery/${eventId}`);
                 const data = await response.json();
                 setEvent(data);
             } catch (error) {
@@ -102,7 +102,7 @@ const EventGallery = () => {
 
             // Send updated images array to backend to update event
             await axios.put(
-                `http://localhost:5000/gallery/${eventId}/add-images`,
+                `https://just-debate-club-server.vercel.app/gallery/${eventId}/add-images`,
                 { images: updatedImages },
                 { headers: { Authorization: `Bearer ${token}` } }
             );

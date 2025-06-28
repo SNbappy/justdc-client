@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Banner = () => {
 
@@ -55,9 +56,9 @@ const Banner = () => {
 
                     {/* Buttons (Visible in Overlay on Large Screens) */}
                     <div className="hidden gap-6 pt-20 md:flex">
-                        <button className="bg-[#003366] py-3 px-14 rounded-full font-sans uppercase hover:bg-[#004477]">
+                        <NavLink to="achievements" className="bg-[#003366] py-3 px-14 rounded-full font-sans uppercase hover:bg-[#004477]">
                             Our Achievements
-                        </button>
+                        </NavLink>
                         <button className="bg-[#003366] py-3 px-16 rounded-full font-sans uppercase hover:bg-[#004477]">
                             Why JUSTDC
                         </button>
@@ -70,9 +71,9 @@ const Banner = () => {
 
             {/* Buttons for Small Screens (Appears as a separate section below the video) */}
             <div className="flex flex-col items-center gap-4 py-8 font-sans md:hidden md:py-10">
-                <button className="w-3/5 sm:w-2/5 md:w-[30%] px-6 py-3 font-medium text-white bg-[#003366] rounded-full hover:bg-[#004477] uppercase drop-shadow-xl">
+                <NavLink to="achievements" className="w-3/5 sm:w-2/5 md:w-[30%] px-6 py-3 font-medium text-white bg-[#003366] rounded-full hover:bg-[#004477] uppercase drop-shadow-xl">
                     Our Achievements
-                </button>
+                </NavLink>
                 <button className="w-3/5 sm:w-2/5 md:w-[30%] px-6 py-3 font-medium text-white rounded-full bg-[#003366] hover:bg-[#004477] uppercase drop-shadow-xl">
                     Why JUSTDC
                 </button>

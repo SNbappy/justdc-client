@@ -77,7 +77,7 @@ const AddGalleryItem = () => {
             const uploadedUrls = await Promise.all(uploadPromises);
 
             await axios.post(
-                'http://localhost:5000/gallery',
+                'https://just-debate-club-server.vercel.app/gallery',
                 {
                     title,
                     coverImage: uploadedUrls[0], // First image as cover

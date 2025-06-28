@@ -11,7 +11,7 @@ const Events = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get('http://localhost:5000/events')
+        axios.get('https://just-debate-club-server.vercel.app/events')
             .then(res => {
                 setEvents(res.data);
             })

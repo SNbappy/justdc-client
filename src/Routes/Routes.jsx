@@ -33,14 +33,14 @@ export const router = createBrowserRouter([
                 path: '/',
                 element: <Home></Home>
             },
-            {
-                path: '/login',
-                element: <Login />
-            },
-            {
-                path: 'signup',
-                element: <SignUp />
-            },
+            // {
+            //     path: '/login',
+            //     element: <Login />
+            // },
+            // {
+            //     path: 'signup',
+            //     element: <SignUp />
+            // },
             {
                 path: 'about',
                 element: <About />
@@ -61,22 +61,22 @@ export const router = createBrowserRouter([
                 path: 'event/:eventId',
                 element: <EventGallery />
             },
-            {
-                path: 'donate',
-                element: <Donate />
-            },
+            // {
+            //     path: 'donate',
+            //     element: <Donate />
+            // },
             {
                 path: 'testimonials',
                 element: <TestimonialPage />
             },
-            {
-                path: 'donate',
-                element: <Donate />
-            },
-            {
-                path: 'donate',
-                element: <Donate />
-            },
+            // {
+            //     path: 'donate',
+            //     element: <Donate />
+            // },
+            // {
+            //     path: 'donate',
+            //     element: <Donate />
+            // },
             {
                 path: 'alumni',
                 element: <AlumniPage />

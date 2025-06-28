@@ -9,7 +9,7 @@ const JustdcTodayCard = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/events'); // Change to your server URL
+                const res = await axios.get('https://just-debate-club-server.vercel.app/events'); // Change to your server URL
                 const events = res.data;
 
                 // Sort the events by eventDate (ascending, from now)

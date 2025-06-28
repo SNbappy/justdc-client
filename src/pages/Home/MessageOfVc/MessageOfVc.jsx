@@ -9,7 +9,7 @@ const MessageOfVc = () => {
                     <img src="Quote/quote-open-yellowOL.svg" className="w-[116px] mt-[-510px]" alt="" />
                 </div>
                 <div className='w-1/2 mt-10 ml-[-40px] bg-white rounded-3xl p-16'>
-                    <p className='text-2xl text-gray-600'>Welcome to the JUST Debate Club, where passionate minds come together to engage in thought-provoking discussions. We believe in the power of debate to inspire change, build confidence, and sharpen critical thinking. Join us in shaping ideas, challenging perspectives, and making a lasting impact!</p>
+                    <p className='text-2xl text-gray-600'>Welcome to the JUST Debate Club — a hub for critical thought, respectful discourse, and transformative leadership. Here, we don’t just argue; we listen, learn, and lead. Our mission is to empower students to speak with purpose, think with clarity, and act with integrity.</p><br />
                     <p className='pt-4 font-sans text-xl font-bold text-right text-[#003366]'>~Mutaleb Hossain</p>
                     <p className='font-sans font-bold text-right text-[#003366]'>President, JUSTDC</p>
                     <svg
@@ -32,7 +32,7 @@ const MessageOfVc = () => {
             </div>
             <div className='max-w-[1250px] px-4 sm:px-8 md:px-12 lg:px-20 xl:px-0 py-10 md:pb-20 xl:pb-28 mx-auto xl:flex hidden'>
                 <div className='w-1/2 '>
-                    <img className='object-cover rounded-3xl h-[430px]' src="/public/Bappyr.JPG" alt="" />
+                    <img className='object-cover rounded-3xl h-[430px]' src="Bappyr.JPG" alt="" />
                     <img src="Quote/quote-open-yellowOL.svg" className="w-[116px] mt-[-510px]" alt="" />
                 </div>
                 <div className='w-1/2 mt-10 ml-[-40px] bg-white rounded-3xl p-16'>

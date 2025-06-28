@@ -9,7 +9,7 @@ const GallerySection = () => {
     useEffect(() => {
         const fetchGalleryData = async () => {
             try {
-                const response = await fetch('http://localhost:5000/gallery');
+                const response = await fetch('https://just-debate-club-server.vercel.app/gallery');
                 const data = await response.json();
 
                 if (response.ok) {

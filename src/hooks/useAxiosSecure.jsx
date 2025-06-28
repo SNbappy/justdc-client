@@ -1,7 +1,7 @@
 import React from 'react';
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000'
+    baseURL: 'https://just-debate-club-server.vercel.app'
 })
 
 const useAxiosSecure = () => {

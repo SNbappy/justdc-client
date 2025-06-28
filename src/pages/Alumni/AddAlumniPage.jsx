@@ -75,7 +75,7 @@ const AddAlumni = () => {
             }
 
             await axios.post(
-                'http://localhost:5000/alumni',
+                'https://just-debate-club-server.vercel.app/alumni',
                 {
                     name: alumni.name,
                     batch: alumni.batch,

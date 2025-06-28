@@ -18,7 +18,7 @@ const navOptions = [
         path: "/alumni"
     },
     { name: "Gallery", path: "/gallery" },
-    { name: "Donate", path: "/donate" },
+    // { name: "Donate", path: "/donate" },
 ];
 
 const menuVariants = {
@@ -84,7 +84,8 @@ const Navbar = () => {
                         :
                         <>
                             <button className="hidden px-4 py-2 text-xs lg:text-sm text-[#003366] uppercase bg-[#fdb714] rounded-full md:block hover:bg-[#eab12a]">Join Us</button>
-                            <NavLink to="/login" className="hidden px-4 py-2 text-xs lg:text-sm text-[#003366] bg-[#fdb714] rounded-full md:block hover:bg-[#eab12a]">Sign In</NavLink>
+                            <button className="hidden px-4 py-2 text-xs lg:text-sm text-[#003366] uppercase bg-[#fdb714] rounded-full md:block hover:bg-[#eab12a]">Sign In</button>
+                            {/* <NavLink to="/login" className="hidden px-4 py-2 text-xs lg:text-sm text-[#003366] bg-[#fdb714] rounded-full md:block hover:bg-[#eab12a]">Sign In</NavLink> */}
 
                         </>
                     }

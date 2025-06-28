@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
+import { NavLink } from 'react-router-dom';
 
 const OurAchievement = () => {
     const ref = useRef(null);
@@ -31,9 +32,9 @@ const OurAchievement = () => {
                     debating community.
                 </p>
 
-                <button className="bg-[#003366] border-none rounded-full px-10 py-4 font-sans uppercase font-semibold text-white hover:bg-[#004477] transition-all text-xs sm:text-base">
+                <NavLink to="achievements" className="bg-[#003366] border-none rounded-full px-10 py-4 font-sans uppercase font-semibold text-white hover:bg-[#004477] transition-all text-xs sm:text-base">
                     See All Achievements
-                </button>
+                </NavLink>
             </motion.div>
 
             {/* Right Section - Image with delayed animation */}

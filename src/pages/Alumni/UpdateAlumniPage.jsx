@@ -11,7 +11,7 @@ const UpdateAlumniPage = () => {
     const [newPhoto, setNewPhoto] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/alumni/${id}`).then(res => {
+        axios.get(`https://just-debate-club-server.vercel.app/alumni/${id}`).then(res => {
             setAlumni(res.data);
         }).catch(() => alert('Failed to load alumni data'));
     }, [id]);
@@ -71,7 +71,7 @@ const UpdateAlumniPage = () => {
 
         try {
             await axios.put(
-                `http://localhost:5000/alumni/${id}`,
+                `https://just-debate-club-server.vercel.app/alumni/${id}`,
                 {
                     ...alumni,
                     photo: photoURL,
