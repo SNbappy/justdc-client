@@ -9,9 +9,10 @@ const Events = () => {
     const [events, setEvents] = useState([]);
     const { user } = useContext(AuthContext);  // Get logged-in user info
     const navigate = useNavigate();
+    const API_BASE_URL = import.meta.env.VITE_API_URL;
 
     useEffect(() => {
-        axios.get('https://just-debate-club-server.vercel.app/events')
+        axios.get(`${API_BASE_URL}/events`)
             .then(res => {
                 setEvents(res.data);
             })

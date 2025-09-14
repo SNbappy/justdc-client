@@ -39,6 +39,8 @@ const AddEvent = () => {
         });
     };
 
+    const API_BASE_URL = import.meta.env.VITE_API_URL;
+
     // Upload Image to ImgBB
     const handleImageUpload = async (imageFile) => {
         try {
@@ -76,7 +78,7 @@ const AddEvent = () => {
 
             // Send event data to backend
             await axios.post(
-                'https://just-debate-club-server.vercel.app/events',
+                `${API_BASE_URL}/events`,
                 {
                     title: event.title,
                     date: isoDate,

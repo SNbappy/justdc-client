@@ -10,6 +10,8 @@ const EventGallery = () => {
     const [event, setEvent] = useState(null);
     const [loading, setLoading] = useState(true);
 
+    const API_BASE_URL = import.meta.env.VITE_API_URL;
+    
     // For new images to add
     const [newImages, setNewImages] = useState([]);
     const [uploading, setUploading] = useState(false);
@@ -18,7 +20,7 @@ const EventGallery = () => {
     useEffect(() => {
         const fetchEventImages = async () => {
             try {
-                const response = await fetch(`https://just-debate-club-server.vercel.app/gallery/${eventId}`);
+                const response = await fetch(`${API_BASE_URL}/gallery/${eventId}`);
                 const data = await response.json();
                 setEvent(data);
             } catch (error) {
@@ -102,7 +104,7 @@ const EventGallery = () => {
 
             // Send updated images array to backend to update event
             await axios.put(
-                `https://just-debate-club-server.vercel.app/gallery/${eventId}/add-images`,
+                `${API_BASE_URL}/gallery/${eventId}/add-images`,
                 { images: updatedImages },
                 { headers: { Authorization: `Bearer ${token}` } }
             );

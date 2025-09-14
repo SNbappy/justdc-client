@@ -7,7 +7,8 @@ const AddGalleryItem = () => {
     const [title, setTitle] = useState('');
     const [images, setImages] = useState([]); // will hold File objects
     const [loading, setLoading] = useState(false);
-
+    const API_BASE_URL = import.meta.env.VITE_API_URL;
+    
     // Compress image (same as before)
     const compressImage = (file, maxWidth = 800, maxHeight = 600, quality = 0.7) => {
         return new Promise((resolve) => {
@@ -77,7 +78,7 @@ const AddGalleryItem = () => {
             const uploadedUrls = await Promise.all(uploadPromises);
 
             await axios.post(
-                'https://just-debate-club-server.vercel.app/gallery',
+                `${API_BASE_URL}/gallery`,
                 {
                     title,
                     coverImage: uploadedUrls[0], // First image as cover

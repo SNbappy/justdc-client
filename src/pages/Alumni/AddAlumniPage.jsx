@@ -75,7 +75,8 @@ const AddAlumni = () => {
             }
 
             await axios.post(
-                'https://just-debate-club-server.vercel.app/alumni',
+                `${import.meta.env.VITE_API_URL}/alumni`, // ✅ Use environment variable
+
                 {
                     name: alumni.name,
                     batch: alumni.batch,

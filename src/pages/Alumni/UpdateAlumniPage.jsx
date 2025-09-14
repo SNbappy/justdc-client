@@ -9,9 +9,10 @@ const UpdateAlumniPage = () => {
     const { user } = useContext(AuthContext);
     const [alumni, setAlumni] = useState(null);
     const [newPhoto, setNewPhoto] = useState(null);
+    const API_BASE_URL = import.meta.env.VITE_API_URL;
 
     useEffect(() => {
-        axios.get(`https://just-debate-club-server.vercel.app/alumni/${id}`).then(res => {
+        axios.get(`${API_BASE_URL}/alumni/${id}`).then(res => {
             setAlumni(res.data);
         }).catch(() => alert('Failed to load alumni data'));
     }, [id]);
@@ -71,7 +72,7 @@ const UpdateAlumniPage = () => {
 
         try {
             await axios.put(
-                `https://just-debate-club-server.vercel.app/alumni/${id}`,
+                `${API_BASE_URL}/alumni/${id}`,
                 {
                     ...alumni,
                     photo: photoURL,
@@ -89,6 +90,8 @@ const UpdateAlumniPage = () => {
     };
 
     if (!alumni) return <p className="mt-10 text-center">Loading...</p>;
+
+    
 
     return (
         <div className="max-w-lg mx-auto mt-10">

@@ -8,11 +8,12 @@ const AlumniPage = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
     const { user } = useContext(AuthContext);
+    const API_BASE_URL = import.meta.env.VITE_API_URL;
 
     useEffect(() => {
         const fetchAlumni = async () => {
             try {
-                const response = await axios.get('https://just-debate-club-server.vercel.app/alumni');
+                const response = await axios.get(`${API_BASE_URL}/alumni`);
                 setAlumniData(response.data);
             } catch (err) {
                 setError("Failed to load alumni data");
@@ -32,7 +33,7 @@ const AlumniPage = () => {
 
         try {
             const token = await user.getIdToken();
-            await axios.delete(`https://just-debate-club-server.vercel.app/alumni/${id}`, {
+            await axios.delete(`${API_BASE_URL}/alumni/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

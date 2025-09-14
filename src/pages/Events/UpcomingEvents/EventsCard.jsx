@@ -3,11 +3,12 @@ import axios from 'axios';
 
 const EventsCard = () => {
     const [eventsData, setEventsData] = useState([]);
+    const API_BASE_URL = import.meta.env.VITE_API_URL;
 
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const res = await axios.get('https://just-debate-club-server.vercel.app/events'); // Update with your correct server URL
+                const res = await axios.get(`${API_BASE_URL}/events`); // Update with your correct server URL
                 setEventsData(res.data);
             } catch (error) {
                 console.error("Error fetching events:", error);

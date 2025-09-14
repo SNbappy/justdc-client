@@ -5,11 +5,13 @@ const JustdcTodayCard = () => {
     const [eventsData, setEventsData] = useState([]);
     const [displayEvents, setDisplayEvents] = useState([]);
 
+    const API_BASE_URL = import.meta.env.VITE_API_URL;
+
     // Fetch data from the backend
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const res = await axios.get('https://just-debate-club-server.vercel.app/events'); // Change to your server URL
+                const res = await axios.get(`${API_BASE_URL}/events`); // Change to your server URL
                 const events = res.data;
 
                 // Sort the events by eventDate (ascending, from now)
