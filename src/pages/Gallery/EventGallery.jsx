@@ -137,54 +137,56 @@ const EventGallery = () => {
                 ))}
             </div>
 
-            {/* Add More Images Section */}
-            <div className="max-w-lg mx-auto">
-                <h3 className="mb-4 text-xl font-semibold">Add More Images</h3>
-                <input
-                    type="file"
-                    accept="image/*"
-                    multiple
-                    onChange={handleNewImagesChange}
-                    className="w-full p-2 mb-4 border"
-                />
+            {/* Add More Images Section - Only visible when logged in */}
+            {user && (
+                <div className="max-w-lg mx-auto">
+                    <h3 className="mb-4 text-xl font-semibold">Add More Images</h3>
+                    <input
+                        type="file"
+                        accept="image/*"
+                        multiple
+                        onChange={handleNewImagesChange}
+                        className="w-full p-2 mb-4 border"
+                    />
 
-                {/* Preview new images */}
-                {newImages.length > 0 && (
-                    <div className="flex flex-wrap gap-3 mb-4">
-                        {newImages.map((file, idx) => {
-                            const url = URL.createObjectURL(file);
-                            return (
-                                <div key={idx} className="relative w-24 h-24 overflow-hidden border rounded">
-                                    <img
-                                        src={url}
-                                        alt={`new preview ${idx}`}
-                                        className="object-cover w-full h-full"
-                                        onLoad={() => URL.revokeObjectURL(url)}
-                                    />
-                                    <button
-                                        type="button"
-                                        onClick={() => removeNewImage(idx)}
-                                        className="absolute flex items-center justify-center w-6 h-6 text-xs text-white bg-red-600 rounded-full top-1 right-1 hover:bg-red-800"
-                                        title="Remove image"
-                                    >
-                                        &times;
-                                    </button>
-                                </div>
-                            );
-                        })}
-                    </div>
-                )}
+                    {/* Preview new images */}
+                    {newImages.length > 0 && (
+                        <div className="flex flex-wrap gap-3 mb-4">
+                            {newImages.map((file, idx) => {
+                                const url = URL.createObjectURL(file);
+                                return (
+                                    <div key={idx} className="relative w-24 h-24 overflow-hidden border rounded">
+                                        <img
+                                            src={url}
+                                            alt={`new preview ${idx}`}
+                                            className="object-cover w-full h-full"
+                                            onLoad={() => URL.revokeObjectURL(url)}
+                                        />
+                                        <button
+                                            type="button"
+                                            onClick={() => removeNewImage(idx)}
+                                            className="absolute flex items-center justify-center w-6 h-6 text-xs text-white bg-red-600 rounded-full top-1 right-1 hover:bg-red-800"
+                                            title="Remove image"
+                                        >
+                                            &times;
+                                        </button>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    )}
 
-                <button
-                    type="button"
-                    onClick={handleAddImages}
-                    disabled={uploading}
-                    className={`w-full p-2 text-white rounded ${uploading ? 'bg-gray-400' : 'bg-green-600 hover:bg-green-800'
-                        }`}
-                >
-                    {uploading ? 'Uploading...' : 'Add Images'}
-                </button>
-            </div>
+                    <button
+                        type="button"
+                        onClick={handleAddImages}
+                        disabled={uploading}
+                        className={`w-full p-2 text-white rounded ${uploading ? 'bg-gray-400' : 'bg-green-600 hover:bg-green-800'
+                            }`}
+                    >
+                        {uploading ? 'Uploading...' : 'Add Images'}
+                    </button>
+                </div>
+            )}
         </div>
     );
 };

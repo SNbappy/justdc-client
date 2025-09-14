@@ -1,22 +1,22 @@
 const About = () => {
     return (
-        <div className="pt-20 bg-gray-50">
+        <div className="pt-14 sm:pt-20 bg-gray-50">
             {/* Hero Section */}
             <div className="relative w-full">
                 <div>
                     <img
                         src="Hero Section/Gallery.webp"
                         alt="Gallery Hero"
-                        className={`object-cover w-full h-[200px] transition-transform duration-[1500ms] ease-in-out`}
+                        className={`object-cover w-full h-[100px] sm:h-[200px] transition-transform duration-[1500ms] ease-in-out`}
                     />
                 </div>
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[#4A7EB4]/50 via-[#6EA8DB]/50 to-[#9EC4EC]/50 mix-blend-multiply backdrop-blur-[4px]"></div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center px-4 mx-auto text-center text-white sm:max-w-full lg:pb-0">
-                    <h2 className="font-sans text-5xl font-bold uppercase">
+                    <h2 className="font-sans text-2xl font-bold uppercase sm:text-5xl">
                         About JUSTDC
                     </h2>
-                    <p className='flex items-center pt-2 text-xl font-semibold'>Home / About</p>
+                    <p className='flex items-center pt-2 text-lg font-semibold sm:text-xl'>Home / About</p>
                     {/* <p className="mt-2 font-sans text-xl font-medium">
                         A glimpse into our events, achievements, and the vibrant spirit of the JUST Debate Club.
                     </p> */}
@@ -85,11 +85,11 @@ const About = () => {
                     <div className="grid gap-8 md:grid-cols-2">
                         <div className="p-6 bg-gray-100 shadow rounded-xl">
                             <p className="italic text-gray-700">“JUSTDC helped me find my voice and build the confidence to speak on any stage. It's more than a club — it's a family.”</p>
-                            <p className="mt-4 font-semibold text-[#003366]">— Tanisha Rahman, Former President</p>
+                            <p className="mt-4 font-semibold text-[#003366]">— Md Shahriar Kabir, Former President</p>
                         </div>
                         <div className="p-6 bg-gray-100 shadow rounded-xl">
                             <p className="italic text-gray-700">“The experiences I gained through JUSTDC shaped my leadership skills and taught me the value of informed discourse.”</p>
-                            <p className="mt-4 font-semibold text-[#003366]">— Rifat Ahmed, Debate Coach</p>
+                            <p className="mt-4 font-semibold text-[#003366]">— Md. Atiqur Rahman, Vice President</p>
                         </div>
                     </div>
                 </div>

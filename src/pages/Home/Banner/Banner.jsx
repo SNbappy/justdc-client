@@ -71,7 +71,7 @@ const Banner = () => {
 
             {/* Buttons for Small Screens (Appears as a separate section below the video) */}
             <div className="flex flex-col items-center gap-4 py-8 font-sans md:hidden md:py-10">
-                <NavLink to="achievements" className="w-3/5 sm:w-2/5 md:w-[30%] px-6 py-3 font-medium text-white bg-[#003366] rounded-full hover:bg-[#004477] uppercase drop-shadow-xl">
+                <NavLink to="achievements" className="w-3/5 sm:w-2/5 md:w-[30%] px-6 py-3 font-medium text-white bg-[#003366] rounded-full hover:bg-[#004477] uppercase drop-shadow-xl text-center">
                     Our Achievements
                 </NavLink>
                 <button className="w-3/5 sm:w-2/5 md:w-[30%] px-6 py-3 font-medium text-white rounded-full bg-[#003366] hover:bg-[#004477] uppercase drop-shadow-xl">

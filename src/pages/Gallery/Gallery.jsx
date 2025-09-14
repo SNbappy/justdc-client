@@ -32,23 +32,23 @@ const GallerySection = () => {
     if (error) return <div>{error}</div>;
 
     return (
-        <div className='pt-20'>
+        <div className='pt-14 sm:pt-20'>
             {/* Hero Section */}
             <div className="relative w-full">
                 <div>
                     <img
                         src="Hero Section/Gallery.webp"
                         alt="Gallery Hero"
-                        className={`object-cover w-full h-[200px] transition-transform duration-[1500ms] ease-in-out`}
+                        className={`object-cover w-full h-[100px] sm:h-[200px] transition-transform duration-[1500ms] ease-in-out`}
                     />
                 </div>
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[#4A7EB4]/50 via-[#6EA8DB]/50 to-[#9EC4EC]/50 mix-blend-multiply backdrop-blur-[4px]"></div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center px-4 mx-auto text-center text-white sm:max-w-full lg:pb-0">
-                    <h2 className="font-sans text-5xl font-bold uppercase">
+                    <h2 className="font-sans text-xl font-bold uppercase sm:text-5xl">
                         JUSTDC Gallery
                     </h2>
-                    <p className='flex items-center pt-2 text-xl font-semibold'>Home / Image Gallery</p>
+                    <p className='flex items-center pt-2 text-lg font-semibold sm:text-xl'>Home / Gallery</p>
                     {/* <p className="mt-2 font-sans text-xl font-medium">
                         A glimpse into our events, achievements, and the vibrant spirit of the JUST Debate Club.
                     </p> */}

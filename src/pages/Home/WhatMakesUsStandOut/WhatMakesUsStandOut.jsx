@@ -55,9 +55,9 @@ const WhatMakesUsStandOut = () => {
                         className='flex flex-col items-center justify-center gap-4 mx-auto font-sans uppercase xl:flex-row'
                     >
                         <div className="w-4/5 md:w-2/5 sm:w-3/5">
-                            <NavLink to="gallery" className="rounded-full px-14 py-4 font-sans uppercase font-semibold text-[#003366] border-2 border-[#003366] hover:bg-[#003366] hover:text-white w-full text-center">
+                            <button className="rounded-full px-14 py-4 font-sans uppercase font-semibold text-[#003366] border-2 border-[#003366] hover:bg-[#003366] hover:text-white w-full text-center">
                                 Discover Our Story
-                            </NavLink>
+                            </button>
                         </div>
                         <div className="w-4/5 md:w-2/5 sm:w-3/5">
                             <button className="rounded-full px-14 py-4 font-sans uppercase font-semibold text-[#003366] border-2 border-[#003366] hover:bg-[#003366] hover:text-white  w-full">

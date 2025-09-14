@@ -55,8 +55,8 @@ const Footer = () => {
                     </p>
                     <p className="flex items-center gap-2 text-gray-300 text-[16px] lg:text-lg hover:text-blue-400">
                         <IoCallSharp />
-                        <a href="tel:+8801581055022" className="transition-all duration-300">
-                            +88 01581-055022
+                        <a href="tel:+8801921024590" className="transition-all duration-300">
+                            +88 01921024590
                         </a>
                     </p>
                     <div className="flex mt-4 space-x-4">

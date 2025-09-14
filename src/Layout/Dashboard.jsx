@@ -1,51 +1,44 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FaCalendar, FaEvernote, FaHome, FaImage, FaPeopleArrows, FaShoppingCart } from 'react-icons/fa';
+import {
+    FaHome,
+    FaCalendarAlt,
+    FaTrophy,
+    FaChartLine,
+    FaBookOpen,
+    FaUsers,
+    FaBell,
+    FaCog,
+    FaSignOutAlt,
+    FaMicrophone,
+    FaVideo,
+    FaClipboardList,
+    FaMedal,
+    FaBars,
+    FaTimes
+} from 'react-icons/fa';
 import { NavLink, Outlet } from 'react-router-dom';
+import { AuthContext } from '../providers/AuthProvider';
 
 const Dashboard = () => {
+    const { user, logOut } = useContext(AuthContext);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false);
+    };
+
     return (
-        <div className='flex'>
+        <div className='flex min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
             <Helmet>
-                <title>JUST Debate Club | Dashboard</title>
+                <title>My Dashboard | JUST Debate Club</title>
             </Helmet>
-            {/* dashboard side bar */}
-            <div className='w-64 min-h-full bg-orange-400'>
-                <ul className='p-4 menu'>
-                    <li>
 
-                        <NavLink to="/">
-                            <FaHome />
-                            User Home</NavLink>
-                    </li>
-                    <li>
-
-                        <NavLink to="/dashboard/add-event">
-                            <FaCalendar />
-                            Add Event</NavLink>
-                    </li>
-                    <li>
-
-                        <NavLink to="/dashboard/add-gallery">
-                            <FaImage />
-                            Add Gallery</NavLink>
-                    </li>
-                    <li>
-
-                        <NavLink to="/dashboard/add-alumni">
-                            <FaPeopleArrows />
-                            Add Alumni</NavLink>
-                    </li>
-                    <li>
-
-                        <NavLink to="/dashboard/cart">
-                            <FaShoppingCart />My Cart</NavLink>
-                    </li>
-                </ul>
-            </div>
-            <div className='flex-1'>
-                <Outlet></Outlet>
-            </div>
+           dashboard
         </div>
     );
 };
