@@ -13,7 +13,7 @@ import NotFound from "../pages/NotFound/NotFound";
 import PrivateRoute from "./PrivateRoute";
 import RoleRoute from "../Components/RoleRoute";
 import Secret from "../pages/Shared/Secret/Secret";
-import Dashboard from "../Layout/Dashboard";
+import Dashboard from "../Components/Dashboard/Dashboard";
 import AddEvent from "../pages/Events/AddEvent/AddEvent";
 import AddGalleryItem from "../pages/Gallery/AddGalleryItem";
 import AlumniPage from "../pages/Alumni/AlumniPage";
@@ -77,7 +77,7 @@ export const router = createBrowserRouter([
         path: 'dashboard',
         element: <PrivateRoute><Dashboard /></PrivateRoute>,
         children: [
-            
+
         ]
     },
     {
